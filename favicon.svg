@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="g" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0.7" stop-color="#3b1d8a"/>
+      <stop offset="1" stop-color="#1a0d3d"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <circle cx="40" cy="24" r="9" fill="#fff" opacity="0.25"/>
+  <text x="50%" y="56%" text-anchor="middle" dominant-baseline="middle"
+        font-family="-apple-system,BlinkMacSystemFont,Inter,sans-serif"
+        font-size="36" font-weight="800" fill="#fff">i</text>
+</svg>

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Discover · Influradar</title>
+<meta name="description" content="Search Israeli Instagram creators by niche, audience and engagement." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span>Influradar</span>
+      <small data-i18n="brand.beta">beta · IL</small>
+    </a>
+    <nav class="topnav">
+      <a href="app.html" class="active" data-i18n="nav.discover">Discover</a>
+      <a href="lists.html" data-i18n="nav.lists">Saved lists</a>
+      <a href="#" data-i18n="nav.briefs">Briefs sent</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+    </nav>
+  </div>
+  <div class="top-actions">
+    <div class="lang-toggle">
+      <button data-lang="en">EN</button>
+      <button data-lang="he">עב</button>
+    </div>
+    <button class="btn">ACW · Castro ▾</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="filters">
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.niche">Niche</h4>
+      <div class="chip-row">
+        <div class="chip active" data-i18n="niche.fashion">Fashion</div>
+        <div class="chip" data-i18n="niche.beauty">Beauty</div>
+        <div class="chip" data-i18n="niche.fitness">Fitness</div>
+        <div class="chip" data-i18n="niche.food">Food</div>
+        <div class="chip" data-i18n="niche.travel">Travel</div>
+        <div class="chip" data-i18n="niche.tech">Tech</div>
+        <div class="chip" data-i18n="niche.parenting">Parenting</div>
+        <div class="chip" data-i18n="niche.lifestyle">Lifestyle</div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.followers">Followers</h4>
+      <div class="range">
+        <input type="text" value="10K" />
+        <span>—</span>
+        <input type="text" value="100K" />
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.er">Engagement rate</h4>
+      <div class="range">
+        <input type="text" value="2%" />
+        <span>—</span>
+        <input type="text" value="15%" />
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.language">Language</h4>
+      <div class="chip-row">
+        <div class="chip active" data-i18n="lang.hebrew">Hebrew</div>
+        <div class="chip active" data-i18n="lang.english">English</div>
+        <div class="chip" data-i18n="lang.arabic">Arabic</div>
+        <div class="chip" data-i18n="lang.russian">Russian</div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.location">Location signals</h4>
+      <div class="chip-row">
+        <div class="chip active" data-i18n="loc.tlv">Tel Aviv</div>
+        <div class="chip" data-i18n="loc.jerusalem">Jerusalem</div>
+        <div class="chip" data-i18n="loc.haifa">Haifa</div>
+        <div class="chip" data-i18n="loc.other">Other IL</div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.account">Account</h4>
+      <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.business_only">Business / Creator only</span></label>
+      <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.verified">Verified (blue check)</span></label>
+      <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.recent_active">Posted in last 14 days</span></label>
+      <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.claimed_only">Claimed profile only</span></label>
+    </div>
+
+    <button class="btn btn-block" data-i18n="filter.reset">Reset filters</button>
+  </aside>
+
+  <main class="results">
+    <div class="search-bar">
+      <input type="search" data-i18n-placeholder="app.search.placeholder" placeholder="Search by handle, bio keyword, or hashtag (e.g. #אופנהישראלית)" />
+      <select class="sort-select">
+        <option data-i18n="app.sort.er">Sort: Engagement rate ↓</option>
+        <option data-i18n="app.sort.fol_up">Followers ↑</option>
+        <option data-i18n="app.sort.fol_down">Followers ↓</option>
+        <option data-i18n="app.sort.recent">Last posted</option>
+      </select>
+    </div>
+
+    <div class="results-meta">
+      <div><strong>247</strong> <span data-i18n="app.results.meta.a">creators match · Fashion · 10K–100K · Tel Aviv</span></div>
+      <div data-i18n="app.results.meta.b">Data refreshed 2h ago via IG Business Discovery</div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <div class="card-head">
+          <div class="avatar a1">נל</div>
+          <div>
+            <div class="handle">@noamfit_tlv</div>
+            <div class="name">Noam Levi · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Slow fashion, vintage finds & sustainable styling. Sharing fits from my Florentin closet. Hebrew + English captions.</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Vintage</span>
+          <span class="niche-tag">Sustainable</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge" data-i18n="card.creds">Verified ER · 94% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">42.1K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">6.4%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">3.8</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
+        <div class="card-head">
+          <div class="avatar a2">יש</div>
+          <div>
+            <div class="handle">@yael.shamir</div>
+            <div class="name">Yael Shamir · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Editor at Vogue IL ✦ minimalist daily fits ✦ collabs: yael@shamirstudio.co.il</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Editorial</span>
+          <span class="niche-tag">Minimalist</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 91% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">78.5K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">4.9%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">2.1</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <div class="card-head">
+          <div class="avatar a3">רא</div>
+          <div>
+            <div class="handle">@ronen.atelier</div>
+            <div class="name">Ronen Avraham · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Menswear ✂️ tailoring stories from Levinsky market. Behind the scenes of every piece I make.</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Menswear</span>
+          <span class="niche-tag">Craft</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 97% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">23.7K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">8.1%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">2.6</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <div class="card-head">
+          <div class="avatar a4">מכ</div>
+          <div>
+            <div class="handle">@maya.kohen</div>
+            <div class="name">Maya Kohen · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Streetwear & sneakers. Reviews, drops, and city fits across TLV. DMs open for paid collabs.</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Streetwear</span>
+          <span class="niche-tag">Sneakers</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 88% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">61.2K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value">3.2%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">4.5</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
+        <div class="card-head">
+          <div class="avatar a5">דב</div>
+          <div>
+            <div class="handle">@daniel.bfits</div>
+            <div class="name">Daniel Ben-David · Ramat Gan</div>
+          </div>
+        </div>
+        <div class="bio">Smart casual menswear on a budget. Weekly thrift hauls + outfit math (₪ per wear).</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Budget</span>
+          <span class="niche-tag">Thrift</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 96% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">15.8K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">9.7%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">3.1</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <div class="card-head">
+          <div class="avatar a6">שג</div>
+          <div>
+            <div class="handle">@shira.gold</div>
+            <div class="name">Shira Gold · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Modest fashion ✡️ everyday looks for working women. Hebrew captions, English alt text.</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Modest</span>
+          <span class="niche-tag">Workwear</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 93% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">34.0K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">5.6%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">2.9</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <div class="card-head">
+          <div class="avatar a7">אכ</div>
+          <div>
+            <div class="handle">@adi.knit</div>
+            <div class="name">Adi Klein · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Handmade knitwear & slow style ✦ studio in Florentin ✦ DMs for collabs and pre-orders</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Knitwear</span>
+          <span class="niche-tag">Craft</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 95% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">18.4K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">7.8%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">2.4</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
+        <div class="card-head">
+          <div class="avatar a8">תמ</div>
+          <div>
+            <div class="handle">@tamar.mizrahi</div>
+            <div class="name">Tamar Mizrahi · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio">Bilingual content (HE/EN) on color, print and Israeli design ✦ partners: TogTime, Adika, Castro</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag">Print</span>
+          <span class="niche-tag">Color</span>
+        </div>
+        <div class="row">
+          <span class="creds-badge">Verified ER · 90% real audience</span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">52.0K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">5.1%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">3.4</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-note" data-i18n="footer.source">
+      All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API.
+      Creators can claim or remove their profile at any time.
+    </div>
+  </main>
+</div>
+
+<div class="modal-shade" id="m">
+  <div class="modal">
+    <h3><span data-i18n="modal.title">Send brief to</span> @noamfit_tlv</h3>
+    <p class="sub" data-i18n="modal.sub">Profile is unclaimed. We'll reach out on your behalf and notify you when they respond.</p>
+
+    <div class="notice" data-i18n="modal.notice">
+      This intro is included in your Pro plan (3 of 25 used this month). Your brand identity will be revealed to the creator only after they opt in.
+    </div>
+
+    <div class="form-row">
+      <label data-i18n="modal.campaign">Campaign type</label>
+      <select>
+        <option>Sponsored post (single)</option>
+        <option>Reel</option>
+        <option>Story series</option>
+        <option>Long-term ambassador</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label data-i18n="modal.budget">Budget (ILS)</label>
+      <input type="text" data-i18n-placeholder="modal.placeholder.budget" placeholder="e.g. 2,500 – 4,000" />
+    </div>
+
+    <div class="form-row">
+      <label data-i18n="modal.brief">Brief</label>
+      <textarea data-i18n-placeholder="modal.placeholder.brief" placeholder="What's the campaign, what's the product, what makes this a fit for the creator's audience?"></textarea>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn" data-i18n="modal.cancel" onclick="document.getElementById('m').classList.remove('open')">Cancel</button>
+      <button class="btn btn-primary" data-i18n="modal.send">Send brief</button>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+</body>
+</html>

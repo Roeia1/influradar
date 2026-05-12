@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>@noamfit_tlv · Influradar</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span>Influradar</span>
+      <small data-i18n="brand.beta">beta · IL</small>
+    </a>
+    <nav class="topnav">
+      <a href="app.html" data-i18n="nav.discover">Discover</a>
+      <a href="lists.html" data-i18n="nav.lists">Saved lists</a>
+      <a href="#" data-i18n="nav.briefs">Briefs sent</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+    </nav>
+  </div>
+  <div class="top-actions">
+    <div class="lang-toggle">
+      <button data-lang="en">EN</button>
+      <button data-lang="he">עב</button>
+    </div>
+    <button class="btn">ACW · Castro ▾</button>
+  </div>
+</header>
+
+<div class="page page-wide">
+
+  <a href="app.html" class="text-muted small" data-i18n="profile.back" style="display:inline-block;margin-bottom:14px">← Back to search</a>
+
+  <!-- Profile header -->
+  <div class="profile-header">
+    <div class="avatar avatar-lg a1">נל</div>
+    <div class="meta-block">
+      <h1>@noamfit_tlv</h1>
+      <div class="name-line">Noam Levi · Tel Aviv · she/her</div>
+      <div class="niche-row" style="margin-bottom:10px">
+        <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+        <span class="niche-tag">Vintage</span>
+        <span class="niche-tag">Sustainable</span>
+        <span class="niche-tag">HE / EN</span>
+      </div>
+      <div class="row" style="gap:8px;flex-wrap:wrap">
+        <span class="status-pill pill-unclaimed" style="position:static" data-i18n="card.unclaimed">Unclaimed</span>
+        <span class="creds-badge">Verified ER · 94% real audience</span>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn">+ Save to list</button>
+      <button class="btn btn-primary btn-lg" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+    </div>
+  </div>
+
+  <div class="profile-grid">
+
+    <!-- Main column -->
+    <div>
+      <div class="panel">
+        <h3 data-i18n="profile.about">About</h3>
+        <p class="text-muted" style="font-size:14px;line-height:1.6;margin:0 0 16px">
+          Slow fashion, vintage finds & sustainable styling. Sharing fits from my Florentin closet. Hebrew + English captions.
+          Open to brand collaborations aligned with sustainability values.
+        </p>
+        <div class="kv-row">
+          <span class="k" data-i18n="profile.stat.followers">Followers</span>
+          <span class="v">42,108</span>
+        </div>
+        <div class="kv-row">
+          <span class="k" data-i18n="profile.stat.er">Avg. engagement rate</span>
+          <span class="v value-good">6.4%</span>
+        </div>
+        <div class="kv-row">
+          <span class="k" data-i18n="profile.stat.posts">Posts / week</span>
+          <span class="v">3.8</span>
+        </div>
+        <div class="kv-row">
+          <span class="k" data-i18n="profile.stat.lang">Primary language</span>
+          <span class="v">Hebrew (74%) · English (26%)</span>
+        </div>
+        <div class="kv-row">
+          <span class="k" data-i18n="profile.stat.location">Location signal</span>
+          <span class="v">Tel Aviv (high confidence)</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="profile.engagement">Engagement (last 12 posts)</h3>
+        <div class="sparkline">
+          <div class="bar" style="height:45%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:38%"></div>
+          <div class="bar" style="height:75%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:48%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:92%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:80%"></div>
+          <div class="bar" style="height:68%"></div>
+        </div>
+        <div class="row-space-between small text-muted">
+          <span>12 posts ago</span>
+          <span>Today</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="profile.recent">Recent posts</h3>
+        <div class="post-grid">
+          <div class="post-thumb pt1"><span>♥ 3,142 · 89 comments</span></div>
+          <div class="post-thumb pt2"><span>♥ 2,807 · 142 comments</span></div>
+          <div class="post-thumb pt3"><span>♥ 4,221 · 201 comments</span></div>
+          <div class="post-thumb pt4"><span>♥ 1,950 · 67 comments</span></div>
+          <div class="post-thumb pt5"><span>♥ 3,560 · 118 comments</span></div>
+          <div class="post-thumb pt6"><span>♥ 2,402 · 95 comments</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div>
+      <div class="panel text-center">
+        <h3 data-i18n="profile.cred.title" style="text-align:start">Audience credibility</h3>
+        <div class="creds-circle">
+          <div>
+            <span>94%</span>
+            <small>real audience</small>
+          </div>
+        </div>
+        <p class="text-muted small mt-0" data-i18n="profile.cred.body">
+          Real-audience score based on follower quality, engagement legitimacy and growth pattern.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="profile.audience">Audience snapshot</h3>
+
+        <div class="audience-bar">
+          <div class="label-row">
+            <span class="k" data-i18n="profile.aud.age">Age 25–34</span>
+            <span class="v">52%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:52%"></div></div>
+        </div>
+
+        <div class="audience-bar">
+          <div class="label-row">
+            <span class="k" data-i18n="profile.aud.female">Female audience</span>
+            <span class="v">71%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:71%"></div></div>
+        </div>
+
+        <div class="audience-bar">
+          <div class="label-row">
+            <span class="k" data-i18n="profile.aud.israel">In Israel</span>
+            <span class="v">82%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:82%"></div></div>
+        </div>
+
+        <div class="audience-bar">
+          <div class="label-row">
+            <span class="k" data-i18n="profile.aud.tlv">In Tel Aviv area</span>
+            <span class="v">47%</span>
+          </div>
+          <div class="track"><div class="fill" style="width:47%"></div></div>
+        </div>
+
+        <p class="text-muted small" style="margin-top:14px;line-height:1.5">
+          Audience demographics inferred from a sample of 1,200 recent engagers. Available for verified creators only.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-bottom:10px">Use this profile</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:13px">
+          <li><a href="#" style="color:var(--accent)">+ Add to Spring fashion drop</a></li>
+          <li><a href="#" style="color:var(--accent)">+ Compare with another creator</a></li>
+          <li><a href="#" style="color:var(--accent)">⤓ Export PDF for client deck</a></li>
+          <li><a href="#" style="color:var(--accent)">⊕ Check creator history (your campaigns)</a></li>
+        </ul>
+        <p class="text-muted small" style="margin-top:14px;line-height:1.5;padding-top:14px;border-top:1px solid var(--border)">
+          Data refreshed 2h ago via Meta Business Discovery. Audience credibility scored nightly. Last engagement-rate check: today 09:14.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-shade" id="m">
+  <div class="modal">
+    <h3><span data-i18n="modal.title">Send brief to</span> @noamfit_tlv</h3>
+    <p class="sub" data-i18n="modal.sub">Profile is unclaimed. We'll reach out on your behalf and notify you when they respond.</p>
+    <div class="notice" data-i18n="modal.notice">
+      This intro is included in your Pro plan (3 of 25 used this month). Your brand identity will be revealed to the creator only after they opt in.
+    </div>
+    <div class="form-row">
+      <label data-i18n="modal.campaign">Campaign type</label>
+      <select>
+        <option>Sponsored post (single)</option>
+        <option>Reel</option>
+        <option>Story series</option>
+        <option>Long-term ambassador</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label data-i18n="modal.budget">Budget (ILS)</label>
+      <input type="text" data-i18n-placeholder="modal.placeholder.budget" placeholder="e.g. 2,500 – 4,000" />
+    </div>
+    <div class="form-row">
+      <label data-i18n="modal.brief">Brief</label>
+      <textarea data-i18n-placeholder="modal.placeholder.brief" placeholder="What's the campaign, what's the product, what makes this a fit for the creator's audience?"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" data-i18n="modal.cancel" onclick="document.getElementById('m').classList.remove('open')">Cancel</button>
+      <button class="btn btn-primary" data-i18n="modal.send">Send brief</button>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+</body>
+</html>
