@@ -257,6 +257,38 @@ const I18N = {
     "profile.about.location.v": "Tel Aviv (high confidence)",
     "profile.audience.note": "Audience demographics inferred from a sample of 1,200 recent engagers. Available for verified creators only.",
     "profile.subtitle.her": "she/her",
+
+    // --- Demo creator names & bios (shown across app/profile/lists) ---
+    "creator.noamfit.name": "Noam Levi · Tel Aviv",
+    "creator.yael.name": "Yael Shamir · Tel Aviv",
+    "creator.ronen.name": "Ronen Avraham · Tel Aviv",
+    "creator.maya.name": "Maya Kohen · Tel Aviv",
+    "creator.daniel.name": "Daniel Ben-David · Ramat Gan",
+    "creator.shira.name": "Shira Gold · Tel Aviv",
+    "creator.adi.name": "Adi Klein · Tel Aviv",
+    "creator.tamar.name": "Tamar Mizrahi · Tel Aviv",
+    "creator.noamfit.bio": "Slow fashion, vintage finds & sustainable styling. Sharing fits from my Florentin closet. Hebrew + English captions.",
+    "creator.yael.bio": "Editor at Vogue IL ✦ minimalist daily fits ✦ collabs: yael@shamirstudio.co.il",
+    "creator.ronen.bio": "Menswear ✂️ tailoring stories from Levinsky market. Behind the scenes of every piece I make.",
+    "creator.maya.bio": "Streetwear & sneakers. Reviews, drops, and city fits across TLV. DMs open for paid collabs.",
+    "creator.daniel.bio": "Smart casual menswear on a budget. Weekly thrift hauls + outfit math (₪ per wear).",
+    "creator.shira.bio": "Modest fashion ✡️ everyday looks for working women. Hebrew captions, English alt text.",
+    "creator.adi.bio": "Handmade knitwear & slow style ✦ studio in Florentin ✦ DMs for collabs and pre-orders",
+    "creator.tamar.bio": "Bilingual content (HE/EN) on color, print and Israeli design ✦ partners: TogTime, Adika, Castro",
+
+    // --- Lists table: niche cells + notes ---
+    "lists.niche.vintage": "Fashion · Vintage",
+    "lists.niche.editorial": "Fashion · Editorial",
+    "lists.niche.menswear": "Fashion · Menswear",
+    "lists.niche.modest": "Fashion · Modest",
+    "lists.niche.knitwear": "Fashion · Knitwear",
+    "lists.niche.streetwear": "Fashion · Streetwear",
+    "lists.note.noamfit": "Available end of May, asked for product samples",
+    "lists.note.yael": "Sent 2 days ago, waiting",
+    "lists.note.ronen": "Strong niche fit, ER unusually high — recheck audience",
+    "lists.note.shira": "Modest workwear angle — pair with new spring jacket SKU",
+    "lists.note.adi": "Aesthetic match, ask about studio visit content",
+    "lists.note.maya": "ER below threshold for budget tier",
   },
   he: {
     // --- Header / nav ---
@@ -512,6 +544,38 @@ const I18N = {
     "profile.about.location.v": "תל אביב (סבירות גבוהה)",
     "profile.audience.note": "פילוח דמוגרפי של הקהל מחושב מדגימה של 1,200 מגיבים אחרונים. זמין רק ליוצרים מאומתים.",
     "profile.subtitle.her": "היא / שלה",
+
+    // --- Demo creator names & bios ---
+    "creator.noamfit.name": "נועם לוי · תל אביב",
+    "creator.yael.name": "יעל שמיר · תל אביב",
+    "creator.ronen.name": "רונן אברהם · תל אביב",
+    "creator.maya.name": "מאיה כהן · תל אביב",
+    "creator.daniel.name": "דניאל בן-דוד · רמת גן",
+    "creator.shira.name": "שירה גולד · תל אביב",
+    "creator.adi.name": "עדי קליין · תל אביב",
+    "creator.tamar.name": "תמר מזרחי · תל אביב",
+    "creator.noamfit.bio": "אופנה איטית, ממצאי וינטג' וסטיילינג בר-קיימא. משתפת פיטים מהארון שלי בפלורנטין. כיתובים בעברית ובאנגלית.",
+    "creator.yael.bio": "עורכת בווג ישראל ✦ פיטים יומיומיים מינימליסטיים ✦ שת״פ: yael@shamirstudio.co.il",
+    "creator.ronen.bio": "אופנת גברים ✂️ סיפורי תפירה משוק לוינסקי. מאחורי הקלעים של כל פריט שאני מייצר.",
+    "creator.maya.bio": "סטריטוור וסניקרס. ביקורות, דרופים ופיטים עירוניים ברחבי תל אביב. DMs פתוחים לשת״פ בתשלום.",
+    "creator.daniel.bio": "אופנת גברים סמארט-קז'ואל בתקציב. הולים שבועיים מיד שנייה + חישובי אאוטפיט (₪ ללבישה).",
+    "creator.shira.bio": "אופנה צנועה ✡️ לוקים יומיומיים לנשים עובדות. כיתובים בעברית, תוכן נלווה באנגלית.",
+    "creator.adi.bio": "סריגה בעבודת יד וסגנון איטי ✦ סטודיו בפלורנטין ✦ DMs לשת״פ והזמנות מראש",
+    "creator.tamar.bio": "תוכן דו-לשוני (עברית/אנגלית) על צבע, הדפסים ועיצוב ישראלי ✦ שותפויות: TogTime, אדיקה, קסטרו",
+
+    // --- Lists table: niche cells + notes ---
+    "lists.niche.vintage": "אופנה · וינטג'",
+    "lists.niche.editorial": "אופנה · עריכה",
+    "lists.niche.menswear": "אופנה · אופנת גברים",
+    "lists.niche.modest": "אופנה · צנוע",
+    "lists.niche.knitwear": "אופנה · סריגה",
+    "lists.niche.streetwear": "אופנה · סטריטוור",
+    "lists.note.noamfit": "זמינה לסוף מאי, ביקשה דוגמיות",
+    "lists.note.yael": "נשלח לפני יומיים, מחכה לתשובה",
+    "lists.note.ronen": "התאמת נישה חזקה, ER גבוה במיוחד — לבדוק קהל מחדש",
+    "lists.note.shira": "זווית של אופנת עבודה צנועה — לשלב עם דגם הז'קט החדש לאביב",
+    "lists.note.adi": "התאמה אסתטית, לשאול על תוכן ביקור בסטודיו",
+    "lists.note.maya": "ER מתחת לסף לתקציב הזה",
   }
 };
 
