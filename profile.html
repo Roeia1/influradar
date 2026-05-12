@@ -31,7 +31,7 @@
       <button data-lang="en">EN</button>
       <button data-lang="he">עב</button>
     </div>
-    <button class="btn">ACW · Castro ▾</button>
+    <button class="btn" data-i18n="workspace.castro">ACW · Castro ▾</button>
   </div>
 </header>
 
@@ -44,20 +44,20 @@
     <div class="avatar avatar-lg a1">נל</div>
     <div class="meta-block">
       <h1>@noamfit_tlv</h1>
-      <div class="name-line">Noam Levi · Tel Aviv · she/her</div>
+      <div class="name-line">Noam Levi · Tel Aviv · <span data-i18n="profile.subtitle.her">she/her</span></div>
       <div class="niche-row" style="margin-bottom:10px">
         <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
-        <span class="niche-tag">Vintage</span>
-        <span class="niche-tag">Sustainable</span>
-        <span class="niche-tag">HE / EN</span>
+        <span class="niche-tag" data-i18n="tag.vintage">Vintage</span>
+        <span class="niche-tag" data-i18n="tag.sustainable">Sustainable</span>
+        <span class="niche-tag" data-i18n="tag.heen">HE / EN</span>
       </div>
       <div class="row" style="gap:8px;flex-wrap:wrap">
         <span class="status-pill pill-unclaimed" style="position:static" data-i18n="card.unclaimed">Unclaimed</span>
-        <span class="creds-badge">Verified ER · 94% real audience</span>
+        <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 94% <span data-i18n="creds.realAudience">real audience</span></span>
       </div>
     </div>
     <div class="actions">
-      <button class="btn">+ Save to list</button>
+      <button class="btn" data-i18n="profile.btn.save">+ Save to list</button>
       <button class="btn btn-primary btn-lg" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
     </div>
   </div>
@@ -68,7 +68,7 @@
     <div>
       <div class="panel">
         <h3 data-i18n="profile.about">About</h3>
-        <p class="text-muted" style="font-size:14px;line-height:1.6;margin:0 0 16px">
+        <p class="text-muted" style="font-size:14px;line-height:1.6;margin:0 0 16px" data-i18n="profile.about.body">
           Slow fashion, vintage finds & sustainable styling. Sharing fits from my Florentin closet. Hebrew + English captions.
           Open to brand collaborations aligned with sustainability values.
         </p>
@@ -86,11 +86,11 @@
         </div>
         <div class="kv-row">
           <span class="k" data-i18n="profile.stat.lang">Primary language</span>
-          <span class="v">Hebrew (74%) · English (26%)</span>
+          <span class="v" data-i18n="profile.about.lang.v">Hebrew (74%) · English (26%)</span>
         </div>
         <div class="kv-row">
           <span class="k" data-i18n="profile.stat.location">Location signal</span>
-          <span class="v">Tel Aviv (high confidence)</span>
+          <span class="v" data-i18n="profile.about.location.v">Tel Aviv (high confidence)</span>
         </div>
       </div>
 
@@ -111,8 +111,8 @@
           <div class="bar" style="height:68%"></div>
         </div>
         <div class="row-space-between small text-muted">
-          <span>12 posts ago</span>
-          <span>Today</span>
+          <span data-i18n="profile.spark.start">12 posts ago</span>
+          <span data-i18n="profile.spark.end">Today</span>
         </div>
       </div>
 
@@ -179,20 +179,20 @@
           <div class="track"><div class="fill" style="width:47%"></div></div>
         </div>
 
-        <p class="text-muted small" style="margin-top:14px;line-height:1.5">
+        <p class="text-muted small" style="margin-top:14px;line-height:1.5" data-i18n="profile.audience.note">
           Audience demographics inferred from a sample of 1,200 recent engagers. Available for verified creators only.
         </p>
       </div>
 
       <div class="panel">
-        <h3 style="margin-bottom:10px">Use this profile</h3>
+        <h3 style="margin-bottom:10px" data-i18n="profile.use.title">Use this profile</h3>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:13px">
-          <li><a href="#" style="color:var(--accent)">+ Add to Spring fashion drop</a></li>
-          <li><a href="#" style="color:var(--accent)">+ Compare with another creator</a></li>
-          <li><a href="#" style="color:var(--accent)">⤓ Export PDF for client deck</a></li>
-          <li><a href="#" style="color:var(--accent)">⊕ Check creator history (your campaigns)</a></li>
+          <li><a href="#" style="color:var(--accent)" data-i18n="profile.use.l1">+ Add to Spring fashion drop</a></li>
+          <li><a href="#" style="color:var(--accent)" data-i18n="profile.use.l2">+ Compare with another creator</a></li>
+          <li><a href="#" style="color:var(--accent)" data-i18n="profile.use.l3">⤓ Export PDF for client deck</a></li>
+          <li><a href="#" style="color:var(--accent)" data-i18n="profile.use.l4">⊕ Check creator history (your campaigns)</a></li>
         </ul>
-        <p class="text-muted small" style="margin-top:14px;line-height:1.5;padding-top:14px;border-top:1px solid var(--border)">
+        <p class="text-muted small" style="margin-top:14px;line-height:1.5;padding-top:14px;border-top:1px solid var(--border)" data-i18n="profile.use.body">
           Data refreshed 2h ago via Meta Business Discovery. Audience credibility scored nightly. Last engagement-rate check: today 09:14.
         </p>
       </div>
@@ -234,6 +234,6 @@
 
 <div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
 
-<script src="i18n.js"></script>
+<script src="i18n.js?v=2"></script>
 </body>
 </html>
