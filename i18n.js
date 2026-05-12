@@ -12,7 +12,11 @@ const I18N = {
     "nav.pricing": "Pricing",
     "nav.signin": "Sign in",
     "nav.demo": "See demo",
+    "nav.menu": "Menu",
     "brand.beta": "beta · IL",
+    "filter.toggle": "Filters",
+    "filter.active": "3 active",
+    "filter.close": "Close",
 
     // --- Landing ---
     "land.eyebrow": "Built for Israeli agencies and in-house teams",
@@ -189,7 +193,11 @@ const I18N = {
     "nav.pricing": "מחירון",
     "nav.signin": "התחברות",
     "nav.demo": "צפו בדמו",
+    "nav.menu": "תפריט",
     "brand.beta": "בטא · ישראל",
+    "filter.toggle": "סינון",
+    "filter.active": "3 פעילים",
+    "filter.close": "סגור",
 
     // --- Landing ---
     "land.eyebrow": "נבנה במיוחד לסוכנויות וצוותי שיווק בישראל",
@@ -387,3 +395,17 @@ function initI18n(){
 }
 
 document.addEventListener("DOMContentLoaded", initI18n);
+
+// Mobile UX: drawer + bottom-sheet toggles
+function toggleMobileNav(){
+  document.body.classList.toggle("mobile-nav-open");
+  document.body.classList.remove("filter-sheet-open");
+}
+function toggleFilterSheet(){
+  document.body.classList.toggle("filter-sheet-open");
+  document.body.classList.remove("mobile-nav-open");
+}
+function closeMobileSheets(){
+  document.body.classList.remove("mobile-nav-open");
+  document.body.classList.remove("filter-sheet-open");
+}

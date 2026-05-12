@@ -51,6 +51,51 @@ header.topbar{
 .topnav a.active{color:var(--text)}
 .top-actions{display:flex;gap:10px;align-items:center}
 
+/* Hamburger button — hidden on desktop, shown ≤900px */
+.hamburger{
+  display:none;flex-direction:column;justify-content:center;gap:4px;
+  width:34px;height:34px;background:transparent;border:1px solid var(--border);
+  border-radius:8px;cursor:pointer;padding:0;
+  transition:background .15s;
+}
+.hamburger:hover{background:var(--panel-2)}
+.hamburger span{display:block;height:2px;width:16px;background:var(--text);border-radius:2px;margin:0 auto}
+
+/* Filter toggle button (app view, mobile only) */
+.filter-toggle{
+  display:none;align-items:center;gap:10px;
+  width:100%;padding:11px 14px;
+  background:var(--panel);border:1px solid var(--border);border-radius:10px;
+  font-size:13px;font-weight:600;color:var(--text);
+  margin-bottom:12px;cursor:pointer;
+}
+.filter-toggle:hover{border-color:var(--border-light)}
+.filter-toggle .icon{font-size:14px;color:var(--accent)}
+.filter-toggle .label{flex:1;text-align:start}
+.filter-toggle .count{
+  padding:2px 9px;border-radius:999px;
+  background:var(--accent-glow);color:#cbbcff;
+  font-size:11px;font-weight:700;
+}
+
+/* Filter close (inside aside.filters when shown as bottom-sheet) */
+.filter-close{
+  display:none;position:absolute;top:14px;inset-inline-end:14px;
+  width:32px;height:32px;align-items:center;justify-content:center;
+  background:var(--panel-2);border:1px solid var(--border);
+  border-radius:50%;color:var(--text);font-size:18px;line-height:1;
+  cursor:pointer;z-index:2;
+}
+
+/* Shared dim overlay for mobile drawer + sheet */
+.sheet-backdrop{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.55);backdrop-filter:blur(2px);
+  z-index:8;
+}
+body.mobile-nav-open .sheet-backdrop{display:block;z-index:8}
+body.filter-sheet-open .sheet-backdrop{display:block;z-index:48}
+
 .btn{
   padding:8px 14px;border-radius:8px;font-weight:600;font-size:13px;
   background:var(--panel-2);color:var(--text);border:1px solid var(--border);
@@ -472,7 +517,24 @@ html[dir=rtl] .brand small{margin-inline-start:6px}
    Tablet (≤ 900px): collapse sidebar nav, soften layouts
    =================================================================== */
 @media (max-width:900px){
+  .hamburger{display:flex}
+  /* Topnav hidden by default; revealed as a drawer below the topbar */
   .topnav{display:none}
+  body.mobile-nav-open .topnav{
+    display:flex;flex-direction:column;
+    position:fixed;top:53px;inset-inline-start:0;inset-inline-end:0;
+    background:var(--panel);border-bottom:1px solid var(--border);
+    padding:6px 18px 14px;gap:0;font-size:15px;
+    z-index:9;
+    box-shadow:0 12px 28px rgba(0,0,0,.35);
+  }
+  body.mobile-nav-open .topnav a{
+    padding:14px 0;border-bottom:1px solid var(--border);
+    color:var(--text);
+  }
+  body.mobile-nav-open .topnav a:last-child{border-bottom:0}
+  body.mobile-nav-open .topnav a.active{color:var(--accent)}
+
   .profile-grid{grid-template-columns:1fr}
   .profile-header{padding:22px}
   .profile-header .avatar-lg{width:64px;height:64px;font-size:22px}
@@ -486,30 +548,40 @@ html[dir=rtl] .brand small{margin-inline-start:6px}
 @media (max-width:760px){
   .layout{grid-template-columns:1fr}
 
-  /* Filter sidebar collapses into a single horizontal-scroll chip strip
-     so creator results are visible immediately on phones/small tablets. */
+  /* "Filters" button visible at the top of results */
+  .filter-toggle{display:flex}
+
+  /* Filter sidebar becomes a slide-up bottom sheet. Hidden by default
+     (off-screen); revealed when body has .filter-sheet-open. */
   aside.filters{
-    border-inline-end:0;border-bottom:1px solid var(--border);
-    padding:10px 14px;
-    display:flex;align-items:center;gap:14px;
-    overflow-x:auto;overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;scrollbar-width:none;
-    position:sticky;top:51px;z-index:5;
+    position:fixed;bottom:-100%;left:0;right:0;
+    background:var(--panel);
+    border:0;border-top:1px solid var(--border);
+    border-radius:18px 18px 0 0;
+    padding:48px 18px 24px;
+    max-height:85vh;overflow-y:auto;
+    z-index:49;
+    transition:bottom .25s ease-out;
+    -webkit-overflow-scrolling:touch;
   }
-  aside.filters::-webkit-scrollbar{display:none}
-  /* Hide range and checkbox filter groups — keep chip-based ones */
-  aside.filters .filter-group:not(:has(.chip-row)){display:none}
-  aside.filters .filter-group{
-    margin:0;display:flex;align-items:center;gap:8px;
-    flex-shrink:0;
-    padding-inline-end:14px;
-    border-inline-end:1px solid var(--border);
+  body.filter-sheet-open aside.filters{bottom:0}
+
+  /* Sheet header label */
+  aside.filters::before{
+    content:"Filters";
+    position:absolute;top:18px;inset-inline-start:18px;
+    font-size:14px;font-weight:700;color:var(--text);
   }
-  aside.filters .filter-group:last-of-type{border-inline-end:0;padding-inline-end:0}
-  aside.filters .filter-group h4{margin:0;font-size:10px;flex-shrink:0}
-  aside.filters .chip-row{flex-wrap:nowrap;gap:5px}
-  aside.filters .chip{flex-shrink:0;font-size:11px;padding:4px 9px}
-  aside.filters .btn-block{display:none}
+  html[dir=rtl] aside.filters::before{content:"סינון"}
+  .filter-close{display:flex}
+
+  /* Restore vertical filter groups inside the sheet */
+  aside.filters .filter-group{margin-bottom:18px}
+  aside.filters .filter-group h4{font-size:11px;margin-bottom:10px}
+  aside.filters .chip-row{flex-wrap:wrap;gap:6px}
+  aside.filters .chip{font-size:12px;padding:5px 10px}
+  aside.filters .check-row{font-size:13px;margin-bottom:8px}
+  aside.filters .range input{font-size:13px;padding:8px 10px}
 
   .hero{padding:48px 20px 36px}
   .hero h1{font-size:30px;line-height:1.15}
@@ -601,9 +673,7 @@ html[dir=rtl] .brand small{margin-inline-start:6px}
   .cta-strip p{font-size:13px}
 
   /* ---- App view (discovery) ---- */
-  /* Filter strip rules already set at ≤760px — just tighten padding */
-  aside.filters{padding:8px 12px;gap:10px}
-  main.results{padding:18px 16px}
+  main.results{padding:16px 14px}
   .search-bar{flex-direction:column;gap:8px;align-items:stretch;margin-bottom:14px}
   .search-bar input[type=search],.sort-select{width:100%;padding:10px 12px;font-size:13px}
   .results-meta{font-size:12px;flex-direction:column;align-items:flex-start;gap:4px}

@@ -12,6 +12,9 @@
 
 <header class="topbar">
   <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="brand">
       <div class="brand-mark"></div>
       <span>Influradar</span>
@@ -36,6 +39,8 @@
 <div class="layout">
 
   <aside class="filters">
+
+    <button class="filter-close" onclick="toggleFilterSheet()" aria-label="Close">×</button>
 
     <div class="filter-group">
       <h4 data-i18n="filter.niche">Niche</h4>
@@ -101,6 +106,11 @@
   </aside>
 
   <main class="results">
+    <button class="filter-toggle" onclick="toggleFilterSheet()">
+      <span class="icon">⚙</span>
+      <span class="label" data-i18n="filter.toggle">Filters</span>
+      <span class="count" data-i18n="filter.active">3 active</span>
+    </button>
     <div class="search-bar">
       <input type="search" data-i18n-placeholder="app.search.placeholder" placeholder="Search by handle, bio keyword, or hashtag (e.g. #אופנהישראלית)" />
       <select class="sort-select">
@@ -394,6 +404,8 @@
     </div>
   </div>
 </div>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
 
 <script src="i18n.js"></script>
 </body>

@@ -11,6 +11,9 @@
 
 <header class="topbar">
   <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="brand">
       <div class="brand-mark"></div>
       <span>Influradar</span>
@@ -164,6 +167,8 @@
     All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API. Creators can claim or remove their profile at any time.
   </div>
 </div>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
 
 <script src="i18n.js"></script>
 </body>

@@ -12,6 +12,9 @@
 
 <header class="topbar">
   <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="brand">
       <div class="brand-mark"></div>
       <span>Influradar</span>
@@ -162,6 +165,8 @@
     Profile data refreshed daily from Meta's Business Discovery API. Audience scores computed nightly.
   </div>
 </div>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
 
 <script src="i18n.js"></script>
 </body>
