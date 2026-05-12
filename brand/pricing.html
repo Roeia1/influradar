@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pricing · Influradar for Brands</title>
+<meta name="description" content="Pricing plans for Israeli brands taking influencer marketing in-house. Pre-launch: 40% off first 6 months for the first 50 brands." />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span>Influradar</span>
+      <small data-i18n="brand.beta">beta · IL</small>
+    </a>
+    <nav class="topnav">
+      <a href="app.html" data-i18n="nav.discover">Discover</a>
+      <a href="pricing.html" class="active" data-i18n="nav.pricing">Pricing</a>
+    </nav>
+  </div>
+  <div class="top-actions">
+    <div class="lang-toggle">
+      <button data-lang="en">EN</button>
+      <button data-lang="he">עב</button>
+    </div>
+    <a href="app.html" class="btn" data-i18n="nav.signin">Sign in</a>
+    <a href="app.html" class="btn btn-primary" data-i18n="nav.demo">See demo</a>
+  </div>
+</header>
+
+<div class="page">
+
+  <div class="text-center" style="max-width:680px;margin:40px auto 0">
+    <h1 data-i18n="brand.pricing.h1">Pricing built for Israeli brands</h1>
+    <p class="subtitle" style="margin-top:14px" data-i18n="brand.pricing.sub">
+      Less than what an agency charges you for a single sourcing day. Try free for 14 days. 40% off your first 6 months for the first 50 brands.
+    </p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <!-- Solo -->
+    <div class="plan">
+      <div>
+        <h3 data-i18n="brand.pricing.solo.name">Solo</h3>
+        <div class="price">
+          <span class="strike">₪199</span>
+          <span class="nis">₪119</span>
+          <span class="cycle" data-i18n="pricing.cycle">/ month</span>
+        </div>
+        <p class="text-muted small mt-0" style="margin-top:6px" data-i18n="brand.plan.solo.desc">For one brand manager running 1–2 campaigns / month in-house</p>
+      </div>
+      <ul>
+        <li data-i18n="brand.plan.s.f1">1 seat</li>
+        <li data-i18n="brand.plan.s.f2">Up to 100 profile views / month</li>
+        <li data-i18n="brand.plan.s.f3">Basic niche & engagement filters</li>
+        <li data-i18n="brand.plan.s.f4">5 brief intros / month</li>
+        <li data-i18n="brand.plan.s.f5">Hebrew + English UI</li>
+        <li class="muted" data-i18n="brand.plan.s.f6">Audience credibility scores</li>
+        <li class="muted" data-i18n="brand.plan.s.f7">Audience-overlap matching</li>
+        <li class="muted" data-i18n="brand.plan.s.f8">Brand-safety screening</li>
+      </ul>
+      <a href="#" class="btn btn-block" data-i18n="brand.pricing.solo.cta">Start free trial</a>
+    </div>
+
+    <!-- Team -->
+    <div class="plan featured">
+      <div class="plan-badge" data-i18n="pricing.featured">Most popular</div>
+      <div>
+        <h3 data-i18n="brand.pricing.team.name">Team</h3>
+        <div class="price">
+          <span class="strike">₪399</span>
+          <span class="nis">₪249</span>
+          <span class="cycle" data-i18n="pricing.cycle">/ month</span>
+        </div>
+        <p class="text-muted small mt-0" style="margin-top:6px" data-i18n="brand.plan.team.desc">For brand marketing teams running campaigns in-house</p>
+      </div>
+      <ul>
+        <li data-i18n="brand.plan.p.f1">3 seats included (+₪49/extra seat)</li>
+        <li data-i18n="brand.plan.p.f2">Unlimited profile views</li>
+        <li data-i18n="brand.plan.p.f3">All filters: audience, language mix, location, credibility</li>
+        <li data-i18n="brand.plan.p.f4">25 brief intros / month + bulk send</li>
+        <li data-i18n="brand.plan.p.f5">Audience-overlap matching to your brand's followers</li>
+        <li data-i18n="brand.plan.p.f6">Audience snapshot (age, gender, location)</li>
+        <li data-i18n="brand.plan.p.f7">Brand-safety screening + competitor partnerships</li>
+        <li data-i18n="brand.plan.p.f8">Private creator roster + performance notes</li>
+        <li data-i18n="brand.plan.p.f9">Campaign tracking & response inbox</li>
+      </ul>
+      <a href="#" class="btn btn-primary btn-block" data-i18n="brand.pricing.team.cta">Start free trial</a>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="plan">
+      <div>
+        <h3 data-i18n="brand.pricing.ent.name">Enterprise</h3>
+        <div class="price">
+          <span class="nis" data-i18n="brand.pricing.ent.price">Custom</span>
+        </div>
+        <p class="text-muted small mt-0" style="margin-top:6px" data-i18n="brand.plan.ent.desc">For multi-brand portfolios and retail groups (Fox Group, BSR, Delta, etc.)</p>
+      </div>
+      <ul>
+        <li data-i18n="brand.plan.e.f1">Unlimited seats across all your brands</li>
+        <li data-i18n="brand.plan.e.f2">Everything in Team</li>
+        <li data-i18n="brand.plan.e.f3">Separate workspaces per brand in your portfolio</li>
+        <li data-i18n="brand.plan.e.f4">Unlimited brief intros</li>
+        <li data-i18n="brand.plan.e.f5">SSO + role-based permissions</li>
+        <li data-i18n="brand.plan.e.f6">Side-by-side creator comparison view</li>
+        <li data-i18n="brand.plan.e.f7">API access (1,000 calls / day)</li>
+        <li data-i18n="brand.plan.e.f8">Dedicated success manager + Hebrew support</li>
+        <li data-i18n="brand.plan.e.f9">Custom onboarding + competitor creator seed</li>
+      </ul>
+      <a href="#" class="btn btn-block" data-i18n="brand.pricing.ent.cta">Contact sales</a>
+    </div>
+
+  </div>
+
+  <p class="text-center text-muted small" data-i18n="brand.plan.legal">
+    Prices in ILS, exclude VAT. 40% off for the first 6 months while early-access slots last (42 of 50 remaining).
+  </p>
+
+  <div class="faq">
+    <h2 class="text-center" data-i18n="pricing.faq.title">Frequently asked</h2>
+
+    <div class="faq-item" style="margin-top:24px">
+      <h4 data-i18n="brand.pricing.faq.q1">We already work with an agency. Why would we bring this in-house?</h4>
+      <p data-i18n="brand.pricing.faq.a1">Most Israeli agencies charge a ₪10–15K/month retainer for influencer sourcing — work that Influradar does for ₪249/month. Brands that want speed, transparency, and ownership of their creator roster bring it in-house. Brands that want full-service campaign execution still use an agency for production, contracts and reporting — and use Influradar to brief them with the exact creators they want.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 data-i18n="brand.pricing.faq.q2">How is this different from Heepsy, Modash, or Favikon?</h4>
+      <p data-i18n="brand.pricing.faq.a2">Israel-first, not Israel-as-an-afterthought. Hebrew-native search, deeper Israeli creator coverage (modest fashion, mizrahi food, Hebrew tech creators), ILS pricing, and brand-side features global tools don't have — audience-overlap matching to your brand's actual followers, competitor-partnership screening, and a creator roster that's yours forever.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 data-i18n="brand.pricing.faq.q3">What is "audience overlap" matching?</h4>
+      <p data-i18n="brand.pricing.faq.a3">We measure what percentage of a creator's audience already follows your brand's Instagram account. A creator with 50% overlap is partnering with an audience that already knows you — different campaign math than reaching cold followers. Available on Team and Enterprise plans, once you connect your brand's Instagram.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 data-i18n="brand.pricing.faq.q4">Do you take a cut of the creator deals?</h4>
+      <p data-i18n="brand.pricing.faq.a4">Never. Influradar is subscription only. Zero commission on what you pay the creator, zero per-message fees, zero markup. Your full media budget goes to the creator. We don't touch invoices or contracts — those are between you and the creator (or the creator's agency).</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 data-i18n="brand.pricing.faq.q5">What if our marketing team has no influencer experience?</h4>
+      <p data-i18n="brand.pricing.faq.a5">The Team plan includes a 1-hour onboarding session, brief templates that match Israeli market norms, and a credibility-score-first workflow that protects you from common mistakes (bought followers, engagement pods, declining accounts). Most brand teams run their first campaign within 3 weeks of starting the trial.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 data-i18n="brand.pricing.faq.q6">Can I cancel anytime?</h4>
+      <p data-i18n="brand.pricing.faq.a6">Yes. Monthly plans cancel anytime. Annual plans (40% discount) lock in the price for 12 months. If you cancel, your creator roster and campaign history export as CSV — you keep the data.</p>
+    </div>
+  </div>
+
+  <div class="footer-note" style="margin-top:60px" data-i18n="footer.source">
+    Profile data refreshed daily from Meta's Business Discovery API. Audience scores computed nightly.
+  </div>
+</div>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
+
+<script src="../i18n.js?v=4"></script>
+</body>
+</html>
