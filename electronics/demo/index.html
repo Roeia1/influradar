@@ -6,7 +6,7 @@
 <script>
   window.__niche = "electronics";
   fetch("../../brand/app.html").then(r => r.text()).then(html => {
-    html = html.replace("<head>", '<head><base href="../../brand/">');
+    html = html.replace("<head>", '<head><style>html{visibility:hidden}</style><base href="../../brand/">');
     document.open(); document.write(html); document.close();
   });
 </script>

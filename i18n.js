@@ -833,6 +833,10 @@ function applyI18n(lang){
     b.classList.toggle("active", b.dataset.lang === lang);
   });
   try { localStorage.setItem("influradar_lang", lang); } catch(_) {}
+  // Reveal page after translations apply, unless a niche overlay is also
+  // about to run — in that case let niche-demo.js do the reveal so the
+  // user doesn't see fashion content briefly before the niche swap.
+  if (!window.__niche) document.documentElement.style.visibility = "visible";
 }
 
 function initI18n(){

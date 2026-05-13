@@ -6,7 +6,7 @@
 <script>
   fetch("../brand/index.html").then(r => r.text()).then(html => {
     html = html
-      .replace("<head>", '<head><base href="../brand/">')
+      .replace("<head>", '<head><style>html{visibility:hidden}</style><base href="../brand/">')
       .replace(/href="app\.html"/g, 'href="../electronics/demo/"');
     document.open(); document.write(html); document.close();
   });

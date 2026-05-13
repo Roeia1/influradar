@@ -356,6 +356,9 @@ const NICHES = {
 
   function boot(){
     apply();
+    // Reveal the page now that the niche overlay has applied (i18n.js skips the
+    // reveal when window.__niche is set, to avoid a brief fashion-content flash).
+    document.documentElement.style.visibility = "visible";
     // Re-apply whenever language flips
     new MutationObserver(apply).observe(document.documentElement, {
       attributes: true, attributeFilter: ["dir", "lang"],
