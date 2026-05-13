@@ -47,6 +47,11 @@ const NICHES = {
         bio:  { en: "Dizengoff Square foodie & content creator ✦ Bezalel grad ✦ honest TLV restaurant recs.",
                 he: "הפודית של כיכר דיזינגוף ויוצרת תוכן ✦ בוגרת בצלאל ✦ המלצות כנות על מסעדות ת״א." },
         tags: [{en:"Food",he:"אוכל"},{en:"Tel Aviv",he:"תל אביב"},{en:"Restaurants",he:"מסעדות"}],
+        workedWith: [
+          { handle:"@night.cookie", name:"Night Cookie", logo:"../../assets/brands/night.cookie.jpg" },
+          { handle:"@basher.fromagerieil", name:"Basher Fromagerie", logo:"../../assets/brands/basher.fromagerieil.jpg" },
+          { handle:"@eatsane_israel", name:"Eatsane", logo:"../../assets/brands/eatsane_israel.jpg" },
+        ],
         creds: 96, followers: "4.0K", er: "9.6%", erGood: true, posts: "2.0" },
       { handle: "@vegan.idan",      initials: "עי", overlap: 36, badge: "mid",
         name: { en: "Idan Eshel · Ramat Gan",        he: "עידן אשל · רמת גן" },
@@ -294,13 +299,33 @@ const NICHES = {
     const erClass = c.erGood ? "value value-good" : "value";
     const t = lang() === "he"
       ? { overlap:"חפיפה", vER:"ER מאומת", real:"קהל אמיתי", fol:"עוקבים",
-          er:"שיעור מעורבות", posts:"פוסטים/שבוע", view:"לפרופיל", brief:"שלח בריף" }
+          er:"שיעור מעורבות", posts:"פוסטים/שבוע", view:"לפרופיל", brief:"שלח בריף",
+          collabs:"שיתופי פעולה", collabPast:n=>`${n} שיתופי עבר` }
       : { overlap:"overlap", vER:"Verified ER", real:"real audience", fol:"Followers",
-          er:"Eng. rate", posts:"Posts/wk", view:"View profile", brief:"Send brief" };
+          er:"Eng. rate", posts:"Posts/wk", view:"View profile", brief:"Send brief",
+          collabs:"Worked with", collabPast:n=>`${n} past collab${n===1?'':'s'}` };
     const avatarInner = c.photo
       ? `<img class="avatar-img" src="${c.photo}" alt="${c.handle}" loading="lazy" />`
       : c.initials;
     const profileHref = c.profileUrl || "profile.html";
+    const collabsHTML = (c.workedWith && c.workedWith.length)
+      ? `<div class="worked-with" tabindex="0" aria-label="${t.collabs}">
+           <div class="worked-with-logos">
+             ${c.workedWith.slice(0,3).map(b => `<img src="${b.logo}" alt="${b.handle}" loading="lazy" />`).join("")}
+           </div>
+           <span class="worked-with-label">${t.collabPast(c.workedWith.length)}</span>
+           <div class="worked-with-popover">
+             <div class="worked-with-popover-title">${t.collabs}</div>
+             <ul>
+               ${c.workedWith.map(b => `
+                 <li>
+                   <img src="${b.logo}" alt="" />
+                   <div><b>${b.name}</b><span>${b.handle}</span></div>
+                 </li>`).join("")}
+             </ul>
+           </div>
+         </div>`
+      : "";
     return `
       <div class="card">
         <div class="card-head">
@@ -316,6 +341,7 @@ const NICHES = {
           <span class="overlap-badge ${c.badge==='high'?'high':c.badge==='low'?'low':''}">${c.overlap}% <span>${t.overlap}</span></span>
           <span class="creds-badge"><span>${t.vER}</span> · ${c.creds}% <span>${t.real}</span></span>
         </div>
+        ${collabsHTML}
         <div class="stats">
           <div class="stat-cell"><div class="label">${t.fol}</div><div class="value">${c.followers}</div></div>
           <div class="stat-cell"><div class="label">${t.er}</div><div class="${erClass}">${c.er}</div></div>
