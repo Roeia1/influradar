@@ -56,6 +56,10 @@ Recommend grabbing both — `.co.il` for the Israeli credibility, `.com` as fall
 - [ ] Add Hebrew alt text on hero illustrations once added.
 - [ ] Update prices on `pricing.html` if you settle on different tiers after buyer conversations.
 
+## Adding a real creator to the demo
+
+See [`docs/adding-a-creator.md`](docs/adding-a-creator.md) — a step-by-step playbook for pulling profile data from Instagram, wiring a new card into `brand/niche-demo.js`, and (optionally) building a dedicated profile page with real post thumbnails and past brand-collab logos. Used to add [@maya.agassi](https://www.instagram.com/maya.agassi/) to the food demo.
+
 ## Notes on the i18n implementation
 
 - All translatable text uses `data-i18n="key"` and is replaced from `I18N[lang]` in `i18n.js`.
