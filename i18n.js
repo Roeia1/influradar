@@ -173,9 +173,9 @@ const I18N = {
     "lists.h1": "Campaign lists",
     "lists.sub": "Shortlists you've built. Track outreach status across creators in one place.",
     "lists.new": "+ New list",
-    "lists.tab.spring": "Castro · Spring fashion drop",
-    "lists.tab.fitness": "Naked Foods · Fitness Q3",
-    "lists.tab.food": "Aroma · New Florentin branch",
+    "lists.tab.spring": "Adira · Spring fashion drop",
+    "lists.tab.fitness": "PurePlate · Fitness Q3",
+    "lists.tab.food": "Bean Bar · New Florentin branch",
     "lists.table.creator": "Creator",
     "lists.table.niche": "Niche",
     "lists.table.followers": "Followers",
@@ -219,12 +219,12 @@ const I18N = {
     "plan.legal": "Prices in ILS, exclude VAT. 40% off for the first 6 months while early-access slots last (42 of 50 remaining).",
 
     // --- Workspace switcher (top bar) ---
-    "workspace.castro": "ACW · Castro ▾",
+    "workspace.castro": "ACW · Adira ▾",
     "workspace.agency": "ACW Agency ▾",
 
     // --- Agency bulk-action bar ---
     "agency.bulk.count": "3 selected",
-    "agency.bulk.list": "↳ Castro · S/S Drop shortlist",
+    "agency.bulk.list": "↳ Adira · S/S Drop shortlist",
     "agency.bulk.add": "+ Add to list",
     "agency.bulk.export": "Export client PDF",
     "agency.bulk.send": "Send 3 briefs",
@@ -283,7 +283,7 @@ const I18N = {
     "creator.daniel.bio": "Smart casual menswear on a budget. Weekly thrift hauls + outfit math (₪ per wear).",
     "creator.shira.bio": "Modest fashion ✡️ everyday looks for working women. Hebrew captions, English alt text.",
     "creator.adi.bio": "Handmade knitwear & slow style ✦ studio in Florentin ✦ DMs for collabs and pre-orders",
-    "creator.tamar.bio": "Bilingual content (HE/EN) on color, print and Israeli design ✦ partners: TogTime, Adika, Castro",
+    "creator.tamar.bio": "Bilingual content (HE/EN) on color, print and Israeli design ✦ open to fashion-label collabs",
 
     // --- Lists table: niche cells + notes ---
     "lists.niche.vintage": "Fashion · Vintage",
@@ -399,13 +399,13 @@ const I18N = {
     "brand.pricing.faq.a6": "Yes. Monthly plans cancel anytime. Annual plans (40% discount) lock in the price for 12 months. If you cancel, your creator roster and campaign history export as CSV — you keep the data.",
 
     // --- Brand app overrides ---
-    "brand.workspace.castro": "Castro · Marketing ▾",
+    "brand.workspace.castro": "Adira · Marketing ▾",
     "brand.modal.notice": "This brief is included in your Team plan (3 of 25 sent this month). The brief is sent from your brand email — no middleman, no agency boilerplate.",
     "brand.filter.overlap": "Audience overlap with your brand",
     "brand.filter.overlap.meta": "412K followers · matched daily",
     "brand.filter.overlap.swap": "Change ▾",
     "brand.app.sort.overlap": "Sort: Audience overlap ↓",
-    "brand.app.results.meta.a": "creators match · ≥15% overlap with @castro_il · Fashion · Tel Aviv",
+    "brand.app.results.meta.a": "creators match · ≥15% overlap with @adira_il · Fashion · Tel Aviv",
     "brand.app.results.meta.b": "Overlap refreshed nightly · Profile data 2h ago",
     "brand.card.overlap": "overlap",
   },
@@ -579,9 +579,9 @@ const I18N = {
     "lists.h1": "רשימות קמפיין",
     "lists.sub": "רשימות קצרות שבניתם. עקבו אחרי מצב הפנייה לכל יוצר במקום אחד.",
     "lists.new": "+ רשימה חדשה",
-    "lists.tab.spring": "Castro · קולקציית אביב",
-    "lists.tab.fitness": "Naked Foods · כושר רבעון 3",
-    "lists.tab.food": "Aroma · סניף פלורנטין חדש",
+    "lists.tab.spring": "Adira · קולקציית אביב",
+    "lists.tab.fitness": "PurePlate · כושר רבעון 3",
+    "lists.tab.food": "Bean Bar · סניף פלורנטין חדש",
     "lists.table.creator": "יוצר",
     "lists.table.niche": "נישה",
     "lists.table.followers": "עוקבים",
@@ -625,12 +625,12 @@ const I18N = {
     "plan.legal": "מחירים בשקלים, לא כולל מע״מ. 40% הנחה לחצי שנה ראשונה כל עוד יש מקומות במחיר ההשקה (נשארו 42 מתוך 50).",
 
     // --- Workspace switcher (top bar) ---
-    "workspace.castro": "ACW · קסטרו ▾",
+    "workspace.castro": "ACW · אדירה ▾",
     "workspace.agency": "ACW סוכנות ▾",
 
     // --- Agency bulk-action bar ---
     "agency.bulk.count": "3 נבחרו",
-    "agency.bulk.list": "↳ קסטרו · שורטליסט קולקציית קיץ",
+    "agency.bulk.list": "↳ אדירה · שורטליסט קולקציית קיץ",
     "agency.bulk.add": "+ הוספה לרשימה",
     "agency.bulk.export": "ייצוא PDF ללקוח",
     "agency.bulk.send": "שליחת 3 בריפים",
@@ -689,7 +689,7 @@ const I18N = {
     "creator.daniel.bio": "אופנת גברים סמארט-קז'ואל בתקציב. הולים שבועיים מיד שנייה + חישובי אאוטפיט (₪ ללבישה).",
     "creator.shira.bio": "אופנה צנועה ✡️ לוקים יומיומיים לנשים עובדות. כיתובים בעברית, תוכן נלווה באנגלית.",
     "creator.adi.bio": "סריגה בעבודת יד וסגנון איטי ✦ סטודיו בפלורנטין ✦ DMs לשת״פ והזמנות מראש",
-    "creator.tamar.bio": "תוכן דו-לשוני (עברית/אנגלית) על צבע, הדפסים ועיצוב ישראלי ✦ שותפויות: TogTime, אדיקה, קסטרו",
+    "creator.tamar.bio": "תוכן דו-לשוני (עברית/אנגלית) על צבע, הדפסים ועיצוב ישראלי ✦ פתוחה לשת״פים עם מותגי אופנה",
 
     // --- Lists table: niche cells + notes ---
     "lists.niche.vintage": "אופנה · וינטג'",
@@ -805,13 +805,13 @@ const I18N = {
     "brand.pricing.faq.a6": "כן. תוכניות חודשיות מתבטלות בכל עת. תוכניות שנתיות (40% הנחה) נועלות מחיר ל-12 חודשים. אם תבטלו, מאגר היוצרים והיסטוריית הקמפיינים מיוצאים כ-CSV — המידע נשאר אצלכם.",
 
     // --- Brand app overrides ---
-    "brand.workspace.castro": "קסטרו · שיווק ▾",
+    "brand.workspace.castro": "אדירה · שיווק ▾",
     "brand.modal.notice": "הבריף כלול בתוכנית 'צוות' (3 מתוך 25 בחודש). הבריף נשלח מהמייל של המותג שלכם — בלי מתווך, בלי בויילרפלייט של סוכנות.",
     "brand.filter.overlap": "חפיפת קהל עם המותג שלך",
     "brand.filter.overlap.meta": "412K עוקבים · מתאמת מדי לילה",
     "brand.filter.overlap.swap": "החלף ▾",
     "brand.app.sort.overlap": "מיון: חפיפת קהל ↓",
-    "brand.app.results.meta.a": "יוצרים תואמים · חפיפה ≥15% עם @castro_il · אופנה · תל אביב",
+    "brand.app.results.meta.a": "יוצרים תואמים · חפיפה ≥15% עם @adira_il · אופנה · תל אביב",
     "brand.app.results.meta.b": "חפיפת קהל מתעדכנת לילית · פרופילים לפני שעתיים",
     "brand.card.overlap": "חפיפה",
   }

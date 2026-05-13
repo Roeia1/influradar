@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Discover · Influradar</title>
+<script>
+  // Niche demo stub — keeps /food/ in the URL bar, loads the canonical app shell.
+  window.__niche = "food";
+  fetch("/brand/app.html").then(r => r.text()).then(html => {
+    document.open(); document.write(html); document.close();
+  });
+</script>
