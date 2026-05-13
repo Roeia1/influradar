@@ -3,8 +3,10 @@
 <title>Discover · Influradar</title>
 <script>
   // Niche demo stub — keeps /food/ in the URL bar, loads the canonical app shell.
+  // Relative paths so the site can be hosted at either the domain root or a subpath.
   window.__niche = "food";
-  fetch("/brand/app.html").then(r => r.text()).then(html => {
+  fetch("../brand/app.html").then(r => r.text()).then(html => {
+    html = html.replace("<head>", '<head><base href="../brand/">');
     document.open(); document.write(html); document.close();
   });
 </script>
