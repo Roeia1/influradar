@@ -41,6 +41,8 @@ const NICHES = {
         tags: [{en:"Food",he:"אוכל"},{en:"Café",he:"בתי קפה"},{en:"Reviews",he:"ביקורות"}],
         creds: 90, followers: "32.6K", er: "8.9%", erGood: true, posts: "4.2" },
       { handle: "@maya.agassi",     initials: "מא", overlap: 39, badge: "high",
+        photo: "../../assets/creators/maya.agassi.jpg",
+        profileUrl: "../food/demo/profile.html",
         name: { en: "Maya Agassi · Tel Aviv",        he: "מאיה אגסי · תל אביב" },
         bio:  { en: "Dizengoff Square foodie & content creator ✦ Bezalel grad ✦ honest TLV restaurant recs.",
                 he: "הפודית של כיכר דיזינגוף ויוצרת תוכן ✦ בוגרת בצלאל ✦ המלצות כנות על מסעדות ת״א." },
@@ -295,10 +297,14 @@ const NICHES = {
           er:"שיעור מעורבות", posts:"פוסטים/שבוע", view:"לפרופיל", brief:"שלח בריף" }
       : { overlap:"overlap", vER:"Verified ER", real:"real audience", fol:"Followers",
           er:"Eng. rate", posts:"Posts/wk", view:"View profile", brief:"Send brief" };
+    const avatarInner = c.photo
+      ? `<img class="avatar-img" src="${c.photo}" alt="${c.handle}" loading="lazy" />`
+      : c.initials;
+    const profileHref = c.profileUrl || "profile.html";
     return `
       <div class="card">
         <div class="card-head">
-          <div class="avatar a${(idx%8)+1}">${c.initials}</div>
+          <div class="avatar a${(idx%8)+1}">${avatarInner}</div>
           <div>
             <div class="handle">${c.handle}</div>
             <div class="name">${pick(c.name)}</div>
@@ -316,7 +322,7 @@ const NICHES = {
           <div class="stat-cell"><div class="label">${t.posts}</div><div class="value">${c.posts}</div></div>
         </div>
         <div class="card-actions">
-          <a href="profile.html" class="btn">${t.view}</a>
+          <a href="${profileHref}" class="btn">${t.view}</a>
           <button class="btn btn-primary" onclick="document.getElementById('m').classList.add('open')">${t.brief}</button>
         </div>
       </div>`;
