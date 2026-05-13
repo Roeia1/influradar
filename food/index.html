@@ -1,12 +1,13 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Discover · Influradar</title>
+<title>Influradar — Influencer sourcing built for Israeli brands</title>
 <script>
-  // Niche demo stub — keeps /food/ in the URL bar, loads the canonical app shell.
-  // Relative paths so the site can be hosted at either the domain root or a subpath.
-  window.__niche = "food";
-  fetch("../brand/app.html").then(r => r.text()).then(html => {
-    html = html.replace("<head>", '<head><base href="../brand/">');
+  // Niche landing stub — keeps /food/ in the URL bar, loads the canonical brand
+  // landing page, then re-points the demo CTAs at the food niche demo.
+  fetch("../brand/index.html").then(r => r.text()).then(html => {
+    html = html
+      .replace("<head>", '<head><base href="../brand/">')
+      .replace(/href="app\.html"/g, 'href="../food/demo/"');
     document.open(); document.write(html); document.close();
   });
 </script>

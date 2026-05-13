@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Discover · Influradar</title>
+<script>
+  window.__niche = "beauty";
+  fetch("../../brand/app.html").then(r => r.text()).then(html => {
+    html = html.replace("<head>", '<head><base href="../../brand/">');
+    document.open(); document.write(html); document.close();
+  });
+</script>
