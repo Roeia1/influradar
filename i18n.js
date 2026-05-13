@@ -26,7 +26,13 @@ const I18N = {
     "land.lede": "The discovery, vetting and outreach tool built specifically for Israeli agencies. Cut sourcing from 12 hours to 30 minutes — with Hebrew-native search, audience credibility scores, and client-ready exports.",
     "land.cta.primary": "Try the demo",
     "land.cta.secondary": "See pricing",
-    "land.trusted": "Trusted by Israeli agencies serving",
+    "land.trusted": "Built for the verticals Israeli agencies live in",
+    "land.vertical.fashion": "Fashion",
+    "land.vertical.beauty": "Beauty",
+    "land.vertical.food": "Food & café",
+    "land.vertical.pharma": "Pharma & wellness",
+    "land.vertical.lifestyle": "Lifestyle",
+    "land.vertical.d2c": "D2C",
     "land.stat1.big": "12 hrs",
     "land.stat1.lbl": "Saved per campaign vs. manual sourcing",
     "land.stat2.big": "11,400+",
@@ -83,18 +89,14 @@ const I18N = {
     "filter.business_only": "Business / Creator only",
     "filter.verified": "Verified (blue check)",
     "filter.recent_active": "Posted in last 14 days",
-    "filter.claimed_only": "Claimed profile only",
     "filter.reset": "Reset filters",
     "card.view": "View profile",
-    "card.express": "Express interest",
     "card.brief": "Send brief",
-    "card.unclaimed": "Unclaimed",
-    "card.claimed": "Claimed",
     "card.stat.followers": "Followers",
     "card.stat.er": "Eng. rate",
     "card.stat.posts": "Posts/wk",
     "card.creds": "94% real audience · verified ER",
-    "footer.source": "Profile data refreshed daily from Meta's Business Discovery API. Audience scores computed nightly. All metrics current as of the last refresh shown above each card.",
+    "footer.source": "Profile data refreshed daily from Meta's Business Discovery API. Audience scores computed nightly.",
     "niche.fashion": "Fashion",
     "niche.beauty": "Beauty",
     "niche.fitness": "Fitness",
@@ -114,8 +116,8 @@ const I18N = {
 
     // --- Modal ---
     "modal.title": "Send brief to",
-    "modal.sub": "We'll DM the creator on your behalf and surface the response in your inbox. Track status in Saved lists.",
-    "modal.notice": "This intro is included in your Pro plan (3 of 25 used this month). Your agency identity stays on the brief — your client identity is masked until the creator engages.",
+    "modal.sub": "We'll deliver the brief to the creator and surface their response in your inbox. Track status in Saved lists.",
+    "modal.notice": "This brief is included in your Pro plan (3 of 25 sent this month). Briefs are sent from your agency email so the creator replies directly to you.",
     "modal.campaign": "Campaign type",
     "modal.budget": "Budget (ILS)",
     "modal.brief": "Brief",
@@ -220,6 +222,13 @@ const I18N = {
     "workspace.castro": "ACW · Castro ▾",
     "workspace.agency": "ACW Agency ▾",
 
+    // --- Agency bulk-action bar ---
+    "agency.bulk.count": "3 selected",
+    "agency.bulk.list": "↳ Castro · S/S Drop shortlist",
+    "agency.bulk.add": "+ Add to list",
+    "agency.bulk.export": "Export client PDF",
+    "agency.bulk.send": "Send 3 briefs",
+
     // --- Niche secondary tags (cards & profile) ---
     "tag.vintage": "Vintage",
     "tag.sustainable": "Sustainable",
@@ -298,7 +307,7 @@ const I18N = {
     "brand.land.lede": "Influradar is the in-house influencer platform for Israeli brands. Discover creators your audience already follows, vet them on real metrics, and run outreach yourself — without the 15–25% agency markup or the black-box reporting.",
     "brand.land.cta.primary": "Try the demo",
     "brand.land.cta.secondary": "See pricing",
-    "brand.land.trusted": "Built for Israeli brands like",
+    "brand.land.trusted": "Built for Israeli brand teams in",
     "brand.land.stat1.big": "₪38K",
     "brand.land.stat1.lbl": "Saved per quarter vs. agency sourcing retainer",
     "brand.land.stat2.big": "11,400+",
@@ -391,7 +400,14 @@ const I18N = {
 
     // --- Brand app overrides ---
     "brand.workspace.castro": "Castro · Marketing ▾",
-    "brand.modal.notice": "This intro is included in your Team plan (3 of 25 used this month). The brief is sent from your brand email — no middleman, no agency boilerplate.",
+    "brand.modal.notice": "This brief is included in your Team plan (3 of 25 sent this month). The brief is sent from your brand email — no middleman, no agency boilerplate.",
+    "brand.filter.overlap": "Audience overlap with your brand",
+    "brand.filter.overlap.meta": "412K followers · matched daily",
+    "brand.filter.overlap.swap": "Change ▾",
+    "brand.app.sort.overlap": "Sort: Audience overlap ↓",
+    "brand.app.results.meta.a": "creators match · ≥15% overlap with @castro_il · Fashion · Tel Aviv",
+    "brand.app.results.meta.b": "Overlap refreshed nightly · Profile data 2h ago",
+    "brand.card.overlap": "overlap",
   },
   he: {
     // --- Header / nav ---
@@ -416,7 +432,13 @@ const I18N = {
     "land.lede": "כלי הגילוי, הסינון והפנייה שנבנה במיוחד לסוכנויות ישראליות. חתכו את זמן הסורסינג מ-12 שעות ל-30 דקות — עם חיפוש בעברית, ציוני אמינות קהל, ויצוא בעיצוב הסוכנות שלכם.",
     "land.cta.primary": "נסו את הדמו",
     "land.cta.secondary": "מחירון",
-    "land.trusted": "סוכנויות ישראליות שעובדות עם",
+    "land.trusted": "בנוי לוורטיקלים שבהם סוכנויות ישראליות חיות",
+    "land.vertical.fashion": "אופנה",
+    "land.vertical.beauty": "יופי",
+    "land.vertical.food": "אוכל ובתי קפה",
+    "land.vertical.pharma": "פארמה ובריאות",
+    "land.vertical.lifestyle": "לייפסטייל",
+    "land.vertical.d2c": "D2C",
     "land.stat1.big": "12 שעות",
     "land.stat1.lbl": "נחסכות בכל קמפיין מול סורסינג ידני",
     "land.stat2.big": "11,400+",
@@ -473,18 +495,14 @@ const I18N = {
     "filter.business_only": "Business / Creator בלבד",
     "filter.verified": "מאומת (וי כחול)",
     "filter.recent_active": "פרסם ב-14 ימים אחרונים",
-    "filter.claimed_only": "פרופילים מאוששים בלבד",
     "filter.reset": "אפס סינונים",
     "card.view": "צפייה בפרופיל",
-    "card.express": "להביע עניין",
     "card.brief": "לשלוח בריף",
-    "card.unclaimed": "לא מאושש",
-    "card.claimed": "מאושש",
     "card.stat.followers": "עוקבים",
     "card.stat.er": "שיעור עניין",
     "card.stat.posts": "פוסטים בשבוע",
     "card.creds": "94% קהל אמיתי · ER מאומת",
-    "footer.source": "נתוני הפרופיל מתעדכנים יומית דרך Meta Business Discovery API. ציוני אמינות קהל מחושבים בלילה. כל המדדים נכונים לזמן הרענון האחרון המוצג מעל כל כרטיס.",
+    "footer.source": "נתוני הפרופיל מתעדכנים יומית דרך Meta Business Discovery API. ציוני אמינות קהל מחושבים בלילה.",
     "niche.fashion": "אופנה",
     "niche.beauty": "יופי",
     "niche.fitness": "כושר",
@@ -504,8 +522,8 @@ const I18N = {
 
     // --- Modal ---
     "modal.title": "שליחת בריף ל-",
-    "modal.sub": "אנחנו נשלח DM ליוצר בשמכם ונציג את התגובה בתיבה שלכם. עקבו אחר הסטטוס ברשימות השמורות.",
-    "modal.notice": "הפנייה כלולה במנוי הפרו (3 מתוך 25 בחודש). זהות הסוכנות נשארת על הבריף — זהות הלקוח מוסתרת עד שהיוצר מגיב.",
+    "modal.sub": "אנחנו נעביר את הבריף ליוצר ונציג את התגובה בתיבה שלכם. עקבו אחר הסטטוס ברשימות השמורות.",
+    "modal.notice": "הבריף כלול במנוי הפרו (3 מתוך 25 בחודש). הבריף נשלח מהמייל של הסוכנות — היוצר עונה ישירות אליכם.",
     "modal.campaign": "סוג קמפיין",
     "modal.budget": "תקציב (₪)",
     "modal.brief": "בריף",
@@ -610,6 +628,13 @@ const I18N = {
     "workspace.castro": "ACW · קסטרו ▾",
     "workspace.agency": "ACW סוכנות ▾",
 
+    // --- Agency bulk-action bar ---
+    "agency.bulk.count": "3 נבחרו",
+    "agency.bulk.list": "↳ קסטרו · שורטליסט קולקציית קיץ",
+    "agency.bulk.add": "+ הוספה לרשימה",
+    "agency.bulk.export": "ייצוא PDF ללקוח",
+    "agency.bulk.send": "שליחת 3 בריפים",
+
     // --- Niche secondary tags ---
     "tag.vintage": "וינטג'",
     "tag.sustainable": "בר-קיימא",
@@ -688,7 +713,7 @@ const I18N = {
     "brand.land.lede": "Influradar היא הפלטפורמה הפנימית למשפיענים עבור מותגים ישראליים. גלו יוצרים שהקהל שלכם כבר עוקב אחריהם, סננו לפי מדדים אמיתיים, ונהלו פנייה בעצמכם — בלי 15%–25% עמלה לסוכנות ובלי דוחות מעורפלים.",
     "brand.land.cta.primary": "נסו את הדמו",
     "brand.land.cta.secondary": "מחירון",
-    "brand.land.trusted": "נבנה למותגים ישראליים כמו",
+    "brand.land.trusted": "בנוי לצוותי שיווק במותגים ישראליים בתחומי",
     "brand.land.stat1.big": "₪38K",
     "brand.land.stat1.lbl": "חיסכון רבעוני מול ריטיינר סורסינג בסוכנות",
     "brand.land.stat2.big": "11,400+",
@@ -781,7 +806,14 @@ const I18N = {
 
     // --- Brand app overrides ---
     "brand.workspace.castro": "קסטרו · שיווק ▾",
-    "brand.modal.notice": "הפנייה כלולה בתוכנית 'צוות' (3 מתוך 25 בחודש). הבריף נשלח מהמייל של המותג שלכם — בלי מתווך, בלי בויילרפלייט של סוכנות.",
+    "brand.modal.notice": "הבריף כלול בתוכנית 'צוות' (3 מתוך 25 בחודש). הבריף נשלח מהמייל של המותג שלכם — בלי מתווך, בלי בויילרפלייט של סוכנות.",
+    "brand.filter.overlap": "חפיפת קהל עם המותג שלך",
+    "brand.filter.overlap.meta": "412K עוקבים · מתאמת מדי לילה",
+    "brand.filter.overlap.swap": "החלף ▾",
+    "brand.app.sort.overlap": "מיון: חפיפת קהל ↓",
+    "brand.app.results.meta.a": "יוצרים תואמים · חפיפה ≥15% עם @castro_il · אופנה · תל אביב",
+    "brand.app.results.meta.b": "חפיפת קהל מתעדכנת לילית · פרופילים לפני שעתיים",
+    "brand.card.overlap": "חפיפה",
   }
 };
 
@@ -827,3 +859,93 @@ function closeMobileSheets(){
   document.body.classList.remove("mobile-nav-open");
   document.body.classList.remove("filter-sheet-open");
 }
+
+// --- Demo filter interactivity (toggle chips, recount, bulk select, reset) ---
+(function(){
+  function activeFilterCount(){
+    return document.querySelectorAll(".filters .chip.active").length
+         + document.querySelectorAll(".filters input[type=checkbox]:checked").length;
+  }
+  function animateCount(el, target){
+    if (!el) return;
+    var cur = parseInt(el.textContent.replace(/[^\d]/g,''),10) || target;
+    var dist = Math.abs(target - cur);
+    var dur = Math.min(420, 80 + dist*8);
+    var start = performance.now();
+    function tick(t){
+      var p = Math.min(1, (t-start)/dur);
+      var ease = 1 - Math.pow(1-p,3);
+      el.textContent = Math.round(cur + (target-cur)*ease);
+      if (p<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  function recompute(){
+    var countEl = document.querySelector(".results-meta strong");
+    var toggleCount = document.querySelector(".filter-toggle .count");
+    var n = activeFilterCount();
+    // Demo-only heuristic: more active filters → fewer results
+    var base = 312;
+    var target = Math.max(8, base - n*38 + Math.round((Math.random()-.5)*14));
+    animateCount(countEl, target);
+    if (toggleCount){
+      var word = (document.documentElement.dir === "rtl") ? " פעילים" : " active";
+      toggleCount.textContent = n + word;
+    }
+  }
+  function onChipClick(e){
+    var chip = e.target.closest(".filters .chip");
+    if (!chip) return;
+    chip.classList.toggle("active");
+    recompute();
+  }
+  function onCheckChange(e){
+    if (!e.target.closest(".filters")) return;
+    if (e.target.matches("input[type=checkbox]")) recompute();
+  }
+  function onReset(e){
+    var btn = e.target.closest(".filters .btn-block");
+    if (!btn) return;
+    // Default state: Fashion + HE/EN + Tel Aviv chips; business+recent checkboxes
+    document.querySelectorAll(".filters .chip").forEach(function(c){ c.classList.remove("active"); });
+    var defaults = ["niche.fashion","lang.hebrew","lang.english","loc.tlv"];
+    defaults.forEach(function(key){
+      var el = document.querySelector('.filters .chip[data-i18n="'+key+'"]');
+      if (el) el.classList.add("active");
+    });
+    document.querySelectorAll(".filters input[type=checkbox]").forEach(function(cb,i){
+      cb.checked = (i===0 || i===2); // business-only + posted-in-14-days
+    });
+    recompute();
+  }
+
+  // Bulk-select: clicking .card-check toggles selection + count
+  function onCardCheck(e){
+    var chk = e.target.closest(".card-check");
+    if (!chk) return;
+    e.stopPropagation();
+    var card = chk.closest(".card");
+    chk.classList.toggle("on");
+    card.classList.toggle("selected");
+    var n = document.querySelectorAll(".card-check.on").length;
+    var badge = document.querySelector(".bulk-bar .count-badge");
+    var send  = document.querySelector('[data-i18n="agency.bulk.send"]');
+    if (badge){
+      var rtl = document.documentElement.dir === "rtl";
+      badge.textContent = rtl ? (n + " נבחרו") : (n + " selected");
+    }
+    if (send){
+      var rtl = document.documentElement.dir === "rtl";
+      send.textContent = rtl ? ("שליחת " + n + " בריפים") : ("Send " + n + " briefs");
+    }
+    var bar = document.querySelector(".bulk-bar");
+    if (bar) bar.style.display = (n>0 ? "" : "none");
+  }
+
+  document.addEventListener("click", function(e){
+    onChipClick(e);
+    onReset(e);
+    onCardCheck(e);
+  });
+  document.addEventListener("change", onCheckChange);
+})();

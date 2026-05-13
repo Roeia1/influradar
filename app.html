@@ -32,6 +32,13 @@
       <button data-lang="en">EN</button>
       <button data-lang="he">עב</button>
     </div>
+    <span class="team-stack" title="Team on this workspace">
+      <span class="avatars">
+        <span class="avatar a2">RA</span>
+        <span class="avatar a6">NS</span>
+        <span class="avatar a5">+2</span>
+      </span>
+    </span>
     <button class="btn" data-i18n="workspace.castro">ACW · Castro ▾</button>
   </div>
 </header>
@@ -99,7 +106,6 @@
       <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.business_only">Business / Creator only</span></label>
       <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.verified">Verified (blue check)</span></label>
       <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.recent_active">Posted in last 14 days</span></label>
-      <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.claimed_only">Claimed profile only</span></label>
     </div>
 
     <button class="btn btn-block" data-i18n="filter.reset">Reset filters</button>
@@ -126,10 +132,20 @@
       <div data-i18n="app.results.meta.b">Data refreshed 2h ago via IG Business Discovery</div>
     </div>
 
+    <div class="bulk-bar">
+      <span class="count-badge"><span data-i18n="agency.bulk.count">3 selected</span></span>
+      <span class="sep" data-i18n="agency.bulk.list">↳ Castro · S/S Drop shortlist</span>
+      <div class="actions">
+        <button class="btn" data-i18n="agency.bulk.add">+ Add to list</button>
+        <button class="btn" data-i18n="agency.bulk.export">Export client PDF</button>
+        <button class="btn btn-primary" data-i18n="agency.bulk.send">Send 3 briefs</button>
+      </div>
+    </div>
+
     <div class="grid">
 
-      <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+      <div class="card selected">
+        <span class="card-check on"></span>
         <div class="card-head">
           <div class="avatar a1">נל</div>
           <div>
@@ -153,12 +169,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
+        <span class="card-check"></span>
         <div class="card-head">
           <div class="avatar a2">יש</div>
           <div>
@@ -182,12 +198,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <span class="card-check"></span>
         <div class="card-head">
           <div class="avatar a3">רא</div>
           <div>
@@ -211,12 +227,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
-      <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+      <div class="card selected">
+        <span class="card-check on"></span>
         <div class="card-head">
           <div class="avatar a4">מכ</div>
           <div>
@@ -240,12 +256,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
+        <span class="card-check"></span>
         <div class="card-head">
           <div class="avatar a5">דב</div>
           <div>
@@ -269,12 +285,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
-      <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+      <div class="card selected">
+        <span class="card-check on"></span>
         <div class="card-head">
           <div class="avatar a6">שג</div>
           <div>
@@ -298,12 +314,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
+        <span class="card-check"></span>
         <div class="card-head">
           <div class="avatar a7">אכ</div>
           <div>
@@ -327,12 +343,12 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
+        <span class="card-check"></span>
         <div class="card-head">
           <div class="avatar a8">תמ</div>
           <div>
@@ -356,7 +372,7 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
@@ -364,7 +380,6 @@
 
     <div class="footer-note" data-i18n="footer.source">
       All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API.
-      Creators can claim or remove their profile at any time.
     </div>
   </main>
 </div>
@@ -372,10 +387,10 @@
 <div class="modal-shade" id="m">
   <div class="modal">
     <h3><span data-i18n="modal.title">Send brief to</span> @noamfit_tlv</h3>
-    <p class="sub" data-i18n="modal.sub">Profile is unclaimed. We'll reach out on your behalf and notify you when they respond.</p>
+    <p class="sub" data-i18n="modal.sub">We'll deliver the brief to the creator and surface their response in your inbox. Track status in Saved lists.</p>
 
     <div class="notice" data-i18n="modal.notice">
-      This intro is included in your Pro plan (3 of 25 used this month). Your brand identity will be revealed to the creator only after they opt in.
+      This brief is included in your Pro plan (3 of 25 sent this month). Briefs are sent from your agency email so the creator replies directly to you.
     </div>
 
     <div class="form-row">

@@ -43,6 +43,23 @@
     <button class="filter-close" onclick="toggleFilterSheet()" aria-label="Close">×</button>
 
     <div class="filter-group">
+      <h4 data-i18n="brand.filter.overlap">Audience overlap with your brand</h4>
+      <div class="overlap-target">
+        <div class="swatch">CA</div>
+        <div class="meta">
+          <b>@castro_il</b>
+          <span data-i18n="brand.filter.overlap.meta">412K followers · matched daily</span>
+        </div>
+        <a class="swap" data-i18n="brand.filter.overlap.swap">Change ▾</a>
+      </div>
+      <div class="range" style="margin-top:8px">
+        <input type="text" value="15%" />
+        <span>—</span>
+        <input type="text" value="100%" />
+      </div>
+    </div>
+
+    <div class="filter-group">
       <h4 data-i18n="filter.niche">Niche</h4>
       <div class="chip-row">
         <div class="chip active" data-i18n="niche.fashion">Fashion</div>
@@ -99,7 +116,6 @@
       <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.business_only">Business / Creator only</span></label>
       <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.verified">Verified (blue check)</span></label>
       <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.recent_active">Posted in last 14 days</span></label>
-      <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.claimed_only">Claimed profile only</span></label>
     </div>
 
     <button class="btn btn-block" data-i18n="filter.reset">Reset filters</button>
@@ -114,7 +130,8 @@
     <div class="search-bar">
       <input type="search" data-i18n-placeholder="app.search.placeholder" placeholder="Search by handle, bio keyword, or hashtag (e.g. #אופנהישראלית)" />
       <select class="sort-select">
-        <option data-i18n="app.sort.er">Sort: Engagement rate ↓</option>
+        <option data-i18n="brand.app.sort.overlap">Sort: Audience overlap ↓</option>
+        <option data-i18n="app.sort.er">Engagement rate ↓</option>
         <option data-i18n="app.sort.fol_up">Followers ↑</option>
         <option data-i18n="app.sort.fol_down">Followers ↓</option>
         <option data-i18n="app.sort.recent">Last posted</option>
@@ -122,14 +139,13 @@
     </div>
 
     <div class="results-meta">
-      <div><strong>247</strong> <span data-i18n="app.results.meta.a">creators match · Fashion · 10K–100K · Tel Aviv</span></div>
-      <div data-i18n="app.results.meta.b">Data refreshed 2h ago via IG Business Discovery</div>
+      <div><strong>84</strong> <span data-i18n="brand.app.results.meta.a">creators match · ≥15% overlap with @castro_il · Fashion · Tel Aviv</span></div>
+      <div data-i18n="brand.app.results.meta.b">Overlap refreshed nightly · Profile data 2h ago</div>
     </div>
 
     <div class="grid">
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
         <div class="card-head">
           <div class="avatar a1">נל</div>
           <div>
@@ -144,6 +160,7 @@
           <span class="niche-tag" data-i18n="tag.sustainable">Sustainable</span>
         </div>
         <div class="row">
+          <span class="overlap-badge high">47% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 94% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -153,12 +170,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
         <div class="card-head">
           <div class="avatar a2">יש</div>
           <div>
@@ -173,6 +189,7 @@
           <span class="niche-tag" data-i18n="tag.minimalist">Minimalist</span>
         </div>
         <div class="row">
+          <span class="overlap-badge high">43% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 91% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -182,12 +199,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
         <div class="card-head">
           <div class="avatar a3">רא</div>
           <div>
@@ -202,6 +218,7 @@
           <span class="niche-tag" data-i18n="tag.craft">Craft</span>
         </div>
         <div class="row">
+          <span class="overlap-badge high">39% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 97% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -211,12 +228,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
         <div class="card-head">
           <div class="avatar a4">מכ</div>
           <div>
@@ -231,6 +247,7 @@
           <span class="niche-tag" data-i18n="tag.sneakers">Sneakers</span>
         </div>
         <div class="row">
+          <span class="overlap-badge">34% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 88% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -240,12 +257,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
         <div class="card-head">
           <div class="avatar a5">דב</div>
           <div>
@@ -260,6 +276,7 @@
           <span class="niche-tag" data-i18n="tag.thrift">Thrift</span>
         </div>
         <div class="row">
+          <span class="overlap-badge">28% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 96% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -269,12 +286,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
         <div class="card-head">
           <div class="avatar a6">שג</div>
           <div>
@@ -289,6 +305,7 @@
           <span class="niche-tag" data-i18n="tag.workwear">Workwear</span>
         </div>
         <div class="row">
+          <span class="overlap-badge">24% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 93% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -298,12 +315,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-unclaimed" data-i18n="card.unclaimed">Unclaimed</span>
         <div class="card-head">
           <div class="avatar a7">אכ</div>
           <div>
@@ -318,6 +334,7 @@
           <span class="niche-tag" data-i18n="tag.craft">Craft</span>
         </div>
         <div class="row">
+          <span class="overlap-badge low">19% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 95% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -327,12 +344,11 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.express" onclick="document.getElementById('m').classList.add('open')">Express interest</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
       <div class="card">
-        <span class="status-pill pill-claimed" data-i18n="card.claimed">Claimed</span>
         <div class="card-head">
           <div class="avatar a8">תמ</div>
           <div>
@@ -347,6 +363,7 @@
           <span class="niche-tag" data-i18n="tag.color">Color</span>
         </div>
         <div class="row">
+          <span class="overlap-badge low">16% <span data-i18n="brand.card.overlap">overlap</span></span>
           <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 90% <span data-i18n="creds.realAudience">real audience</span></span>
         </div>
         <div class="stats">
@@ -356,7 +373,7 @@
         </div>
         <div class="card-actions">
           <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
-          <button class="btn btn-primary" data-i18n="card.brief">Send brief</button>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
         </div>
       </div>
 
@@ -364,7 +381,6 @@
 
     <div class="footer-note" data-i18n="footer.source">
       All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API.
-      Creators can claim or remove their profile at any time.
     </div>
   </main>
 </div>
@@ -372,10 +388,10 @@
 <div class="modal-shade" id="m">
   <div class="modal">
     <h3><span data-i18n="modal.title">Send brief to</span> @noamfit_tlv</h3>
-    <p class="sub" data-i18n="modal.sub">Profile is unclaimed. We'll reach out on your behalf and notify you when they respond.</p>
+    <p class="sub" data-i18n="modal.sub">We'll deliver the brief to the creator and surface their response in your inbox. Track status in Saved lists.</p>
 
     <div class="notice" data-i18n="brand.modal.notice">
-      This intro is included in your Team plan (3 of 25 used this month). The brief is sent from your brand email — no middleman, no agency boilerplate.
+      This brief is included in your Team plan (3 of 25 sent this month). The brief is sent from your brand email — no middleman, no agency boilerplate.
     </div>
 
     <div class="form-row">
