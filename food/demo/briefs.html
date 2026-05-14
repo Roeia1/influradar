@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Saved lists · Influradar</title>
+<title>Briefs sent · Influradar</title>
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
 <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -21,8 +21,8 @@
     </a>
     <nav class="topnav">
       <a href="index.html" data-i18n="nav.discover">Discover</a>
-      <a href="lists.html" class="active" data-i18n="nav.lists">Saved lists</a>
-      <a href="briefs.html" data-i18n="nav.briefs">Briefs sent</a>
+      <a href="lists.html" data-i18n="nav.lists">Saved lists</a>
+      <a href="briefs.html" class="active" data-i18n="nav.briefs">Briefs sent</a>
       <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
     </nav>
   </div>
@@ -39,35 +39,47 @@
 
   <div class="list-header">
     <div>
-      <h1 data-i18n="lists.h1">Campaign lists</h1>
-      <p class="subtitle mt-0" style="margin-top:6px" data-i18n="lists.sub">Shortlists you've built. Track outreach status across creators in one place.</p>
+      <h1>Briefs sent</h1>
+      <p class="subtitle mt-0" style="margin-top:6px">Every brief Pantry &amp; Co. has sent. Track status from outreach to deal closed.</p>
     </div>
-    <button class="btn btn-primary" data-i18n="lists.new">+ New list</button>
+    <button class="btn btn-primary">+ Send new brief</button>
   </div>
 
   <div class="list-tabs">
     <div class="list-tab active">
-      <span>Spring food launch</span>
+      <span>All briefs</span>
       <span class="count">8</span>
     </div>
     <div class="list-tab">
-      <span>Healthy-eating Q3</span>
-      <span class="count">6</span>
+      <span>Awaiting reply</span>
+      <span class="count">3</span>
     </div>
     <div class="list-tab">
-      <span>Restaurant openings</span>
-      <span class="count">4</span>
+      <span>Responded</span>
+      <span class="count">2</span>
+    </div>
+    <div class="list-tab">
+      <span>In negotiation</span>
+      <span class="count">1</span>
+    </div>
+    <div class="list-tab">
+      <span>Closed-won</span>
+      <span class="count">1</span>
+    </div>
+    <div class="list-tab">
+      <span>Declined</span>
+      <span class="count">1</span>
     </div>
   </div>
 
   <div class="list-table">
 
     <div class="list-row header">
-      <div data-i18n="lists.table.creator">Creator</div>
-      <div data-i18n="lists.table.niche">Niche</div>
-      <div data-i18n="lists.table.followers">Followers</div>
-      <div data-i18n="lists.table.status">Status</div>
-      <div data-i18n="lists.table.notes">Notes</div>
+      <div>Creator</div>
+      <div>Campaign</div>
+      <div>Budget</div>
+      <div>Sent</div>
+      <div>Status</div>
       <div></div>
     </div>
 
@@ -79,10 +91,10 @@
           <span class="n">Linor Levanter</span>
         </div>
       </div>
-      <div>Food · Protein</div>
-      <div>115K · <span class="value-good">3.9%</span></div>
-      <div><span class="status-tag tag-brief" data-i18n="lists.status.brief">Brief sent</span></div>
-      <div class="text-muted small">High-protein angle, awaiting reply</div>
+      <div>Skinny Pasta IL · April reel</div>
+      <div>₪3,500</div>
+      <div class="text-muted small">3 days ago</div>
+      <div><span class="status-tag tag-brief">Brief sent</span></div>
       <div><a href="profile-linorlab.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -94,10 +106,10 @@
           <span class="n">Maya Agassi</span>
         </div>
       </div>
-      <div>Food · Matcha</div>
-      <div>4.0K · <span class="value-good">9.6%</span></div>
-      <div><span class="status-tag tag-responded" data-i18n="lists.status.responded">Responded</span></div>
-      <div class="text-muted small">Available for matcha launch reel</div>
+      <div>Matcha launch · TLV story series</div>
+      <div>₪2,200</div>
+      <div class="text-muted small">6 days ago</div>
+      <div><span class="status-tag tag-responded">Responded</span></div>
       <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -109,10 +121,10 @@
           <span class="n">Romi Avni</span>
         </div>
       </div>
-      <div>Food · Burgers</div>
-      <div>30.0K · <span class="value-good">7.7%</span></div>
-      <div><span class="status-tag tag-interested" data-i18n="lists.status.interested">Interested</span></div>
-      <div class="text-muted small">Wants to test the burger SKU first</div>
+      <div>Beef Steakchips · burger feature</div>
+      <div>₪4,000</div>
+      <div class="text-muted small">1 week ago</div>
+      <div><span class="status-tag tag-interested">In negotiation</span></div>
       <div><a href="profile-romi.eats.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -124,10 +136,10 @@
           <span class="n">Talya Kaplan</span>
         </div>
       </div>
-      <div>Nutrition · Dietitian</div>
-      <div>31.2K · 0.7%</div>
-      <div><span class="status-tag tag-brief" data-i18n="lists.status.brief">Brief sent</span></div>
-      <div class="text-muted small">Dietitian credibility fits — sent 3 days ago</div>
+      <div>Wonders of Nature · supplement Reel</div>
+      <div>₪3,000</div>
+      <div class="text-muted small">4 days ago</div>
+      <div><span class="status-tag tag-brief">Brief sent</span></div>
       <div><a href="profile-talya_kaplan_nutrition.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -139,10 +151,10 @@
           <span class="n">Hadas &amp; Maayan Lapidot</span>
         </div>
       </div>
-      <div>Nutrition · Recipes</div>
-      <div>17.8K · <span class="value-good">3.9%</span></div>
-      <div><span class="status-tag tag-responded" data-i18n="lists.status.responded">Responded</span></div>
-      <div class="text-muted small">Twin angle — proposing duo reel</div>
+      <div>Twin dietitians · MyProtein collab</div>
+      <div>₪5,500</div>
+      <div class="text-muted small">2 weeks ago</div>
+      <div><span class="status-tag tag-responded">Closed-won</span></div>
       <div><a href="profile-hm___fitnutrition.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -154,10 +166,10 @@
           <span class="n">Nitzan Jerbi Derfler</span>
         </div>
       </div>
-      <div>Lifestyle · Comedy</div>
-      <div>23.9K · <span class="value-good">33.0%</span></div>
-      <div><span class="status-tag tag-interested" data-i18n="lists.status.interested">Interested</span></div>
-      <div class="text-muted small">ER outlier, recheck — comedy fit is strong</div>
+      <div>Sprite IL · comedic skit</div>
+      <div>₪6,000</div>
+      <div class="text-muted small">5 days ago</div>
+      <div><span class="status-tag tag-responded">Responded</span></div>
       <div><a href="profile-nitzanjerbi.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -169,10 +181,10 @@
           <span class="n">Chen Ben David</span>
         </div>
       </div>
-      <div>Fitness · Family</div>
-      <div>10.0K · 0.2%</div>
-      <div><span class="status-tag tag-brief" data-i18n="lists.status.brief">Brief sent</span></div>
-      <div class="text-muted small">Family-of-4 audience overlap</div>
+      <div>Naturalion · family workout Reel</div>
+      <div>₪2,800</div>
+      <div class="text-muted small">9 days ago</div>
+      <div><span class="status-tag tag-brief">Brief sent</span></div>
       <div><a href="profile-chen_fitness_crossfit_workout.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
@@ -184,17 +196,17 @@
           <span class="n">Niv Zitayat</span>
         </div>
       </div>
-      <div>Fitness · Protein</div>
-      <div>6.5K · 0.7%</div>
-      <div><span class="status-tag tag-passed" data-i18n="lists.status.passed">Passed</span></div>
-      <div class="text-muted small">ER below threshold for current budget tier</div>
+      <div>Pro+Cream · protein review</div>
+      <div>₪1,800</div>
+      <div class="text-muted small">12 days ago</div>
+      <div><span class="status-tag tag-passed">Declined</span></div>
       <div><a href="profile-nivfitfood.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
   </div>
 
-  <div class="footer-note" style="margin-top:40px" data-i18n="footer.source">
-    All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API.
+  <div class="footer-note" style="margin-top:40px">
+    All briefs are sent directly from your brand inbox. No middleman, no agency boilerplate.
   </div>
 </div>
 

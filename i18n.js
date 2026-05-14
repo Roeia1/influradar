@@ -78,7 +78,7 @@ const I18N = {
     "app.sort.fol_up": "Followers ↑",
     "app.sort.fol_down": "Followers ↓",
     "app.sort.recent": "Last posted",
-    "app.results.meta.a": "creators match · Fashion · 10K–100K · Tel Aviv",
+    "app.results.meta.a": "creators match · Fashion · 10K–100K",
     "app.results.meta.b": "Data refreshed 2h ago via IG Business Discovery",
     "filter.niche": "Niche",
     "filter.followers": "Followers",
@@ -87,7 +87,6 @@ const I18N = {
     "filter.workedWith.placeholder": "e.g. @night.cookie",
     "filter.workedWith.help": "Find creators who've already collab'd with a competitor or lookalike.",
     "filter.language": "Language",
-    "filter.location": "Location signals",
     "filter.account": "Account",
     "filter.business_only": "Business / Creator only",
     "filter.verified": "Verified (blue check)",
@@ -112,10 +111,6 @@ const I18N = {
     "lang.english": "English",
     "lang.arabic": "Arabic",
     "lang.russian": "Russian",
-    "loc.tlv": "Tel Aviv",
-    "loc.jerusalem": "Jerusalem",
-    "loc.haifa": "Haifa",
-    "loc.other": "Other IL",
 
     // --- Modal ---
     "modal.title": "Send brief to",
@@ -272,14 +267,14 @@ const I18N = {
     "profile.subtitle.him": "he/him",
 
     // --- Demo creator names & bios (shown across app/profile/lists) ---
-    "creator.noamfit.name": "Noam Levi · Tel Aviv",
-    "creator.yael.name": "Yael Shamir · Tel Aviv",
-    "creator.ronen.name": "Ronen Avraham · Tel Aviv",
-    "creator.maya.name": "Maya Kohen · Tel Aviv",
-    "creator.daniel.name": "Daniel Ben-David · Ramat Gan",
-    "creator.shira.name": "Shira Gold · Tel Aviv",
-    "creator.adi.name": "Adi Klein · Tel Aviv",
-    "creator.tamar.name": "Tamar Mizrahi · Tel Aviv",
+    "creator.noamfit.name": "Noam Levi",
+    "creator.yael.name": "Yael Shamir",
+    "creator.ronen.name": "Ronen Avraham",
+    "creator.maya.name": "Maya Kohen",
+    "creator.daniel.name": "Daniel Ben-David",
+    "creator.shira.name": "Shira Gold",
+    "creator.adi.name": "Adi Klein",
+    "creator.tamar.name": "Tamar Mizrahi",
     "creator.noamfit.bio": "Slow fashion, vintage finds & sustainable styling. Sharing fits from my Florentin closet. Hebrew + English captions.",
     "creator.yael.bio": "Editor at Vogue IL ✦ minimalist daily fits ✦ collabs: yael@shamirstudio.co.il",
     "creator.ronen.bio": "Menswear ✂️ tailoring stories from Levinsky market. Behind the scenes of every piece I make.",
@@ -411,7 +406,7 @@ const I18N = {
     "brand.filter.overlap.meta": "412K followers · matched daily",
     "brand.filter.overlap.swap": "Change ▾",
     "brand.app.sort.overlap": "Sort: Audience overlap ↓",
-    "brand.app.results.meta.a": "creators match · ≥15% overlap with @adira_il · Fashion · Tel Aviv",
+    "brand.app.results.meta.a": "creators match · ≥15% overlap with @adira_il · Fashion",
     "brand.app.results.meta.b": "Overlap refreshed nightly · Profile data 2h ago",
     "brand.card.overlap": "overlap",
   },
@@ -490,7 +485,7 @@ const I18N = {
     "app.sort.fol_up": "עוקבים ↑",
     "app.sort.fol_down": "עוקבים ↓",
     "app.sort.recent": "פוסט אחרון",
-    "app.results.meta.a": "יוצרים תואמים · אופנה · 10K–100K · תל אביב",
+    "app.results.meta.a": "יוצרים תואמים · אופנה · 10K–100K",
     "app.results.meta.b": "המידע עודכן לפני שעתיים דרך IG Business Discovery",
     "filter.niche": "נישה",
     "filter.followers": "עוקבים",
@@ -499,7 +494,6 @@ const I18N = {
     "filter.workedWith.placeholder": "לדוגמה: @night.cookie",
     "filter.workedWith.help": "מצאי יוצרים שכבר עשו שת״פ עם מתחרה או מותג דומה.",
     "filter.language": "שפה",
-    "filter.location": "אזור",
     "filter.account": "סוג חשבון",
     "filter.business_only": "Business / Creator בלבד",
     "filter.verified": "מאומת (וי כחול)",
@@ -524,10 +518,6 @@ const I18N = {
     "lang.english": "אנגלית",
     "lang.arabic": "ערבית",
     "lang.russian": "רוסית",
-    "loc.tlv": "תל אביב",
-    "loc.jerusalem": "ירושלים",
-    "loc.haifa": "חיפה",
-    "loc.other": "אחר בישראל",
 
     // --- Modal ---
     "modal.title": "שליחת בריף ל-",
@@ -684,14 +674,14 @@ const I18N = {
     "profile.subtitle.him": "הוא / שלו",
 
     // --- Demo creator names & bios ---
-    "creator.noamfit.name": "נועם לוי · תל אביב",
-    "creator.yael.name": "יעל שמיר · תל אביב",
-    "creator.ronen.name": "רונן אברהם · תל אביב",
-    "creator.maya.name": "מאיה כהן · תל אביב",
-    "creator.daniel.name": "דניאל בן-דוד · רמת גן",
-    "creator.shira.name": "שירה גולד · תל אביב",
-    "creator.adi.name": "עדי קליין · תל אביב",
-    "creator.tamar.name": "תמר מזרחי · תל אביב",
+    "creator.noamfit.name": "נועם לוי",
+    "creator.yael.name": "יעל שמיר",
+    "creator.ronen.name": "רונן אברהם",
+    "creator.maya.name": "מאיה כהן",
+    "creator.daniel.name": "דניאל בן-דוד",
+    "creator.shira.name": "שירה גולד",
+    "creator.adi.name": "עדי קליין",
+    "creator.tamar.name": "תמר מזרחי",
     "creator.noamfit.bio": "אופנה איטית, ממצאי וינטג' וסטיילינג בר-קיימא. משתפת פיטים מהארון שלי בפלורנטין. כיתובים בעברית ובאנגלית.",
     "creator.yael.bio": "עורכת בווג ישראל ✦ פיטים יומיומיים מינימליסטיים ✦ שת״פ: yael@shamirstudio.co.il",
     "creator.ronen.bio": "אופנת גברים ✂️ סיפורי תפירה משוק לוינסקי. מאחורי הקלעים של כל פריט שאני מייצר.",
@@ -823,7 +813,7 @@ const I18N = {
     "brand.filter.overlap.meta": "412K עוקבים · מתאמת מדי לילה",
     "brand.filter.overlap.swap": "החלף ▾",
     "brand.app.sort.overlap": "מיון: חפיפת קהל ↓",
-    "brand.app.results.meta.a": "יוצרים תואמים · חפיפה ≥15% עם @adira_il · אופנה · תל אביב",
+    "brand.app.results.meta.a": "יוצרים תואמים · חפיפה ≥15% עם @adira_il · אופנה",
     "brand.app.results.meta.b": "חפיפת קהל מתעדכנת לילית · פרופילים לפני שעתיים",
     "brand.card.overlap": "חפיפה",
   }
@@ -922,9 +912,9 @@ function closeMobileSheets(){
   function onReset(e){
     var btn = e.target.closest(".filters .btn-block");
     if (!btn) return;
-    // Default state: Fashion + HE/EN + Tel Aviv chips; business+recent checkboxes
+    // Default state: Fashion + HE/EN chips; business+recent checkboxes
     document.querySelectorAll(".filters .chip").forEach(function(c){ c.classList.remove("active"); });
-    var defaults = ["niche.fashion","lang.hebrew","lang.english","loc.tlv"];
+    var defaults = ["niche.fashion","lang.hebrew","lang.english"];
     defaults.forEach(function(key){
       var el = document.querySelector('.filters .chip[data-i18n="'+key+'"]');
       if (el) el.classList.add("active");

@@ -22,7 +22,7 @@
     <nav class="topnav">
       <a href="index.html" data-i18n="nav.discover">Discover</a>
       <a href="lists.html" data-i18n="nav.lists">Saved lists</a>
-      <a href="#" data-i18n="nav.briefs">Briefs sent</a>
+      <a href="briefs.html" data-i18n="nav.briefs">Briefs sent</a>
       <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
     </nav>
   </div>
@@ -44,10 +44,9 @@
     <div class="avatar avatar-lg a1"><img class="avatar-img" src="../../assets/creators/maya.agassi.jpg" alt="@maya.agassi" /></div>
     <div class="meta-block">
       <h1>@maya.agassi</h1>
-      <div class="name-line"><span data-maya="nameLoc">Maya Agassi · Tel Aviv</span> · <span data-i18n="profile.subtitle.her">she/her</span></div>
+      <div class="name-line"><span data-maya="nameLoc">Maya Agassi</span> · <span data-i18n="profile.subtitle.her">she/her</span></div>
       <div class="niche-row" style="margin-bottom:10px">
         <span class="niche-tag" data-maya="tag1">Food</span>
-        <span class="niche-tag" data-maya="tag2">Tel Aviv</span>
         <span class="niche-tag" data-maya="tag3">Restaurants</span>
         <span class="niche-tag" data-i18n="tag.heen">HE / EN</span>
       </div>
@@ -85,32 +84,6 @@
         <div class="kv-row">
           <span class="k" data-i18n="profile.stat.lang">Primary language</span>
           <span class="v" data-maya="langStat">Hebrew (88%) · English (12%)</span>
-        </div>
-        <div class="kv-row">
-          <span class="k" data-i18n="profile.stat.location">Location signal</span>
-          <span class="v" data-maya="locStat">Tel Aviv — Dizengoff Square (high confidence)</span>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h3 data-i18n="profile.engagement">Engagement (last 12 posts)</h3>
-        <div class="sparkline">
-          <div class="bar" style="height:62%"></div>
-          <div class="bar" style="height:84%"></div>
-          <div class="bar" style="height:55%"></div>
-          <div class="bar" style="height:78%"></div>
-          <div class="bar" style="height:91%"></div>
-          <div class="bar" style="height:67%"></div>
-          <div class="bar" style="height:73%"></div>
-          <div class="bar" style="height:88%"></div>
-          <div class="bar" style="height:60%"></div>
-          <div class="bar" style="height:95%"></div>
-          <div class="bar" style="height:71%"></div>
-          <div class="bar" style="height:82%"></div>
-        </div>
-        <div class="row-space-between small text-muted">
-          <span data-i18n="profile.spark.start">12 posts ago</span>
-          <span data-i18n="profile.spark.end">Today</span>
         </div>
       </div>
 
@@ -265,11 +238,10 @@
   // Maya-specific bilingual strings (not in shared i18n.js).
   const MAYA = {
     en: {
-      nameLoc: "Maya Agassi · Tel Aviv",
-      tag1: "Food", tag2: "Tel Aviv", tag3: "Restaurants",
+      nameLoc: "Maya Agassi",
+      tag1: "Food", tag3: "Restaurants",
       aboutBody: "Foodie content creator based around Dizengoff Square, Tel Aviv. Recommends restaurants, cafés and matcha spots across the city. Bezalel & Tirtza Granot grad working in social & creative. Hebrew-first content with the occasional English caption. Open to honest brand collaborations.",
       langStat: "Hebrew (88%) · English (12%)",
-      locStat: "Tel Aviv — Dizengoff Square (high confidence)",
       useL1: "+ Add to Spring foodie drop",
       ws: "Pantry & Co. · Marketing ▾",
       collabsTitle: "Recent brand collabs",
@@ -277,11 +249,10 @@
       basherName: "Basher Fromagerie",
     },
     he: {
-      nameLoc: "מאיה אגסי · תל אביב",
-      tag1: "אוכל", tag2: "תל אביב", tag3: "מסעדות",
+      nameLoc: "מאיה אגסי",
+      tag1: "אוכל", tag3: "מסעדות",
       aboutBody: "יוצרת תוכן ופודית מאזור כיכר דיזינגוף בתל אביב. ממליצה על מסעדות, בתי קפה ונקודות מאצ׳ה בעיר. בוגרת בצלאל ותרצה גרנות, עובדת בתחום הסושיאל והקריאטיב. תוכן בעברית בעיקר, עם כתוביות באנגלית מדי פעם. פתוחה לשיתופי פעולה אותנטיים עם מותגים.",
       langStat: "עברית (88%) · אנגלית (12%)",
-      locStat: "תל אביב — כיכר דיזינגוף (ביטחון גבוה)",
       useL1: "+ הוסיפי לקמפיין פודי לאביב",
       ws: "פאנטרי · שיווק ▾",
       collabsTitle: "שיתופי פעולה אחרונים עם מותגים",
