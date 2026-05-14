@@ -338,12 +338,22 @@ const NICHES = {
     const tagsHTML = c.tags.map(t => `<span class="niche-tag">${pick(t)}</span>`).join("");
     const erClass = c.erGood ? "value value-good" : "value";
     const t = lang() === "he"
-      ? { overlap:"חפיפה", vER:"ER מאומת", real:"קהל אמיתי", fol:"עוקבים",
+      ? { overlap:"חפיפה", fol:"עוקבים",
           er:"שיעור מעורבות", posts:"פוסטים/שבוע", view:"לפרופיל", brief:"שלח בריף",
-          collabs:"שיתופי פעולה", collabPast:n=>`${n} שיתופי עבר` }
-      : { overlap:"overlap", vER:"Verified ER", real:"real audience", fol:"Followers",
+          collabs:"שיתופי פעולה", collabPast:n=>`${n} שיתופי עבר`,
+          erTipLabel:"מה זה שיעור מעורבות",
+          erTipBody:"ממוצע לייקים + תגובות לפוסט חלקי כמות העוקבים, ב-30 הימים האחרונים. אחוז גבוה יותר משמעו קהל שמגיב באמת — לא רק גולל.",
+          overlapTipLabel:"מה זה חפיפת קהל",
+          overlapTipBody:"אחוז העוקבים של היוצר/ת שעוקבים גם אחרי המותג שלך או אחרי מותג דומה. מחושב לילית מדגימת עוקבים פומבית — אחוז גבוה יותר משמעו קהל חם יותר ומוכן יותר." }
+      : { overlap:"overlap", fol:"Followers",
           er:"Eng. rate", posts:"Posts/wk", view:"View profile", brief:"Send brief",
-          collabs:"Worked with", collabPast:n=>`${n} past collab${n===1?'':'s'}` };
+          collabs:"Worked with", collabPast:n=>`${n} past collab${n===1?'':'s'}`,
+          erTipLabel:"About engagement rate",
+          erTipBody:"Average likes + comments per post divided by follower count, over the last 30 days. A higher rate means the audience actively interacts — not just scrolls past.",
+          overlapTipLabel:"About audience overlap",
+          overlapTipBody:"Share of this creator's followers who also follow your brand or a close lookalike. Computed nightly from public follower samples — higher means a warmer, more pre-qualified audience." };
+    const overlapTipHTML = `<span class="info-tip" tabindex="0" role="img" aria-label="${t.overlapTipLabel}">i<span class="info-tip-popup">${t.overlapTipBody}</span></span>`;
+    const erTipHTML = `<span class="info-tip" tabindex="0" role="img" aria-label="${t.erTipLabel}">i<span class="info-tip-popup">${t.erTipBody}</span></span>`;
     const avatarInner = c.photo
       ? `<img class="avatar-img" src="${c.photo}" alt="${c.handle}" loading="lazy" />`
       : c.initials;
@@ -378,13 +388,12 @@ const NICHES = {
         <div class="bio">${pick(c.bio)}</div>
         <div class="niche-row">${tagsHTML}</div>
         <div class="row">
-          <span class="overlap-badge ${c.badge==='high'?'high':c.badge==='low'?'low':''}">${c.overlap}% <span>${t.overlap}</span></span>
-          <span class="creds-badge"><span>${t.vER}</span> · ${c.creds}% <span>${t.real}</span></span>
+          <span class="overlap-badge ${c.badge==='high'?'high':c.badge==='low'?'low':''}">${c.overlap}% <span>${t.overlap}</span>${overlapTipHTML}</span>
         </div>
         ${collabsHTML}
         <div class="stats">
           <div class="stat-cell"><div class="label">${t.fol}</div><div class="value">${c.followers}</div></div>
-          <div class="stat-cell"><div class="label">${t.er}</div><div class="${erClass}">${c.er}</div></div>
+          <div class="stat-cell"><div class="label">${t.er}${erTipHTML}</div><div class="${erClass}">${c.er}</div></div>
           <div class="stat-cell"><div class="label">${t.posts}</div><div class="value">${c.posts}</div></div>
         </div>
         <div class="card-actions">

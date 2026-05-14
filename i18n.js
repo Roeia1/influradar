@@ -407,6 +407,10 @@ const I18N = {
     "brand.app.results.meta.a": "creators match · ≥15% overlap with @adira_il · Fashion",
     "brand.app.results.meta.b": "Overlap refreshed nightly · Profile data 2h ago",
     "brand.card.overlap": "overlap",
+    "info.overlap.label": "About audience overlap",
+    "info.overlap.body": "Share of this creator's followers who also follow your brand or a close lookalike. Computed nightly from public follower samples — higher means a warmer, more pre-qualified audience.",
+    "info.er.label": "About engagement rate",
+    "info.er.body": "Average likes + comments per post divided by follower count, over the last 30 days. A higher rate means the audience actively interacts — not just scrolls past.",
 
     // --- Briefs sent (kanban) ---
     "briefs.h1": "Briefs sent",
@@ -848,6 +852,10 @@ const I18N = {
     "brand.app.results.meta.a": "יוצרים תואמים · חפיפה ≥15% עם @adira_il · אופנה",
     "brand.app.results.meta.b": "חפיפת קהל מתעדכנת לילית · פרופילים לפני שעתיים",
     "brand.card.overlap": "חפיפה",
+    "info.overlap.label": "מה זה חפיפת קהל",
+    "info.overlap.body": "אחוז העוקבים של היוצר/ת שעוקבים גם אחרי המותג שלך או אחרי מותג דומה. מחושב לילית מדגימת עוקבים פומבית — אחוז גבוה יותר משמעו קהל חם יותר ומוכן יותר.",
+    "info.er.label": "מה זה שיעור מעורבות",
+    "info.er.body": "ממוצע לייקים + תגובות לפוסט חלקי כמות העוקבים, ב-30 הימים האחרונים. אחוז גבוה יותר משמעו קהל שמגיב באמת — לא רק גולל.",
 
     // --- Briefs sent (kanban) ---
     "briefs.h1": "בריפים שנשלחו",
