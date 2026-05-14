@@ -263,8 +263,6 @@ const I18N = {
     "profile.about.lang.v": "Hebrew (74%) · English (26%)",
     "profile.about.location.v": "Tel Aviv (high confidence)",
     "profile.audience.note": "Audience demographics inferred from a sample of 1,200 recent engagers. Available for verified creators only.",
-    "profile.subtitle.her": "she/her",
-    "profile.subtitle.him": "he/him",
 
     // --- Demo creator names & bios (shown across app/profile/lists) ---
     "creator.noamfit.name": "Noam Levi",
@@ -670,8 +668,6 @@ const I18N = {
     "profile.about.lang.v": "עברית (74%) · אנגלית (26%)",
     "profile.about.location.v": "תל אביב (סבירות גבוהה)",
     "profile.audience.note": "פילוח דמוגרפי של הקהל מחושב מדגימה של 1,200 מגיבים אחרונים. זמין רק ליוצרים מאומתים.",
-    "profile.subtitle.her": "היא / שלה",
-    "profile.subtitle.him": "הוא / שלו",
 
     // --- Demo creator names & bios ---
     "creator.noamfit.name": "נועם לוי",
