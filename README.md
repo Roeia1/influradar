@@ -2,6 +2,7 @@
 
 A static, single-page-each mockup of the Influradar product, intended for buyer-conversation validation. No backend, no build step — pure HTML/CSS/JS.
 
+
 ## Pages
 
 | File | Purpose |
