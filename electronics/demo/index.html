@@ -1,13 +1,234 @@
 <!doctype html>
-<meta charset="utf-8">
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Discover · Influradar</title>
-<style>html,body{background:#0b0d10;margin:0}</style>
-<link rel="preload" href="../../styles.css" as="style">
-<script>
-  window.__niche = "electronics";
-  fetch("../../brand/app.html").then(r => r.text()).then(html => {
-    html = html.replace("<head>", '<head><style>html{visibility:hidden}</style><base href="../../brand/">');
-    html = html.replace(/href="index\.html"/g, 'href="../electronics/"');
-    document.open(); document.write(html); document.close();
-  });
-</script>
+<meta name="description" content="Search Israeli Instagram creators by niche, audience and engagement." />
+<style>html{visibility:hidden}</style>
+<script>window.__niche = "electronics";</script>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="../" class="brand">
+      <div class="brand-mark"></div>
+      <span>Influradar</span>
+      <small data-i18n="brand.beta">beta · IL</small>
+    </a>
+    <nav class="topnav">
+      <a href="index.html" class="active" data-i18n="nav.discover">Discover</a>
+      <a href="lists.html" data-i18n="nav.lists">Saved lists</a>
+      <a href="#" data-i18n="nav.briefs">Briefs sent</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+    </nav>
+  </div>
+  <div class="top-actions">
+    <div class="lang-toggle">
+      <button data-lang="en">EN</button>
+      <button data-lang="he">עב</button>
+    </div>
+    <button class="btn" data-i18n="brand.workspace.castro">Adira · Marketing ▾</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="filters">
+
+    <button class="filter-close" onclick="toggleFilterSheet()" aria-label="Close">×</button>
+
+    <div class="filter-group">
+      <h4 data-i18n="brand.filter.overlap">Audience overlap with your brand</h4>
+      <div class="overlap-target">
+        <div class="swatch">CA</div>
+        <div class="meta">
+          <b>@adira_il</b>
+          <span data-i18n="brand.filter.overlap.meta">412K followers · matched daily</span>
+        </div>
+        <a class="swap" data-i18n="brand.filter.overlap.swap">Change ▾</a>
+      </div>
+      <div class="range" style="margin-top:8px">
+        <input type="text" value="15%" />
+        <span>—</span>
+        <input type="text" value="100%" />
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.niche">Niche</h4>
+      <div class="chip-row">
+        <div class="chip active" data-i18n="niche.fashion">Fashion</div>
+        <div class="chip" data-i18n="niche.beauty">Beauty</div>
+        <div class="chip" data-i18n="niche.fitness">Fitness</div>
+        <div class="chip" data-i18n="niche.food">Food</div>
+        <div class="chip" data-i18n="niche.travel">Travel</div>
+        <div class="chip" data-i18n="niche.tech">Tech</div>
+        <div class="chip" data-i18n="niche.parenting">Parenting</div>
+        <div class="chip" data-i18n="niche.lifestyle">Lifestyle</div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.followers">Followers</h4>
+      <div class="range">
+        <input type="text" value="10K" />
+        <span>—</span>
+        <input type="text" value="100K" />
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.er">Engagement rate</h4>
+      <div class="range">
+        <input type="text" value="2%" />
+        <span>—</span>
+        <input type="text" value="15%" />
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.workedWith">Worked with brand</h4>
+      <input type="text" class="filter-input" data-i18n-placeholder="filter.workedWith.placeholder" placeholder="e.g. @night.cookie" />
+      <p class="filter-help" data-i18n="filter.workedWith.help">Find creators who've already collab'd with a competitor or lookalike.</p>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.language">Language</h4>
+      <div class="chip-row">
+        <div class="chip active" data-i18n="lang.hebrew">Hebrew</div>
+        <div class="chip active" data-i18n="lang.english">English</div>
+        <div class="chip" data-i18n="lang.arabic">Arabic</div>
+        <div class="chip" data-i18n="lang.russian">Russian</div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.location">Location signals</h4>
+      <div class="chip-row">
+        <div class="chip active" data-i18n="loc.tlv">Tel Aviv</div>
+        <div class="chip" data-i18n="loc.jerusalem">Jerusalem</div>
+        <div class="chip" data-i18n="loc.haifa">Haifa</div>
+        <div class="chip" data-i18n="loc.other">Other IL</div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h4 data-i18n="filter.account">Account</h4>
+      <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.business_only">Business / Creator only</span></label>
+      <label class="check-row"><input type="checkbox" /> <span data-i18n="filter.verified">Verified (blue check)</span></label>
+      <label class="check-row"><input type="checkbox" checked /> <span data-i18n="filter.recent_active">Posted in last 14 days</span></label>
+    </div>
+
+    <button class="btn btn-block" data-i18n="filter.reset">Reset filters</button>
+  </aside>
+
+  <main class="results">
+    <button class="filter-toggle" onclick="toggleFilterSheet()">
+      <span class="icon">⚙</span>
+      <span class="label" data-i18n="filter.toggle">Filters</span>
+      <span class="count" data-i18n="filter.active">3 active</span>
+    </button>
+    <div class="search-bar">
+      <input type="search" data-i18n-placeholder="app.search.placeholder" placeholder="Search by handle, bio keyword, or hashtag (e.g. #אופנהישראלית)" />
+      <select class="sort-select">
+        <option data-i18n="brand.app.sort.overlap">Sort: Audience overlap ↓</option>
+        <option data-i18n="app.sort.er">Engagement rate ↓</option>
+        <option data-i18n="app.sort.fol_up">Followers ↑</option>
+        <option data-i18n="app.sort.fol_down">Followers ↓</option>
+        <option data-i18n="app.sort.recent">Last posted</option>
+      </select>
+    </div>
+
+    <div class="results-meta">
+      <div><strong>84</strong> <span data-i18n="brand.app.results.meta.a">creators match · ≥15% overlap with @adira_il · Fashion · Tel Aviv</span></div>
+      <div data-i18n="brand.app.results.meta.b">Overlap refreshed nightly · Profile data 2h ago</div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="avatar a1">נל</div>
+          <div>
+            <div class="handle">@noamfit_tlv</div>
+            <div class="name" data-i18n="creator.noamfit.name">Noam Levi · Tel Aviv</div>
+          </div>
+        </div>
+        <div class="bio" data-i18n="creator.noamfit.bio">Slow fashion, vintage finds & sustainable styling. Sharing fits from my Florentin closet. Hebrew + English captions.</div>
+        <div class="niche-row">
+          <span class="niche-tag" data-i18n="niche.fashion">Fashion</span>
+          <span class="niche-tag" data-i18n="tag.vintage">Vintage</span>
+          <span class="niche-tag" data-i18n="tag.sustainable">Sustainable</span>
+        </div>
+        <div class="row">
+          <span class="overlap-badge high">47% <span data-i18n="brand.card.overlap">overlap</span></span>
+          <span class="creds-badge"><span data-i18n="creds.verifiedER">Verified ER</span> · 94% <span data-i18n="creds.realAudience">real audience</span></span>
+        </div>
+        <div class="stats">
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.followers">Followers</div><div class="value">42.1K</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.er">Eng. rate</div><div class="value value-good">6.4%</div></div>
+          <div class="stat-cell"><div class="label" data-i18n="card.stat.posts">Posts/wk</div><div class="value">3.8</div></div>
+        </div>
+        <div class="card-actions">
+          <a href="profile.html" class="btn" data-i18n="card.view">View profile</a>
+          <button class="btn btn-primary" data-i18n="card.brief" onclick="document.getElementById('m').classList.add('open')">Send brief</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-note" data-i18n="footer.source">
+      All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API.
+    </div>
+  </main>
+</div>
+
+<div class="modal-shade" id="m">
+  <div class="modal">
+    <h3><span data-i18n="modal.title">Send brief to</span> @noamfit_tlv</h3>
+    <p class="sub" data-i18n="modal.sub">We'll deliver the brief to the creator and surface their response in your inbox. Track status in Saved lists.</p>
+
+    <div class="notice" data-i18n="brand.modal.notice">
+      This brief is included in your Team plan (3 of 25 sent this month). The brief is sent from your brand email — no middleman, no agency boilerplate.
+    </div>
+
+    <div class="form-row">
+      <label data-i18n="modal.campaign">Campaign type</label>
+      <select>
+        <option>Sponsored post (single)</option>
+        <option>Reel</option>
+        <option>Story series</option>
+        <option>Long-term ambassador</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label data-i18n="modal.budget">Budget (ILS)</label>
+      <input type="text" data-i18n-placeholder="modal.placeholder.budget" placeholder="e.g. 2,500 – 4,000" />
+    </div>
+
+    <div class="form-row">
+      <label data-i18n="modal.brief">Brief</label>
+      <textarea data-i18n-placeholder="modal.placeholder.brief" placeholder="What's the campaign, what's the product, what makes this a fit for the creator's audience?"></textarea>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn" data-i18n="modal.cancel" onclick="document.getElementById('m').classList.remove('open')">Cancel</button>
+      <button class="btn btn-primary" data-i18n="modal.send">Send brief</button>
+    </div>
+  </div>
+</div>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
+
+<script src="../../i18n.js?v=4"></script>
+<script src="../../niche-demo.js?v=2"></script>
+</body>
+</html>

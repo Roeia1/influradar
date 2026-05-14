@@ -85,7 +85,7 @@ file assets/creators/$HANDLE.jpg   # → JPEG image data
 
 ## 3. Pick a niche bucket
 
-The discovery grid groups creators by niche via `brand/niche-demo.js`. Pick whichever fits:
+The discovery grid groups creators by niche via `niche-demo.js` (project root). Pick whichever fits:
 
 | Niche key | What it covers |
 |-----------|---------------|
@@ -100,7 +100,7 @@ If none fit, you're adding a new niche — that's a bigger refactor; copy an exi
 
 ## 4. Add the creator entry
 
-Open `brand/niche-demo.js` and find the `creators` array under your chosen niche (e.g. `NICHES.food.creators`). Add an object using this schema. Bold fields are required.
+Open `niche-demo.js` (at the project root) and find the `creators` array under your chosen niche (e.g. `NICHES.food.creators`). Add an object using this schema. Bold fields are required.
 
 ```js
 {
@@ -122,7 +122,7 @@ Open `brand/niche-demo.js` and find the `creators` array under your chosen niche
   erGood:    true,                   // true → render in green
   posts:     "2.0",                  // posts/week display
   photo:      "../../assets/creators/maya.agassi.jpg",       // avatar
-  profileUrl: "../food/demo/profile.html",                   // niche-specific dedicated profile page
+  profileUrl: "profile.html",                                // sibling page in the niche's demo dir
 
   // ── OPTIONAL ──
   workedWith: [                                              // past brand collabs (logo + name + handle)
@@ -135,8 +135,8 @@ Open `brand/niche-demo.js` and find the `creators` array under your chosen niche
 
 Path quirks:
 
-- `photo` and `workedWith[].logo` are evaluated relative to `<base href="../../brand/">` (set by the niche stub), so `../../assets/...` resolves to repo-root `/assets/...`.
-- `profileUrl` follows the same base — point it at the niche-specific profile you build in step 6 (e.g. `../food/demo/profile.html`).
+- `photo` and `workedWith[].logo` are resolved relative to the niche's discover page (e.g. `/food/demo/`), so `../../assets/...` resolves to repo-root `/assets/...`.
+- `profileUrl` is resolved the same way — point it at the niche-specific profile sibling you build in step 6 (e.g. `profile.html` or `profile-handle.html`).
 
 Order entries by `overlap` descending — that's the visual convention.
 
@@ -257,7 +257,7 @@ For a private internal pitch, mixing real identity with plausible estimates is f
 
 A typical featured-creator addition touches:
 
-- `brand/niche-demo.js` — the creator entry (always)
+- `niche-demo.js` (project root) — the creator entry (always)
 - `assets/creators/<handle>.jpg` — avatar (always)
 - `assets/creators/<handle>-posts/*.jpg` — recent post thumbnails (always)
 - `<niche>/demo/profile.html` — dedicated profile page (always)

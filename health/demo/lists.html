@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Saved lists · Influradar</title>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="../" class="brand">
+      <div class="brand-mark"></div>
+      <span>Influradar</span>
+      <small data-i18n="brand.beta">beta · IL</small>
+    </a>
+    <nav class="topnav">
+      <a href="index.html" data-i18n="nav.discover">Discover</a>
+      <a href="lists.html" class="active" data-i18n="nav.lists">Saved lists</a>
+      <a href="#" data-i18n="nav.briefs">Briefs sent</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+    </nav>
+  </div>
+  <div class="top-actions">
+    <div class="lang-toggle">
+      <button data-lang="en">EN</button>
+      <button data-lang="he">עב</button>
+    </div>
+    <button class="btn">Wellnest · Marketing ▾</button>
+  </div>
+</header>
+
+<div class="page page-wide">
+
+  <div class="list-header">
+    <div>
+      <h1 data-i18n="lists.h1">Campaign lists</h1>
+      <p class="subtitle mt-0" style="margin-top:6px" data-i18n="lists.sub">Shortlists you've built. Track outreach status across creators in one place.</p>
+    </div>
+    <button class="btn btn-primary" data-i18n="lists.new">+ New list</button>
+  </div>
+
+  <div class="list-tabs">
+    <div class="list-tab active">
+      <span data-i18n="lists.tab.spring">Spring fashion drop</span>
+      <span class="count">8</span>
+    </div>
+    <div class="list-tab">
+      <span data-i18n="lists.tab.fitness">Fitness Q3</span>
+      <span class="count">12</span>
+    </div>
+    <div class="list-tab">
+      <span data-i18n="lists.tab.food">Restaurant launch</span>
+      <span class="count">5</span>
+    </div>
+  </div>
+
+  <div class="list-table">
+
+    <div class="list-row header">
+      <div data-i18n="lists.table.creator">Creator</div>
+      <div data-i18n="lists.table.niche">Niche</div>
+      <div data-i18n="lists.table.followers">Followers</div>
+      <div data-i18n="lists.table.status">Status</div>
+      <div data-i18n="lists.table.notes">Notes</div>
+      <div></div>
+    </div>
+
+    <div class="list-row">
+      <div class="creator-cell">
+        <div class="avatar a1">נל</div>
+        <div class="meta">
+          <span class="h">@noamfit_tlv</span>
+          <span class="n" data-i18n="creator.noamfit.name">Noam Levi · Tel Aviv</span>
+        </div>
+      </div>
+      <div data-i18n="lists.niche.vintage">Fashion · Vintage</div>
+      <div>42.1K · <span class="value-good">6.4%</span></div>
+      <div><span class="status-tag tag-responded" data-i18n="lists.status.responded">Responded</span></div>
+      <div class="text-muted small" data-i18n="lists.note.noamfit">Available end of May, asked for product samples</div>
+      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+    </div>
+
+    <div class="list-row">
+      <div class="creator-cell">
+        <div class="avatar a2">יש</div>
+        <div class="meta">
+          <span class="h">@yael.shamir</span>
+          <span class="n" data-i18n="creator.yael.name">Yael Shamir · Tel Aviv</span>
+        </div>
+      </div>
+      <div data-i18n="lists.niche.editorial">Fashion · Editorial</div>
+      <div>78.5K · <span class="value-good">4.9%</span></div>
+      <div><span class="status-tag tag-brief" data-i18n="lists.status.brief">Brief sent</span></div>
+      <div class="text-muted small" data-i18n="lists.note.yael">Sent 2 days ago, waiting</div>
+      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+    </div>
+
+    <div class="list-row">
+      <div class="creator-cell">
+        <div class="avatar a3">רא</div>
+        <div class="meta">
+          <span class="h">@ronen.atelier</span>
+          <span class="n" data-i18n="creator.ronen.name">Ronen Avraham · Tel Aviv</span>
+        </div>
+      </div>
+      <div data-i18n="lists.niche.menswear">Fashion · Menswear</div>
+      <div>23.7K · <span class="value-good">8.1%</span></div>
+      <div><span class="status-tag tag-interested" data-i18n="lists.status.interested">Interested</span></div>
+      <div class="text-muted small" data-i18n="lists.note.ronen">Strong niche fit, ER unusually high — recheck audience</div>
+      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+    </div>
+
+    <div class="list-row">
+      <div class="creator-cell">
+        <div class="avatar a6">שג</div>
+        <div class="meta">
+          <span class="h">@shira.gold</span>
+          <span class="n" data-i18n="creator.shira.name">Shira Gold · Tel Aviv</span>
+        </div>
+      </div>
+      <div data-i18n="lists.niche.modest">Fashion · Modest</div>
+      <div>34.0K · <span class="value-good">5.6%</span></div>
+      <div><span class="status-tag tag-brief" data-i18n="lists.status.brief">Brief sent</span></div>
+      <div class="text-muted small" data-i18n="lists.note.shira">Modest workwear angle — pair with new spring jacket SKU</div>
+      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+    </div>
+
+    <div class="list-row">
+      <div class="creator-cell">
+        <div class="avatar a7">אכ</div>
+        <div class="meta">
+          <span class="h">@adi.knit</span>
+          <span class="n" data-i18n="creator.adi.name">Adi Klein · Tel Aviv</span>
+        </div>
+      </div>
+      <div data-i18n="lists.niche.knitwear">Fashion · Knitwear</div>
+      <div>18.4K · <span class="value-good">7.8%</span></div>
+      <div><span class="status-tag tag-interested" data-i18n="lists.status.interested">Interested</span></div>
+      <div class="text-muted small" data-i18n="lists.note.adi">Aesthetic match, ask about studio visit content</div>
+      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+    </div>
+
+    <div class="list-row">
+      <div class="creator-cell">
+        <div class="avatar a4">מכ</div>
+        <div class="meta">
+          <span class="h">@maya.kohen</span>
+          <span class="n" data-i18n="creator.maya.name">Maya Kohen · Tel Aviv</span>
+        </div>
+      </div>
+      <div data-i18n="lists.niche.streetwear">Fashion · Streetwear</div>
+      <div>61.2K · 3.2%</div>
+      <div><span class="status-tag tag-passed" data-i18n="lists.status.passed">Passed</span></div>
+      <div class="text-muted small" data-i18n="lists.note.maya">ER below threshold for budget tier</div>
+      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+    </div>
+
+  </div>
+
+  <div class="footer-note" style="margin-top:40px" data-i18n="footer.source">
+    All profile data sourced from public Instagram Business/Creator profiles via the official Business Discovery API.
+  </div>
+</div>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
+
+<script src="../../i18n.js?v=4"></script>
+</body>
+</html>

@@ -59,7 +59,7 @@ Recommend grabbing both — `.co.il` for the Israeli credibility, `.com` as fall
 
 ## Adding a real creator to the demo
 
-See [`docs/adding-a-creator.md`](docs/adding-a-creator.md) — a step-by-step playbook for pulling profile data from Instagram, wiring a new card into `brand/niche-demo.js`, and (optionally) building a dedicated profile page with real post thumbnails and past brand-collab logos. Used to add [@maya.agassi](https://www.instagram.com/maya.agassi/) to the food demo.
+See [`docs/adding-a-creator.md`](docs/adding-a-creator.md) — a step-by-step playbook for pulling profile data from Instagram, wiring a new card into `niche-demo.js`, and (optionally) building a dedicated profile page with real post thumbnails and past brand-collab logos. Used to add [@maya.agassi](https://www.instagram.com/maya.agassi/) to the food demo.
 
 ## Notes on the i18n implementation
 

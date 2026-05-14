@@ -1,14 +1,192 @@
 <!doctype html>
-<meta charset="utf-8">
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Influradar — Influencer sourcing built for Israeli brands</title>
-<style>html,body{background:#0b0d10;margin:0}</style>
-<link rel="preload" href="../styles.css" as="style">
-<script>
-  fetch("../brand/index.html").then(r => r.text()).then(html => {
-    html = html
-      .replace("<head>", '<head><style>html{visibility:hidden}</style><base href="../brand/">')
-      .replace(/href="app\.html"/g, 'href="../beauty/demo/"')
-      .replace(/href="index\.html"/g, 'href="../beauty/"');
-    document.open(); document.write(html); document.close();
-  });
-</script>
+<meta name="description" content="Take influencer marketing in-house. Find Israeli creators that fit your brand, vet them yourself, and stop paying agency retainers for work you can own." />
+<meta property="og:title" content="Influradar — Influencer sourcing for Israeli brands" />
+<meta property="og:description" content="Stop paying agency retainers for influencer sourcing. Find Israeli creators that fit your brand, in-house." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://influradar.com/beauty/" />
+<meta property="og:image" content="https://influradar.com/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="brand">
+      <div class="brand-mark"></div>
+      <span>Influradar</span>
+      <small data-i18n="brand.beta">beta · IL</small>
+    </a>
+    <nav class="topnav">
+      <a href="demo/" data-i18n="nav.discover">Discover</a>
+      <a href="demo/pricing.html" data-i18n="nav.pricing">Pricing</a>
+    </nav>
+  </div>
+  <div class="top-actions">
+    <div class="lang-toggle">
+      <button data-lang="en">EN</button>
+      <button data-lang="he">עב</button>
+    </div>
+    <a href="demo/" class="btn" data-i18n="nav.signin">Sign in</a>
+    <a href="demo/" class="btn btn-primary" data-i18n="nav.demo">See demo</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">
+    <span class="dot">●</span> <span data-i18n="brand.land.eyebrow">For Israeli brands and in-house marketing teams</span>
+  </div>
+  <h1>
+    <span data-i18n="brand.land.h1.a">Take influencer marketing in-house. </span><span class="grad" data-i18n="brand.land.h1.b">Own your creator roster.</span><span data-i18n="brand.land.h1.c"> Stop paying agency retainers for work you can do yourself.</span>
+  </h1>
+  <p class="lede" data-i18n="brand.land.lede">Influradar is the in-house influencer platform for Israeli brands. Discover creators your audience already follows, vet them on real metrics, and run outreach yourself — without the 15–25% agency markup or the black-box reporting.</p>
+  <div class="hero-cta">
+    <a href="demo/" class="btn btn-primary btn-lg" data-i18n="brand.land.cta.primary">Try the demo</a>
+    <a href="demo/pricing.html" class="btn btn-lg" data-i18n="brand.land.cta.secondary">See pricing</a>
+  </div>
+</section>
+
+<section class="page">
+
+  <!-- Numbers strip -->
+  <div class="stats-strip">
+    <div class="stat-block">
+      <div class="big" data-i18n="brand.land.stat1.big">₪38K</div>
+      <div class="lbl" data-i18n="brand.land.stat1.lbl">Saved per quarter vs. agency sourcing retainer</div>
+    </div>
+    <div class="stat-block">
+      <div class="big" data-i18n="brand.land.stat2.big">11,400+</div>
+      <div class="lbl" data-i18n="brand.land.stat2.lbl">Israeli creators indexed, refreshed daily</div>
+    </div>
+    <div class="stat-block">
+      <div class="big" data-i18n="brand.land.stat3.big">94%</div>
+      <div class="lbl" data-i18n="brand.land.stat3.lbl">Median real-audience score on results</div>
+    </div>
+    <div class="stat-block">
+      <div class="big" data-i18n="brand.land.stat4.big">100%</div>
+      <div class="lbl" data-i18n="brand.land.stat4.lbl">Your data, your roster. Never lost when you switch teams.</div>
+    </div>
+  </div>
+
+  <div class="trusted-by">
+    <div class="label" data-i18n="brand.land.trusted">Built for Israeli brand teams in</div>
+    <div class="logos">
+      <div class="logo-fake" data-i18n="land.vertical.fashion">Fashion</div>
+      <div class="logo-fake s" data-i18n="land.vertical.beauty">Beauty</div>
+      <div class="logo-fake" data-i18n="land.vertical.food">Food &amp; café</div>
+      <div class="logo-fake s" data-i18n="land.vertical.pharma">Pharma &amp; wellness</div>
+      <div class="logo-fake" data-i18n="land.vertical.lifestyle">Lifestyle</div>
+      <div class="logo-fake s" data-i18n="land.vertical.d2c">D2C</div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="icon">⊙</div>
+      <h3 data-i18n="brand.land.f1.title">Find creators your audience already follows</h3>
+      <p data-i18n="brand.land.f1.body">Audience-overlap matching: see which Israeli creators have the highest follower overlap with your own brand's followers. Stop paying for reach that doesn't convert — partner with creators whose audience already trusts you.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">✓</div>
+      <h3 data-i18n="brand.land.f2.title">Vet on metrics, not on a deck</h3>
+      <p data-i18n="brand.land.f2.body">Every creator is scored for follower authenticity, engagement legitimacy, and brand-safety signals. No more relying on the agency's PowerPoint — see the same numbers a creator sees in their own dashboard.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">⌂</div>
+      <h3 data-i18n="brand.land.f3.title">Build a creator roster you own</h3>
+      <p data-i18n="brand.land.f3.body">Save creators, track who delivered last campaign, leave private notes the agency never saw. Your roster, your performance history — it stays with the brand, not with whoever ran your last campaign.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">→</div>
+      <h3 data-i18n="brand.land.f4.title">Outreach in your brand voice</h3>
+      <p data-i18n="brand.land.f4.body">Send briefs directly from your brand's email. Use templates that match your tone, not an agency boilerplate. Track responses, manage approvals, run the campaign — without a middleman taking 20%.</p>
+    </div>
+  </div>
+
+  <!-- Testimonial mock -->
+  <div class="quote-card">
+    <blockquote data-i18n="brand.land.quote">Our agency charged us ₪14K a month just to source creators — and half of them were the same names they pitched our competitors. We brought it in-house with Influradar in two weeks. Our last campaign converted better than anything the agency ran for us.</blockquote>
+    <div class="attrib">
+      <div class="avatar a7">BM</div>
+      <div class="who">
+        <span class="name-q" data-i18n="brand.land.quote.name">Mockup Brand Co.</span>
+        <span class="role-q" data-i18n="brand.land.quote.role">Brand Marketing Lead · Israeli D2C brand</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand workflow band -->
+  <div class="agency-band">
+    <h2 data-i18n="brand.land.band.h2">Built for the in-house brand workflow</h2>
+    <p class="subtitle mt-0" data-i18n="brand.land.band.sub">Everything an Israeli brand team needs to discover, vet, brief, and measure — without a sourcing agency in the middle.</p>
+    <div class="agency-grid">
+      <div class="item">
+        <div class="num">1</div>
+        <div>
+          <h4 data-i18n="brand.land.band.i1.title">Cut the middleman</h4>
+          <p data-i18n="brand.land.band.i1.body">A typical agency retainer for influencer sourcing runs ₪10K–15K/month. Influradar runs ₪249/month and gives you the same data — minus the markup, minus the deck-driven timeline.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">2</div>
+        <div>
+          <h4 data-i18n="brand.land.band.i2.title">Own your creator history</h4>
+          <p data-i18n="brand.land.band.i2.body">When you switch agencies, your creator roster, performance notes, and outreach history stay with your brand. No more starting from zero every 18 months.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">3</div>
+        <div>
+          <h4 data-i18n="brand.land.band.i3.title">Vet for fit, not reach</h4>
+          <p data-i18n="brand.land.band.i3.body">Filter by audience demographics, language mix, location signals, and credibility score. Find the 5,000-follower creator whose audience is 80% your buyer — not the 200K name who looks good in a deck.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">4</div>
+        <div>
+          <h4 data-i18n="brand.land.band.i4.title">Transparent pricing</h4>
+          <p data-i18n="brand.land.band.i4.body">Subscription only. No commission on creator deals, no per-message fees, no markup on what you pay the creator. The whole budget goes to the creator, where it should.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">5</div>
+        <div>
+          <h4 data-i18n="brand.land.band.i5.title">Brand safety, built-in</h4>
+          <p data-i18n="brand.land.band.i5.body">Every creator is screened for tone-of-voice, prior brand partnerships, and content flags. See competitor partnerships before you brief — no awkward overlap surprises.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">6</div>
+        <div>
+          <h4 data-i18n="brand.land.band.i6.title">Hebrew-native</h4>
+          <p data-i18n="brand.land.band.i6.body">Full Hebrew UI, search Hebrew creator bios properly, and discover niches global tools miss — modest fashion, mizrahi food, religious creators, IDF lifestyle. Built for the Israeli market exclusively.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <h2 data-i18n="brand.land.cta2.title">Run influencer marketing in-house. Keep the budget for media.</h2>
+    <p data-i18n="brand.land.cta2.body">Early-access pricing for the first 50 brands — 40% off your first 6 months. Cancel anytime.</p>
+    <a href="demo/pricing.html" class="btn btn-primary btn-lg" data-i18n="brand.land.cta2.button">Claim early-access pricing</a>
+  </div>
+
+  <div class="footer-note" data-i18n="footer.source">
+    Profile data refreshed daily from Meta's Business Discovery API. Audience scores computed nightly.
+  </div>
+</section>
+
+<div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
+
+<script src="../i18n.js?v=4"></script>
+</body>
+</html>

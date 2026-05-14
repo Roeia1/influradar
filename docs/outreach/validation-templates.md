@@ -9,11 +9,14 @@ The working demo is the hook. Lead with the link, keep messages short, make "no"
 | Audience | Demo URL | Role hint |
 |---|---|---|
 | Agency (running campaigns for clients) | `https://influradar-flax.vercel.app/` | media buyers, agency leads, influencer marketing managers |
-| Brand (in-house marketing) | `https://influradar-flax.vercel.app/brand/` | brand managers, marketing leads, growth |
+| Brand — food | `https://influradar-flax.vercel.app/food/` | brand managers in food/CPG, restaurants, nutrition |
+| Brand — beauty | `https://influradar-flax.vercel.app/beauty/` | brand managers in cosmetics, skincare, haircare |
+| Brand — health | `https://influradar-flax.vercel.app/health/` | brand managers in wellness, supplements, fitness |
+| Brand — electronics | `https://influradar-flax.vercel.app/electronics/` | brand managers in tech, gadgets, audio |
 
 Tag links per channel + template for tracking. Example:
 ```
-https://influradar-flax.vercel.app/brand/?utm_source=linkedin&utm_campaign=validation_v1&utm_content=brand_dm
+https://influradar-flax.vercel.app/food/?utm_source=linkedin&utm_campaign=validation_v1&utm_content=brand_dm
 https://influradar-flax.vercel.app/?utm_source=email&utm_campaign=validation_v1&utm_content=agency_email
 ```
 
@@ -25,7 +28,7 @@ https://influradar-flax.vercel.app/?utm_source=email&utm_campaign=validation_v1&
 |---|---|
 | `{first_name}` | LinkedIn / contact list |
 | `{company}` | LinkedIn |
-| `{demo_url}` | `https://influradar-flax.vercel.app/brand/` (brand) or `https://influradar-flax.vercel.app/` (agency), with UTM tags appended |
+| `{demo_url}` | per-niche brand URL like `https://influradar-flax.vercel.app/food/` (pick the niche that fits the prospect) or `https://influradar-flax.vercel.app/` (agency), with UTM tags appended |
 | `{personalized_reason}` | 1 hand-written line per prospect — the response-rate lever |
 | `{role_context}` | mapped from job title (brand-side / agency / freelance) |
 

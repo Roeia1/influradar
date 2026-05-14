@@ -1,4 +1,4 @@
-// Per-niche demo overlay for brand/app.html.
+// Per-niche demo overlay for each niche's discover page (niche/demo/index.html).
 // Reads ?niche=food|electronics|health|beauty and rewrites:
 //   - workspace pill (top right)
 //   - "audience overlap" target brand
@@ -24,7 +24,7 @@ const NICHES = {
     creators: [
       { handle: "@linorlab",        initials: "לל", overlap: 47, badge: "high",
         photo: "../../assets/creators/linorlab.jpg",
-        profileUrl: "../food/demo/profile-linorlab.html",
+        profileUrl: "profile-linorlab.html",
         name: { en: "Linor Levanter · Israel",       he: "לינור לבנטר · ישראל" },
         bio:  { en: "Low-cal high-protein recipes & shaping tips — eat more, still lose weight without suffering.",
                 he: "חיטוב, מתכונים וטיפים · אוכלים ומרזים בכיף בלי להיקרע באימונים." },
@@ -37,7 +37,7 @@ const NICHES = {
         creds: 91, followers: "115K", er: "3.9%", erGood: true, posts: "2.5" },
       { handle: "@maya.agassi",     initials: "מא", overlap: 39, badge: "high",
         photo: "../../assets/creators/maya.agassi.jpg",
-        profileUrl: "../food/demo/profile.html",
+        profileUrl: "profile.html",
         name: { en: "Maya Agassi · Tel Aviv",        he: "מאיה אגסי · תל אביב" },
         bio:  { en: "Dizengoff Square foodie & content creator ✦ Bezalel grad ✦ honest TLV restaurant recs.",
                 he: "הפודית של כיכר דיזינגוף ויוצרת תוכן ✦ בוגרת בצלאל ✦ המלצות כנות על מסעדות ת״א." },
@@ -50,7 +50,7 @@ const NICHES = {
         creds: 96, followers: "4.0K", er: "9.6%", erGood: true, posts: "2.0" },
       { handle: "@romi.eats",       initials: "רא", overlap: 38, badge: "high",
         photo: "../../assets/creators/romi.eats.jpg",
-        profileUrl: "../food/demo/profile-romi.eats.html",
+        profileUrl: "profile-romi.eats.html",
         name: { en: "Romi Avni · Israel",            he: "רומי אבני · ישראל" },
         bio:  { en: "Food, workouts, recipes — and a lot of burgers.",
                 he: "אוכל, אימונים, מתכונים והרבה המבורגרים." },
@@ -63,7 +63,7 @@ const NICHES = {
         creds: 92, followers: "30.0K", er: "7.7%", erGood: true, posts: "1.5" },
       { handle: "@talya_kaplan_nutrition", initials: "טק", overlap: 34, badge: "mid",
         photo: "../../assets/creators/talya_kaplan_nutrition.jpg",
-        profileUrl: "../food/demo/profile-talya_kaplan_nutrition.html",
+        profileUrl: "profile-talya_kaplan_nutrition.html",
         name: { en: "Talya Kaplan · Rehovot",        he: "טליה קפלן · רחובות" },
         bio:  { en: "Clinical dietitian & fitness coach. Creator of \"You can (and should) eat it all\" — lose weight without giving up chocolate.",
                 he: "דיאטנית קלינית ומאמנת כושר · יוצרת התוכנית ״מותר (ורצוי) לאכול הכל״ · לרדת במשקל בלי לוותר על שוקולד." },
@@ -75,7 +75,7 @@ const NICHES = {
         creds: 90, followers: "31.2K", er: "0.7%", erGood: false, posts: "2.0" },
       { handle: "@hm___fitnutrition", initials: "המ", overlap: 31, badge: "mid",
         photo: "../../assets/creators/hm___fitnutrition.jpg",
-        profileUrl: "../food/demo/profile-hm___fitnutrition.html",
+        profileUrl: "profile-hm___fitnutrition.html",
         name: { en: "Hadas & Maayan Lapidot · Israel", he: "הדס ומעין לפידות · ישראל" },
         bio:  { en: "Twin dietitians, 42, eat everything · low-cal recipes that taste great · @myproteinisrael ambassadors.",
                 he: "דיאטניות תאומות, בנות 42, אוכלות הכל · מתכונים מופחתי קלוריות טעימים · שגרירות @myproteinisrael." },
@@ -87,7 +87,7 @@ const NICHES = {
         creds: 89, followers: "17.8K", er: "3.9%", erGood: true, posts: "2.2" },
       { handle: "@nitzanjerbi",     initials: "נג", overlap: 27, badge: "mid",
         photo: "../../assets/creators/nitzanjerbi.jpg",
-        profileUrl: "../food/demo/profile-nitzanjerbi.html",
+        profileUrl: "profile-nitzanjerbi.html",
         name: { en: "Nitzan Jerbi Derfler · Israel", he: "ניצן ג׳רבי דרפלר · ישראל" },
         bio:  { en: "Comedian & actress turning everyday life into content. Goal: a Sabichia collab.",
                 he: "קומיקאית, שחקנית ואשת חייל — מכל זה יוצרת תוכן. יעד בחיים: שת״פ עם סביחיה." },
@@ -100,7 +100,7 @@ const NICHES = {
         creds: 88, followers: "23.9K", er: "33.0%", erGood: true, posts: "0.5" },
       { handle: "@chen_fitness_crossfit_workout", initials: "חב", overlap: 24, badge: "mid",
         photo: "../../assets/creators/chen_fitness_crossfit_workout.jpg",
-        profileUrl: "../food/demo/profile-chen_fitness_crossfit_workout.html",
+        profileUrl: "profile-chen_fitness_crossfit_workout.html",
         name: { en: "Chen Ben David · Israel",       he: "חן בן דוד · ישראל" },
         bio:  { en: "Fitness coach & nutrition consultant · mom of 4 in 5 years (incl. twins) · sport, healthy food, travel & life tips.",
                 he: "מאמנת כושר ויועצת תזונה · אמא ל-4 ב-5 שנים (כולל תאומים) · ספורט, אוכל בריא, טיולים וטיפים." },
@@ -112,7 +112,7 @@ const NICHES = {
         creds: 87, followers: "10.0K", er: "0.2%", erGood: false, posts: "1.5" },
       { handle: "@nivfitfood",      initials: "נז", overlap: 20, badge: "low",
         photo: "../../assets/creators/nivfitfood.jpg",
-        profileUrl: "../food/demo/profile-nivfitfood.html",
+        profileUrl: "profile-nivfitfood.html",
         name: { en: "Niv Zitayat · Israel",          he: "ניב זיתאית · ישראל" },
         bio:  { en: "Personal trainer & protein-products reviewer. Foods + workouts.",
                 he: "מאמן אישי וסוקר מוצרי חלבון. אוכל ואימונים." },
