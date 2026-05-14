@@ -6,6 +6,74 @@
 <title>Briefs sent · Influradar</title>
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
 <link rel="stylesheet" href="../../styles.css" />
+<style>
+  .campaign-section { margin-top: 28px; }
+  .campaign-section + .campaign-section { margin-top: 40px; }
+  .campaign-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 12px;
+  }
+  .campaign-header h2 { margin: 0; font-size: 20px; font-weight: 600; }
+  .campaign-header .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .campaign-stats { display: flex; gap: 18px; font-size: 13px; color: var(--muted); white-space: nowrap; }
+  .campaign-stats strong { color: var(--text); font-weight: 600; }
+
+  .kanban-board {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .kanban-col {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    display: flex; flex-direction: column; gap: 10px;
+    min-width: 220px;
+  }
+  .kanban-col-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 2px 4px 6px;
+    font-size: 12px; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .kanban-col-head .count {
+    background: var(--panel-3); color: var(--muted);
+    border-radius: 10px; padding: 1px 8px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0;
+  }
+  .kanban-col-empty {
+    color: var(--muted-2); font-size: 12px; padding: 16px 4px; text-align: center;
+    border: 1px dashed var(--border); border-radius: 8px;
+  }
+  .kanban-card {
+    display: block;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    text-decoration: none; color: inherit;
+    transition: border-color .12s ease, transform .12s ease;
+  }
+  .kanban-card:hover { border-color: var(--border-light); transform: translateY(-1px); }
+  .kanban-card .creator-cell { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+  .kanban-card .creator-cell .avatar { width: 32px; height: 32px; font-size: 12px; }
+  .kanban-card .creator-cell .h { font-weight: 600; font-size: 13px; }
+  .kanban-card .creator-cell .n { font-size: 11px; color: var(--muted); }
+  .kanban-card .kanban-card-foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--muted); margin-top: 8px;
+  }
+  .kanban-card .kanban-card-foot .budget { color: var(--text); font-weight: 600; }
+
+  @media (max-width: 980px) {
+    .kanban-board { grid-template-columns: repeat(5, minmax(220px, 240px)); }
+    .campaign-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+</style>
 </head>
 <body>
 
@@ -40,170 +108,196 @@
   <div class="list-header">
     <div>
       <h1>Briefs sent</h1>
-      <p class="subtitle mt-0" style="margin-top:6px">Every brief Pantry &amp; Co. has sent. Track status from outreach to deal closed.</p>
+      <p class="subtitle mt-0" style="margin-top:6px">Every brief Pantry &amp; Co. has sent, grouped by campaign. Drag a card to update its status.</p>
     </div>
     <button class="btn btn-primary">+ Send new brief</button>
   </div>
 
-  <div class="list-tabs">
-    <div class="list-tab active">
-      <span>All briefs</span>
-      <span class="count">8</span>
-    </div>
-    <div class="list-tab">
-      <span>Awaiting reply</span>
-      <span class="count">3</span>
-    </div>
-    <div class="list-tab">
-      <span>Responded</span>
-      <span class="count">2</span>
-    </div>
-    <div class="list-tab">
-      <span>In negotiation</span>
-      <span class="count">1</span>
-    </div>
-    <div class="list-tab">
-      <span>Closed-won</span>
-      <span class="count">1</span>
-    </div>
-    <div class="list-tab">
-      <span>Declined</span>
-      <span class="count">1</span>
-    </div>
-  </div>
-
-  <div class="list-table">
-
-    <div class="list-row header">
-      <div>Creator</div>
-      <div>Campaign</div>
-      <div>Budget</div>
-      <div>Sent</div>
-      <div>Status</div>
-      <div></div>
-    </div>
-
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a1">לל</div>
-        <div class="meta">
-          <span class="h">@linorlab</span>
-          <span class="n">Linor Levanter</span>
-        </div>
+  <!-- Campaign 1 -->
+  <section class="campaign-section">
+    <div class="campaign-header">
+      <div>
+        <h2>Spring pantry refresh · April reels</h2>
+        <div class="sub">Lifestyle creators showcasing the new spring snack &amp; matcha SKUs across Reels and Stories.</div>
       </div>
-      <div>Skinny Pasta IL · April reel</div>
-      <div>₪3,500</div>
-      <div class="text-muted small">3 days ago</div>
-      <div><span class="status-tag tag-brief">Brief sent</span></div>
-      <div><a href="profile-linorlab.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
-    </div>
-
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a2">מא</div>
-        <div class="meta">
-          <span class="h">@maya.agassi</span>
-          <span class="n">Maya Agassi</span>
-        </div>
+      <div class="campaign-stats">
+        <span><strong>4</strong> briefs</span>
+        <span>Budget · <strong>₪15,000</strong></span>
+        <span>Committed · <strong>₪15,000</strong></span>
       </div>
-      <div>Matcha launch · TLV story series</div>
-      <div>₪2,200</div>
-      <div class="text-muted small">6 days ago</div>
-      <div><span class="status-tag tag-responded">Responded</span></div>
-      <div><a href="profile.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
     </div>
 
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a3">רא</div>
-        <div class="meta">
-          <span class="h">@romi.eats</span>
-          <span class="n">Romi Avni</span>
-        </div>
+    <div class="kanban-board">
+
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Brief sent</span><span class="count">1</span></div>
+        <a href="profile-chen_fitness_crossfit_workout.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a7">חב</div>
+            <div class="meta">
+              <span class="h">@chen_fitness_crossfit_workout</span>
+              <span class="n">Chen Ben David</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪2,800</span>
+            <span>Sent 9d ago</span>
+          </div>
+        </a>
       </div>
-      <div>Beef Steakchips · burger feature</div>
-      <div>₪4,000</div>
-      <div class="text-muted small">1 week ago</div>
-      <div><span class="status-tag tag-interested">In negotiation</span></div>
-      <div><a href="profile-romi.eats.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
-    </div>
 
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a4">טק</div>
-        <div class="meta">
-          <span class="h">@talya_kaplan_nutrition</span>
-          <span class="n">Talya Kaplan</span>
-        </div>
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Responded</span><span class="count">2</span></div>
+        <a href="profile.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a2">מא</div>
+            <div class="meta">
+              <span class="h">@maya.agassi</span>
+              <span class="n">Maya Agassi</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪2,200</span>
+            <span>Sent 6d ago</span>
+          </div>
+        </a>
+        <a href="profile-nitzanjerbi.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a6">נג</div>
+            <div class="meta">
+              <span class="h">@nitzanjerbi</span>
+              <span class="n">Nitzan Jerbi Derfler</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪6,000</span>
+            <span>Sent 5d ago</span>
+          </div>
+        </a>
       </div>
-      <div>Wonders of Nature · supplement Reel</div>
-      <div>₪3,000</div>
-      <div class="text-muted small">4 days ago</div>
-      <div><span class="status-tag tag-brief">Brief sent</span></div>
-      <div><a href="profile-talya_kaplan_nutrition.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
-    </div>
 
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a5">המ</div>
-        <div class="meta">
-          <span class="h">@hm___fitnutrition</span>
-          <span class="n">Hadas &amp; Maayan Lapidot</span>
-        </div>
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>In negotiation</span><span class="count">1</span></div>
+        <a href="profile-romi.eats.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a3">רא</div>
+            <div class="meta">
+              <span class="h">@romi.eats</span>
+              <span class="n">Romi Avni</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪4,000</span>
+            <span>Sent 7d ago</span>
+          </div>
+        </a>
       </div>
-      <div>Twin dietitians · MyProtein collab</div>
-      <div>₪5,500</div>
-      <div class="text-muted small">2 weeks ago</div>
-      <div><span class="status-tag tag-responded">Closed-won</span></div>
-      <div><a href="profile-hm___fitnutrition.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
-    </div>
 
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a6">נג</div>
-        <div class="meta">
-          <span class="h">@nitzanjerbi</span>
-          <span class="n">Nitzan Jerbi Derfler</span>
-        </div>
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Closed-won</span><span class="count">0</span></div>
+        <div class="kanban-col-empty">No briefs here yet</div>
       </div>
-      <div>Sprite IL · comedic skit</div>
-      <div>₪6,000</div>
-      <div class="text-muted small">5 days ago</div>
-      <div><span class="status-tag tag-responded">Responded</span></div>
-      <div><a href="profile-nitzanjerbi.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
-    </div>
 
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a7">חב</div>
-        <div class="meta">
-          <span class="h">@chen_fitness_crossfit_workout</span>
-          <span class="n">Chen Ben David</span>
-        </div>
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Declined</span><span class="count">0</span></div>
+        <div class="kanban-col-empty">No briefs here yet</div>
       </div>
-      <div>Naturalion · family workout Reel</div>
-      <div>₪2,800</div>
-      <div class="text-muted small">9 days ago</div>
-      <div><span class="status-tag tag-brief">Brief sent</span></div>
-      <div><a href="profile-chen_fitness_crossfit_workout.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
-    </div>
 
-    <div class="list-row">
-      <div class="creator-cell">
-        <div class="avatar a8">נז</div>
-        <div class="meta">
-          <span class="h">@nivfitfood</span>
-          <span class="n">Niv Zitayat</span>
-        </div>
+    </div>
+  </section>
+
+  <!-- Campaign 2 -->
+  <section class="campaign-section">
+    <div class="campaign-header">
+      <div>
+        <h2>High-protein lineup · Q3 launch</h2>
+        <div class="sub">Nutrition &amp; fitness creators introducing Pantry &amp; Co.'s new high-protein pasta and snack range.</div>
       </div>
-      <div>Pro+Cream · protein review</div>
-      <div>₪1,800</div>
-      <div class="text-muted small">12 days ago</div>
-      <div><span class="status-tag tag-passed">Declined</span></div>
-      <div><a href="profile-nivfitfood.html" class="btn small" style="padding:5px 10px;font-size:12px">→</a></div>
+      <div class="campaign-stats">
+        <span><strong>4</strong> briefs</span>
+        <span>Budget · <strong>₪16,000</strong></span>
+        <span>Committed · <strong>₪13,800</strong></span>
+      </div>
     </div>
 
-  </div>
+    <div class="kanban-board">
+
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Brief sent</span><span class="count">2</span></div>
+        <a href="profile-linorlab.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a1">לל</div>
+            <div class="meta">
+              <span class="h">@linorlab</span>
+              <span class="n">Linor Levanter</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪3,500</span>
+            <span>Sent 3d ago</span>
+          </div>
+        </a>
+        <a href="profile-talya_kaplan_nutrition.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a4">טק</div>
+            <div class="meta">
+              <span class="h">@talya_kaplan_nutrition</span>
+              <span class="n">Talya Kaplan</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪3,000</span>
+            <span>Sent 4d ago</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Responded</span><span class="count">0</span></div>
+        <div class="kanban-col-empty">No briefs here yet</div>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>In negotiation</span><span class="count">0</span></div>
+        <div class="kanban-col-empty">No briefs here yet</div>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Closed-won</span><span class="count">1</span></div>
+        <a href="profile-hm___fitnutrition.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a5">המ</div>
+            <div class="meta">
+              <span class="h">@hm___fitnutrition</span>
+              <span class="n">Hadas &amp; Maayan Lapidot</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪5,500</span>
+            <span>Sent 14d ago</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col-head"><span>Declined</span><span class="count">1</span></div>
+        <a href="profile-nivfitfood.html" class="kanban-card">
+          <div class="creator-cell">
+            <div class="avatar a8">נז</div>
+            <div class="meta">
+              <span class="h">@nivfitfood</span>
+              <span class="n">Niv Zitayat</span>
+            </div>
+          </div>
+          <div class="kanban-card-foot">
+            <span class="budget">₪1,800</span>
+            <span>Sent 12d ago</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
 
   <div class="footer-note" style="margin-top:40px">
     All briefs are sent directly from your brand inbox. No middleman, no agency boilerplate.
