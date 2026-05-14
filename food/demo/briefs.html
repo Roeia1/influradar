@@ -57,17 +57,41 @@
     padding: 12px;
     text-decoration: none; color: inherit;
     transition: border-color .12s ease, transform .12s ease;
+    overflow: hidden;
+    min-width: 0;
   }
   .kanban-card:hover { border-color: var(--border-light); transform: translateY(-1px); }
-  .kanban-card .creator-cell { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
-  .kanban-card .creator-cell .avatar { width: 32px; height: 32px; font-size: 12px; }
-  .kanban-card .creator-cell .h { font-weight: 600; font-size: 13px; }
-  .kanban-card .creator-cell .n { font-size: 11px; color: var(--muted); }
+  .kanban-card .creator-cell {
+    display: flex; gap: 10px; align-items: center; margin-bottom: 10px;
+    min-width: 0;
+  }
+  .kanban-card .creator-cell .avatar { width: 32px; height: 32px; font-size: 12px; flex-shrink: 0; }
+  .kanban-card .creator-cell .meta {
+    display: flex; flex-direction: column;
+    min-width: 0; flex: 1;
+  }
+  .kanban-card .creator-cell .h {
+    font-weight: 600; font-size: 13px;
+    display: block;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    max-width: 100%;
+  }
+  .kanban-card .creator-cell .n {
+    font-size: 11px; color: var(--muted);
+    display: block;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    max-width: 100%;
+  }
   .kanban-card .kanban-card-foot {
     display: flex; justify-content: space-between; align-items: center;
     font-size: 12px; color: var(--muted); margin-top: 8px;
+    gap: 8px;
   }
-  .kanban-card .kanban-card-foot .budget { color: var(--text); font-weight: 600; }
+  .kanban-card .kanban-card-foot .budget { color: var(--text); font-weight: 600; flex-shrink: 0; }
+  .kanban-card .kanban-card-foot .sent {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    min-width: 0; text-align: right;
+  }
 
   @media (max-width: 980px) {
     .kanban-board { grid-template-columns: repeat(5, minmax(220px, 240px)); }
@@ -99,7 +123,7 @@
       <button data-lang="en">EN</button>
       <button data-lang="he">עב</button>
     </div>
-    <button class="btn">Pantry &amp; Co. · Marketing ▾</button>
+    <button class="btn" data-i18n="briefs.workspace">Pantry &amp; Co. · Marketing ▾</button>
   </div>
 </header>
 
@@ -107,58 +131,58 @@
 
   <div class="list-header">
     <div>
-      <h1>Briefs sent</h1>
-      <p class="subtitle mt-0" style="margin-top:6px">Every brief Pantry &amp; Co. has sent, grouped by campaign. Drag a card to update its status.</p>
+      <h1 data-i18n="briefs.h1">Briefs sent</h1>
+      <p class="subtitle mt-0" style="margin-top:6px" data-i18n="briefs.sub">Every brief Pantry &amp; Co. has sent, grouped by campaign. Drag a card to update its status.</p>
     </div>
-    <button class="btn btn-primary">+ Send new brief</button>
+    <button class="btn btn-primary" data-i18n="briefs.new">+ Send new brief</button>
   </div>
 
   <!-- Campaign 1 -->
   <section class="campaign-section">
     <div class="campaign-header">
       <div>
-        <h2>Spring pantry refresh · April reels</h2>
-        <div class="sub">Lifestyle creators showcasing the new spring snack &amp; matcha SKUs across Reels and Stories.</div>
+        <h2 data-i18n="briefs.c1.title">Spring pantry refresh · April reels</h2>
+        <div class="sub" data-i18n="briefs.c1.sub">Lifestyle creators showcasing the new spring snack &amp; matcha SKUs across Reels and Stories.</div>
       </div>
       <div class="campaign-stats">
-        <span><strong>4</strong> briefs</span>
-        <span>Budget · <strong>₪15,000</strong></span>
-        <span>Committed · <strong>₪15,000</strong></span>
+        <span><strong>4</strong> <span data-i18n="briefs.stats.briefs">briefs</span></span>
+        <span><span data-i18n="briefs.stats.budget">Budget · </span><strong>₪15,000</strong></span>
+        <span><span data-i18n="briefs.stats.committed">Committed · </span><strong>₪15,000</strong></span>
       </div>
     </div>
 
     <div class="kanban-board">
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Brief sent</span><span class="count">1</span></div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.brief">Brief sent</span><span class="count">1</span></div>
         <a href="profile-chen_fitness_crossfit_workout.html" class="kanban-card">
           <div class="creator-cell">
             <div class="avatar a7">חב</div>
             <div class="meta">
               <span class="h">@chen_fitness_crossfit_workout</span>
-              <span class="n">Chen Ben David</span>
+              <span class="n" data-i18n="creator.chen_fitness.name">Chen Ben David</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪2,800</span>
-            <span>Sent 9d ago</span>
+            <span class="sent" data-i18n="briefs.sent.9d">Sent 9d ago</span>
           </div>
         </a>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Responded</span><span class="count">2</span></div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.responded">Responded</span><span class="count">2</span></div>
         <a href="profile.html" class="kanban-card">
           <div class="creator-cell">
             <div class="avatar a2">מא</div>
             <div class="meta">
               <span class="h">@maya.agassi</span>
-              <span class="n">Maya Agassi</span>
+              <span class="n" data-i18n="creator.maya_agassi.name">Maya Agassi</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪2,200</span>
-            <span>Sent 6d ago</span>
+            <span class="sent" data-i18n="briefs.sent.6d">Sent 6d ago</span>
           </div>
         </a>
         <a href="profile-nitzanjerbi.html" class="kanban-card">
@@ -166,41 +190,41 @@
             <div class="avatar a6">נג</div>
             <div class="meta">
               <span class="h">@nitzanjerbi</span>
-              <span class="n">Nitzan Jerbi Derfler</span>
+              <span class="n" data-i18n="creator.nitzanjerbi.name">Nitzan Jerbi Derfler</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪6,000</span>
-            <span>Sent 5d ago</span>
+            <span class="sent" data-i18n="briefs.sent.5d">Sent 5d ago</span>
           </div>
         </a>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>In negotiation</span><span class="count">1</span></div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.negotiation">In negotiation</span><span class="count">1</span></div>
         <a href="profile-romi.eats.html" class="kanban-card">
           <div class="creator-cell">
             <div class="avatar a3">רא</div>
             <div class="meta">
               <span class="h">@romi.eats</span>
-              <span class="n">Romi Avni</span>
+              <span class="n" data-i18n="creator.romi_eats.name">Romi Avni</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪4,000</span>
-            <span>Sent 7d ago</span>
+            <span class="sent" data-i18n="briefs.sent.7d">Sent 7d ago</span>
           </div>
         </a>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Closed-won</span><span class="count">0</span></div>
-        <div class="kanban-col-empty">No briefs here yet</div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.closed">Closed-won</span><span class="count">0</span></div>
+        <div class="kanban-col-empty" data-i18n="briefs.col.empty">No briefs here yet</div>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Declined</span><span class="count">0</span></div>
-        <div class="kanban-col-empty">No briefs here yet</div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.declined">Declined</span><span class="count">0</span></div>
+        <div class="kanban-col-empty" data-i18n="briefs.col.empty">No briefs here yet</div>
       </div>
 
     </div>
@@ -210,31 +234,31 @@
   <section class="campaign-section">
     <div class="campaign-header">
       <div>
-        <h2>High-protein lineup · Q3 launch</h2>
-        <div class="sub">Nutrition &amp; fitness creators introducing Pantry &amp; Co.'s new high-protein pasta and snack range.</div>
+        <h2 data-i18n="briefs.c2.title">High-protein lineup · Q3 launch</h2>
+        <div class="sub" data-i18n="briefs.c2.sub">Nutrition &amp; fitness creators introducing Pantry &amp; Co.'s new high-protein pasta and snack range.</div>
       </div>
       <div class="campaign-stats">
-        <span><strong>4</strong> briefs</span>
-        <span>Budget · <strong>₪16,000</strong></span>
-        <span>Committed · <strong>₪13,800</strong></span>
+        <span><strong>4</strong> <span data-i18n="briefs.stats.briefs">briefs</span></span>
+        <span><span data-i18n="briefs.stats.budget">Budget · </span><strong>₪16,000</strong></span>
+        <span><span data-i18n="briefs.stats.committed">Committed · </span><strong>₪13,800</strong></span>
       </div>
     </div>
 
     <div class="kanban-board">
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Brief sent</span><span class="count">2</span></div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.brief">Brief sent</span><span class="count">2</span></div>
         <a href="profile-linorlab.html" class="kanban-card">
           <div class="creator-cell">
             <div class="avatar a1">לל</div>
             <div class="meta">
               <span class="h">@linorlab</span>
-              <span class="n">Linor Levanter</span>
+              <span class="n" data-i18n="creator.linorlab.name">Linor Levanter</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪3,500</span>
-            <span>Sent 3d ago</span>
+            <span class="sent" data-i18n="briefs.sent.3d">Sent 3d ago</span>
           </div>
         </a>
         <a href="profile-talya_kaplan_nutrition.html" class="kanban-card">
@@ -242,56 +266,56 @@
             <div class="avatar a4">טק</div>
             <div class="meta">
               <span class="h">@talya_kaplan_nutrition</span>
-              <span class="n">Talya Kaplan</span>
+              <span class="n" data-i18n="creator.talya_kaplan.name">Talya Kaplan</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪3,000</span>
-            <span>Sent 4d ago</span>
+            <span class="sent" data-i18n="briefs.sent.4d">Sent 4d ago</span>
           </div>
         </a>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Responded</span><span class="count">0</span></div>
-        <div class="kanban-col-empty">No briefs here yet</div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.responded">Responded</span><span class="count">0</span></div>
+        <div class="kanban-col-empty" data-i18n="briefs.col.empty">No briefs here yet</div>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>In negotiation</span><span class="count">0</span></div>
-        <div class="kanban-col-empty">No briefs here yet</div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.negotiation">In negotiation</span><span class="count">0</span></div>
+        <div class="kanban-col-empty" data-i18n="briefs.col.empty">No briefs here yet</div>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Closed-won</span><span class="count">1</span></div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.closed">Closed-won</span><span class="count">1</span></div>
         <a href="profile-hm___fitnutrition.html" class="kanban-card">
           <div class="creator-cell">
             <div class="avatar a5">המ</div>
             <div class="meta">
               <span class="h">@hm___fitnutrition</span>
-              <span class="n">Hadas &amp; Maayan Lapidot</span>
+              <span class="n" data-i18n="creator.hm_fitnutrition.name">Hadas &amp; Maayan Lapidot</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪5,500</span>
-            <span>Sent 14d ago</span>
+            <span class="sent" data-i18n="briefs.sent.14d">Sent 14d ago</span>
           </div>
         </a>
       </div>
 
       <div class="kanban-col">
-        <div class="kanban-col-head"><span>Declined</span><span class="count">1</span></div>
+        <div class="kanban-col-head"><span data-i18n="briefs.col.declined">Declined</span><span class="count">1</span></div>
         <a href="profile-nivfitfood.html" class="kanban-card">
           <div class="creator-cell">
             <div class="avatar a8">נז</div>
             <div class="meta">
               <span class="h">@nivfitfood</span>
-              <span class="n">Niv Zitayat</span>
+              <span class="n" data-i18n="creator.nivfitfood.name">Niv Zitayat</span>
             </div>
           </div>
           <div class="kanban-card-foot">
             <span class="budget">₪1,800</span>
-            <span>Sent 12d ago</span>
+            <span class="sent" data-i18n="briefs.sent.12d">Sent 12d ago</span>
           </div>
         </a>
       </div>
@@ -299,13 +323,13 @@
     </div>
   </section>
 
-  <div class="footer-note" style="margin-top:40px">
+  <div class="footer-note" style="margin-top:40px" data-i18n="briefs.footer">
     All briefs are sent directly from your brand inbox. No middleman, no agency boilerplate.
   </div>
 </div>
 
 <div class="sheet-backdrop" onclick="closeMobileSheets()"></div>
 
-<script src="../../i18n.js?v=4"></script>
+<script src="../../i18n.js?v=5"></script>
 </body>
 </html>
