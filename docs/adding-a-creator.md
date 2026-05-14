@@ -1,6 +1,6 @@
 # Adding a new creator to the demo
 
-A playbook for adding a real Israeli creator (like [@maya.agassi](https://www.instagram.com/maya.agassi/)) to the discovery grid and, optionally, giving them a dedicated profile page with real posts and past brand collabs.
+A playbook for adding a real Israeli creator (like [@maya.agassi](https://www.instagram.com/maya.agassi/)) to the discovery grid and giving them a dedicated profile page with real posts and past brand collabs.
 
 The data comes from Instagram's public `web_profile_info` endpoint — the same one the IG web client uses. No auth, no API key. The creator just needs a public Business or Creator account.
 
@@ -121,10 +121,10 @@ Open `brand/niche-demo.js` and find the `creators` array under your chosen niche
   er:        "9.6%",                 // engagement rate display
   erGood:    true,                   // true → render in green
   posts:     "2.0",                  // posts/week display
+  photo:      "../../assets/creators/maya.agassi.jpg",       // avatar
+  profileUrl: "../food/demo/profile.html",                   // niche-specific dedicated profile page
 
   // ── OPTIONAL ──
-  photo:      "../../assets/creators/maya.agassi.jpg",       // overrides the gradient+initials avatar
-  profileUrl: "../food/demo/profile.html",                   // overrides the default "View profile" link
   workedWith: [                                              // past brand collabs (logo + name + handle)
     { handle:"@night.cookie",        name:"Night Cookie",      logo:"../../assets/brands/night.cookie.jpg" },
     { handle:"@basher.fromagerieil", name:"Basher Fromagerie", logo:"../../assets/brands/basher.fromagerieil.jpg" },
@@ -136,7 +136,7 @@ Open `brand/niche-demo.js` and find the `creators` array under your chosen niche
 Path quirks:
 
 - `photo` and `workedWith[].logo` are evaluated relative to `<base href="../../brand/">` (set by the niche stub), so `../../assets/...` resolves to repo-root `/assets/...`.
-- `profileUrl` follows the same base. Use `../food/demo/profile.html` to point at a niche-specific profile, or omit it to fall back to `brand/profile.html`.
+- `profileUrl` follows the same base — point it at the niche-specific profile you build in step 6 (e.g. `../food/demo/profile.html`).
 
 Order entries by `overlap` descending — that's the visual convention.
 
@@ -170,9 +170,9 @@ The card renders the first 3 brand logos as an overlapping row, and reveals all 
 
 ---
 
-## 6. (Optional) Dedicated profile page with real posts
+## 6. Dedicated profile page with real posts
 
-For featured creators (like Maya), build a niche-specific profile at `<niche>/demo/profile.html`. Use [`food/demo/profile.html`](../food/demo/profile.html) as a template — it bakes in Maya's data directly with a small inline localizer for HE/EN.
+Every creator gets a niche-specific profile at `<niche>/demo/profile.html`. Use [`food/demo/profile.html`](../food/demo/profile.html) as a template — it bakes in Maya's data directly with a small inline localizer for HE/EN.
 
 ### Pull the 6 most recent post thumbnails
 
@@ -229,7 +229,7 @@ python3 -m http.server 8080
 Checklist:
 
 - [ ] Card avatar shows the real profile picture (not the gradient+initials fallback).
-- [ ] `View profile` button lands on the dedicated profile page (if you built one).
+- [ ] `View profile` button lands on the dedicated profile page.
 - [ ] Past collabs row appears with overlapping logos; hover reveals the full list.
 - [ ] HE/EN toggle works on both the card grid and the profile page.
 - [ ] Profile picture and post thumbnails load (200 OK, no broken-image icons).
@@ -259,8 +259,8 @@ A typical featured-creator addition touches:
 
 - `brand/niche-demo.js` — the creator entry (always)
 - `assets/creators/<handle>.jpg` — avatar (always)
-- `assets/creators/<handle>-posts/*.jpg` — recent post thumbnails (if featured)
+- `assets/creators/<handle>-posts/*.jpg` — recent post thumbnails (always)
+- `<niche>/demo/profile.html` — dedicated profile page (always)
 - `assets/brands/<brand>.jpg` — past collab logos (if any)
-- `<niche>/demo/profile.html` — dedicated profile page (if featured)
 
 That's it.
