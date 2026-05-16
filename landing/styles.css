@@ -466,6 +466,61 @@ section{position:relative}
 .lp-foot .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .lp-foot .src{max-width:60ch;line-height:1.5}
 
+/* ============================================================================
+   SMALL PHONES (≤480px — e.g. 375-wide)
+   The previews are dense "product screenshots"; at this width they need to
+   stack and shed the tightest columns rather than cram or overflow-clip.
+   ============================================================================ */
+@media (max-width:480px){
+  .wrap{padding-inline:16px}
+
+  .hero{padding-top:40px;padding-bottom:48px}
+  .hero h1{font-size:28px;max-width:none}
+  .hero .lede{font-size:15.5px;max-width:none}
+  .hero-grid{gap:28px}
+  .sec{padding-block:56px}
+  .sec-tight{padding-block:44px}
+
+  /* Give the shrunk previews room to breathe */
+  .preview-body{padding:12px}
+  .preview-chrome{padding:9px 12px;gap:10px}
+
+  /* Dense creator cards stack instead of cramming 2-up (worked-with row
+     has a nowrap label that overflows a half-width card) */
+  .pv-grid,.pv-grid.two,.pv-grid.mini{grid-template-columns:1fr}
+  .pv-grid.mini .pv-av{width:44px;height:44px}
+
+  /* Engagement metrics: 3-up is too tight at this width */
+  .pv-metric{padding:11px 8px}
+  .pv-metric .big{font-size:19px}
+
+  .pv-modal{padding:16px}
+  .pv-modal-actions{margin-top:14px}
+
+  /* Pipeline rows: tighten the 3 columns so they fit 375 */
+  .pv-row{grid-template-columns:1.5fr .9fr auto;gap:8px;padding:10px}
+  .pv-creator .pv-av{width:30px;height:30px}
+  .pv-creator .h{font-size:11.5px}
+  .pv-creator .n{font-size:10.5px}
+  .pv-num{font-size:11.5px}
+  .pv-status{padding:3px 8px;font-size:10.5px}
+
+  /* White-label PDF mock: drop the sample-post thumbnail column —
+     three 30px thumbs overflow hard and get clipped by the frame */
+  .pv-pdf{padding:14px}
+  .pv-pdf-row,.pv-pdf-row.head{grid-template-columns:1.9fr .65fr .65fr}
+  .pv-pdf-thumbs{display:none}
+  .pv-pdf-row.head>div:last-child{display:none}
+  .pv-pdf-top{flex-direction:column;align-items:flex-start;gap:6px}
+
+  /* Bulk-brief bar: wrap instead of overflowing */
+  .pv-bulk-bar{flex-wrap:wrap}
+  .pv-bulk-bar .pv-btn.primary{flex:1 1 auto}
+
+  .tier{padding:22px 18px}
+  .btn-primary{font-size:15px;padding:14px 22px}
+}
+
 /* ===== RTL niceties ===== */
 [dir=rtl] .preview-chrome .url{direction:ltr}
 [dir=rtl] .pv-handle,[dir=rtl] .pv-creator .h,[dir=rtl] .pv-pdf-cre b{direction:ltr;text-align:start}
