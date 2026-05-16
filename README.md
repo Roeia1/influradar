@@ -18,7 +18,7 @@ document is the spec; this README is just the map.
 | `landing/agency/index.html` | Agency landing — sent to agencies & enterprise marketing teams |
 | `landing/styles.css` | Isolated design system, shared by both landings |
 | `landing/i18n.js` | Isolated EN⇄HE translations + RTL toggle (Hebrew default) |
-| `landing/personalize.js` | Cosmetic `?b=` greeting bar — no logging, no analytics, no network |
+| `landing/personalize.js` | Cosmetic `?name=` founder-note greeting — no logging, no analytics, no network |
 
 **Isolation rule (plan §6):** nothing in `/landing/` loads `/styles.css`,
 `/i18n.js`, or `/niche-demo.js`. The two landings share only the files inside
@@ -28,9 +28,10 @@ document is the spec; this README is just the map.
   Language choice persists in `localStorage` under `zarkor_landing_lang`.
 - All three CTAs (hero, pricing, final) smooth-scroll to the embedded Calendly
   widget (`#book` → `calendly.com/roei-avrahami2/15min-zarkor`).
-- `?b=<business>` renders a one-line greeting above the founder note and
-  nothing else. Missing/empty/shared/unfilled-merge-token → silent generic
-  page, no layout shift. It is never logged or sent anywhere (plan §4/§16).
+- `?name=<recipient>` weaves the name into the founder-note greeting itself
+  (e.g. *"היי Maya, נעים להכיר 👋"*) and nothing else. Missing/empty/shared/
+  unfilled-merge-token → generic greeting, no layout shift. Works on both
+  landings. It is never logged or sent anywhere (plan §4/§16).
 
 ## Kept but unlinked (not in the cold funnel)
 
@@ -55,8 +56,8 @@ python3 -m http.server 8080      # or:  npx serve .
 ```
 
 Then open <http://localhost:8080/landing/food/> or
-<http://localhost:8080/landing/agency/>. Append `?b=Some%20Brand` to preview
-the personalized greeting bar.
+<http://localhost:8080/landing/agency/>. Append `?name=Maya` to preview
+the personalized founder-note greeting.
 
 ## Deploying
 

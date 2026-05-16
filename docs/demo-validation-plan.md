@@ -54,7 +54,7 @@ If an internal user later decides to use the tool to reduce agency reliance, tha
 - **No tour mode, no onboarding overlay, no interactive feedback widget.** The landing IS the artifact.
 - **Realistic funnel assumption:** ~100 sent → ~15 click → ~8 actually read → ~3 book a call. Plan list sizes accordingly (100+ per audience).
 - **No tracking** (no UTM params, no analytics pixel, no logged per-recipient tracking links). At 100-email scale, the Calendly intake form provides enough segmentation. Stay lean. **One CSV mail-merge field is allowed** (`{name}`, optionally `{business}`) — a merge field is personalization, not tracking; it's never logged or used to identify who clicked. See §16.
-- **Cosmetic landing personalization is allowed** (`?b=` query param → client-side greeting). This is explicitly carved out of the "no per-recipient links" rule: the param is *never logged, never sent anywhere, no analytics* — it only renders a greeting in the browser. The §4 rule exists to prevent surveillance, not a hello. A missing/shared param degrades silently to the generic page. See §16.
+- **Cosmetic landing personalization is allowed** (`?name=` query param → client-side greeting). This is explicitly carved out of the "no per-recipient links" rule: the param is *never logged, never sent anywhere, no analytics* — it only renders a greeting in the browser. The §4 rule exists to prevent surveillance, not a hello. A missing/shared param degrades silently to the generic page. See §16.
 
 ### Implication: the landing page does ~100% of the work
 There is no clickable demo behind it. What the cold visitor sees on the landing page IS the entire product story. Selling-point priority must be ruthless.
@@ -344,7 +344,7 @@ All three CTAs go to the SAME Calendly URL. The "or just reply to my email — h
 - [ ] Landing-only translations. Copy or rewrite from `/i18n.js` as needed — no link.
 
 **`/landing/` cosmetic personalization (shared, per §16 Q20):**
-- [ ] Tiny isolated JS (inline or `/landing/personalize.js`, NOT linked to demo): read `?b=` param, URL-decode, inject greeting into the thin bar above the Founder Note on both landings. No param / empty / shared → render nothing, no layout shift. No logging, no network, no analytics.
+- [ ] Tiny isolated JS (inline or `/landing/personalize.js`, NOT linked to demo): read `?name=` param, URL-decode, weave the name into the Founder Note greeting itself on both landings. No param / empty / shared → generic greeting, no layout shift. No logging, no network, no analytics.
 
 **`/landing/agency/index.html`:**
 - [ ] Build from scratch using hero copy in §8 + page structure in §9.
@@ -481,7 +481,7 @@ Resolved here rather than deferred (§14): the email earns the entire top of the
 > I'm Roei — I'm building a tool that gives agencies real Israeli creator coverage, the part global tools (Modash/Heepsy) barely touch. I put together a short page showing what it looks like: [link]. If Israeli coverage and sourcing time are pain points for your team, I'd love 15 minutes by phone to hear how you work today — no pitch, no sale. Or just reply to this email.
 > Roei
 
-`[קישור]`/`[link]` = `zarkor.app/landing/food/?b={business}` or `zarkor.app/landing/agency/?b={business}` (the `?b=` drives the cosmetic landing greeting, below). Drop the `?b=` param when `{business}` is unreliable — the landing falls back to the generic page silently.
+`[קישור]`/`[link]` = `zarkor.app/landing/food/?name={name}` or `zarkor.app/landing/agency/?name={name}` (the `?name=` drives the cosmetic landing greeting, below). Drop the `?name=` param when `{name}` is unreliable — the landing falls back to the generic greeting silently.
 
 ### Additional merge decisions (Q20)
 
@@ -492,10 +492,10 @@ Resolved here rather than deferred (§14): the email earns the entire top of the
 
 **`{city}` — REJECTED.** Marginal lift, extra list-hygiene burden. Not added.
 
-### Landing cosmetic personalization — DECIDED (`?b=`)
+### Landing cosmetic personalization — DECIDED (`?name=`)
 
-- Email link carries `?b={business}` (URL-encoded). Isolated JS inside `/landing/` reads the param and injects a greeting into **one subtle slot only** — a thin bar directly above the Founder Note (§10), e.g. *"היי {עסק} 👋 — הדף הזה למותגים כמוכם."* Never the H1, never the hero.
-- **Hard fallback:** no param, empty param, or shared link → the bar does not render at all; page is the clean generic version. No layout shift.
+- Email link carries `?name={name}` (URL-encoded). Isolated JS inside `/landing/` reads the param and weaves the name into **one subtle slot only** — the Founder Note greeting itself (§10), e.g. *"היי {שם}, נעים להכיר 👋"*. Never the H1, never the hero.
+- **Hard fallback:** no param, empty param, or shared link → the greeting renders in its generic form (*"היי, נעים להכיר 👋"*); no layout shift.
 - **No logging, no analytics, no network call.** Pure client-side string render. This is the §4 carve-out — cosmetic, not tracking.
 - Lives in `/landing/` only (respects §6 isolation — does not touch the demo).
 
