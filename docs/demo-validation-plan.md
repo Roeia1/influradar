@@ -385,7 +385,31 @@ Open items, downstream of "the landings are ready":
 - Cold list sources for SMB food brands (where do we find 100+ Tel Aviv restaurants / cafés?).
 - Cold list sources for agencies (~200 in Israel — directories, LinkedIn, IL marketing forums).
 - ~~Cold email template per audience~~ — **RESOLVED, see §16.**
-- Outreach send cadence (drip vs. batch).
+- ~~Outreach send cadence (drip vs. batch)~~ — see follow-up cadence below.
+
+### Follow-up cadence & deliverability — migrated from the (now-deleted) `docs/outreach/validation-templates.md`
+
+That file predated §15/§16 and mostly contradicted the final plan (it assumed
+a clickable demo as the hook, the retired `*.vercel.app` URL, UTM tracking,
+and demo-side analytics — all explicitly rejected). It was deleted. Only the
+two genuinely-useful, plan-consistent operational notes were salvaged here.
+
+**Bump sequence (send only if no reply; each bump shorter than the last; same
+personal Gmail thread; link = the landing, never a demo; no UTM; `{שם}`/`{name}`
+merge only).** Two bumps total — past Day 10 it's noise.
+
+- **Day 4 — soft bump (HE):** `{שם}, רק מוודא שהמייל הקודם לא נבלע. הדף כאן אם בא לך הצצה: [קישור]. גם ״לא רלוונטי״ עוזר לי 🙏`
+- **Day 4 — soft bump (EN):** `{name}, just making sure the last note didn't get buried. The page is here if you want a look: [link]. Even a "not relevant" helps me 🙏`
+- **Day 10 — close-out (HE):** `{שם}, אני סוגר את סבב הפידבק הראשון השבוע. אם זה רלוונטי — שורה אחת ממך תעשה הבדל. אם לא — אאסוף שזה לא הקהל הנכון, וזה גם בסדר. תודה!`
+- **Day 10 — close-out (EN):** `{name}, I'm closing the first feedback round this week. If this is relevant, one line from you would make a real difference. If not, I'll take that as "wrong audience" — also useful. Thanks!`
+
+**Deliverability / volume ramp.** The from-address is a personal Gmail (§16),
+so SPF/DKIM/DMARC are Google's problem, not ours — but a personal Gmail still
+gets flagged for sudden cold volume. Ramp: ~20/day in week 1, then scale
+gradually; don't fire 100 in a day from a cold-started thread pattern. Keep
+subject lines emoji-free (the §16 subjects already are — deliberate: Hebrew +
+emoji subjects trip spam filters harder). Batch-drip ~20–30/day rather than
+one big blast.
 
 ---
 

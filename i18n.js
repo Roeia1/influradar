@@ -1,4 +1,4 @@
-// Minimal i18n for the Influradar mockup.
+// Minimal i18n for the Zarkor mockup.
 // Adds [data-i18n="key"] text replacement + RTL toggle.
 // Persists choice in localStorage.
 
@@ -68,7 +68,7 @@ const I18N = {
     "land.agency.i6.title": "Work in Hebrew",
     "land.agency.i6.body": "Full Hebrew interface, Hebrew creator bios indexed properly, RTL exports. Your junior planners can work in the language they think in.",
 
-    "land.quote": "We used to lose a full day per campaign sourcing Israeli creators between Heepsy, Modash and manual Instagram scrolling. With Influradar I have 15 vetted picks before standup.",
+    "land.quote": "We used to lose a full day per campaign sourcing Israeli creators between Heepsy, Modash and manual Instagram scrolling. With Zarkor I have 15 vetted picks before standup.",
     "land.quote.name": "Mockup, Inc.",
     "land.quote.role": "Media Director · Tel Aviv-based agency",
 
@@ -161,7 +161,7 @@ const I18N = {
     "pricing.faq.q3": "Can I export shortlists as branded PDFs for client meetings?",
     "pricing.faq.a3": "Yes. Pro and Agency tiers include client-ready PDF exports — upload your agency logo and the report is generated white-label. Includes per-creator credibility scores so you can defend your picks in the meeting.",
     "pricing.faq.q4": "Do you take a cut of the deals or charge per-message fees?",
-    "pricing.faq.a4": "Never. Influradar is subscription only. Zero commission, zero per-message fees, zero markup on what you bill your client. The deal between you, the creator and the client is yours — we don't touch invoices.",
+    "pricing.faq.a4": "Never. Zarkor is subscription only. Zero commission, zero per-message fees, zero markup on what you bill your client. The deal between you, the creator and the client is yours — we don't touch invoices.",
     "pricing.faq.q5": "How fresh is the data? Will I get embarrassed by stale follower counts in a client meeting?",
     "pricing.faq.a5": "Profile data refreshes daily, audience credibility scores re-compute nightly. Every result shows its last-refresh timestamp. We pull from Meta's official source, so the numbers match what the creator sees in their own dashboard.",
     "pricing.faq.q6": "Can I cancel anytime?",
@@ -301,7 +301,7 @@ const I18N = {
     "brand.land.h1.a": "Take influencer marketing in-house. ",
     "brand.land.h1.b": "Own your creator roster.",
     "brand.land.h1.c": " Stop paying agency retainers for work you can do yourself.",
-    "brand.land.lede": "Influradar is the in-house influencer platform for Israeli brands. Discover creators your audience already follows, vet them on real metrics, and run outreach yourself — without the 15–25% agency markup or the black-box reporting.",
+    "brand.land.lede": "Zarkor is the in-house influencer platform for Israeli brands. Discover creators your audience already follows, vet them on real metrics, and run outreach yourself — without the 15–25% agency markup or the black-box reporting.",
     "brand.land.cta.primary": "Try the demo",
     "brand.land.cta.secondary": "See pricing",
     "brand.land.trusted": "Built for Israeli brand teams in",
@@ -321,13 +321,13 @@ const I18N = {
     "brand.land.f3.body": "Save creators, track who delivered last campaign, leave private notes the agency never saw. Your roster, your performance history — it stays with the brand, not with whoever ran your last campaign.",
     "brand.land.f4.title": "Outreach in your brand voice",
     "brand.land.f4.body": "Send briefs directly from your brand's email. Use templates that match your tone, not an agency boilerplate. Track responses, manage approvals, run the campaign — without a middleman taking 20%.",
-    "brand.land.quote": "Our agency charged us ₪14K a month just to source creators — and half of them were the same names they pitched our competitors. We brought it in-house with Influradar in two weeks. Our last campaign converted better than anything the agency ran for us.",
+    "brand.land.quote": "Our agency charged us ₪14K a month just to source creators — and half of them were the same names they pitched our competitors. We brought it in-house with Zarkor in two weeks. Our last campaign converted better than anything the agency ran for us.",
     "brand.land.quote.name": "Mockup Brand Co.",
     "brand.land.quote.role": "Brand Marketing Lead · Israeli D2C brand",
     "brand.land.band.h2": "Built for the in-house brand workflow",
     "brand.land.band.sub": "Everything an Israeli brand team needs to discover, vet, brief, and measure — without a sourcing agency in the middle.",
     "brand.land.band.i1.title": "Cut the middleman",
-    "brand.land.band.i1.body": "A typical agency retainer for influencer sourcing runs ₪10K–15K/month. Influradar runs ₪249/month and gives you the same data — minus the markup, minus the deck-driven timeline.",
+    "brand.land.band.i1.body": "A typical agency retainer for influencer sourcing runs ₪10K–15K/month. Zarkor runs ₪249/month and gives you the same data — minus the markup, minus the deck-driven timeline.",
     "brand.land.band.i2.title": "Own your creator history",
     "brand.land.band.i2.body": "When you switch agencies, your creator roster, performance notes, and outreach history stay with your brand. No more starting from zero every 18 months.",
     "brand.land.band.i3.title": "Vet for fit, not reach",
@@ -383,19 +383,19 @@ const I18N = {
     "brand.pricing.ent.cta": "Contact sales",
     "brand.plan.legal": "Prices in ILS, exclude VAT. 40% off for the first 6 months while early-access slots last (42 of 50 remaining).",
     "brand.pricing.faq.q1": "We already work with an agency. Why would we bring this in-house?",
-    "brand.pricing.faq.a1": "Most Israeli agencies charge a ₪10–15K/month retainer for influencer sourcing — work that Influradar does for ₪249/month. Brands that want speed, transparency, and ownership of their creator roster bring it in-house. Brands that want full-service campaign execution still use an agency for production, contracts and reporting — and use Influradar to brief them with the exact creators they want.",
+    "brand.pricing.faq.a1": "Most Israeli agencies charge a ₪10–15K/month retainer for influencer sourcing — work that Zarkor does for ₪249/month. Brands that want speed, transparency, and ownership of their creator roster bring it in-house. Brands that want full-service campaign execution still use an agency for production, contracts and reporting — and use Zarkor to brief them with the exact creators they want.",
     "brand.pricing.faq.q2": "How is this different from Heepsy, Modash, or Favikon?",
     "brand.pricing.faq.a2": "Israel-first, not Israel-as-an-afterthought. Hebrew-native search, deeper Israeli creator coverage (modest fashion, mizrahi food, Hebrew tech creators), ILS pricing, and brand-side features global tools don't have — audience-overlap matching to your brand's actual followers, competitor-partnership screening, and a creator roster that's yours forever.",
     "brand.pricing.faq.q3": "What is \"audience overlap\" matching?",
     "brand.pricing.faq.a3": "We measure what percentage of a creator's audience already follows your brand's Instagram account. A creator with 50% overlap is partnering with an audience that already knows you — different campaign math than reaching cold followers. Available on Team and Enterprise plans, once you connect your brand's Instagram.",
     "brand.pricing.faq.q4": "Do you take a cut of the creator deals?",
-    "brand.pricing.faq.a4": "Never. Influradar is subscription only. Zero commission on what you pay the creator, zero per-message fees, zero markup. Your full media budget goes to the creator. We don't touch invoices or contracts — those are between you and the creator (or the creator's agency).",
+    "brand.pricing.faq.a4": "Never. Zarkor is subscription only. Zero commission on what you pay the creator, zero per-message fees, zero markup. Your full media budget goes to the creator. We don't touch invoices or contracts — those are between you and the creator (or the creator's agency).",
     "brand.pricing.faq.q5": "What if our marketing team has no influencer experience?",
     "brand.pricing.faq.a5": "The Team plan includes a 1-hour onboarding session, brief templates that match Israeli market norms, and a credibility-score-first workflow that protects you from common mistakes (bought followers, engagement pods, declining accounts). Most brand teams run their first campaign within 3 weeks of starting the trial.",
     "brand.pricing.faq.q6": "Can I cancel anytime?",
     "brand.pricing.faq.a6": "Yes. Monthly plans cancel anytime. Annual plans (40% discount) lock in the price for 12 months. If you cancel, your creator roster and campaign history export as CSV — you keep the data.",
     "brand.pricing.faq.q7": "Can I find creators who've worked with my competitor?",
-    "brand.pricing.faq.a7": "Yes — and it's one of the most-used features. Type a brand's @handle into the \"Worked with brand\" filter and Influradar surfaces every Israeli creator who's tagged, mentioned, or run sponsored content with them in the last 12 months. Use it to find lookalike partners that already fit your category, or to spot competitor overlaps before you brief. Available on Team and Enterprise.",
+    "brand.pricing.faq.a7": "Yes — and it's one of the most-used features. Type a brand's @handle into the \"Worked with brand\" filter and Zarkor surfaces every Israeli creator who's tagged, mentioned, or run sponsored content with them in the last 12 months. Use it to find lookalike partners that already fit your category, or to spot competitor overlaps before you brief. Available on Team and Enterprise.",
 
     // --- Brand app overrides ---
     "brand.workspace.castro": "Adira · Marketing ▾",
@@ -513,7 +513,7 @@ const I18N = {
     "land.agency.i6.title": "עובדים בעברית",
     "land.agency.i6.body": "ממשק עברי מלא, ביו של יוצרים בעברית מסונכרן כראוי, ויצואים RTL. הג'וניורים שלכם עובדים בשפה שהם חושבים בה.",
 
-    "land.quote": "פעם איבדנו יום שלם לכל קמפיין בסורסינג של יוצרים ישראלים בין Heepsy, Modash וגלילה ידנית באינסטגרם. עם Influradar יש לי 15 בחירות מאומתות לפני הסטנדאפ.",
+    "land.quote": "פעם איבדנו יום שלם לכל קמפיין בסורסינג של יוצרים ישראלים בין Heepsy, Modash וגלילה ידנית באינסטגרם. עם Zarkor יש לי 15 בחירות מאומתות לפני הסטנדאפ.",
     "land.quote.name": "Mockup, Inc.",
     "land.quote.role": "מנהל מדיה · סוכנות מתל אביב",
 
@@ -606,7 +606,7 @@ const I18N = {
     "pricing.faq.q3": "אפשר לייצא רשימות קצרות כ-PDF ממותג לפגישות לקוח?",
     "pricing.faq.a3": "כן. מסלולי Pro ו-Agency כוללים יצוא PDF מוכן ללקוח — העלו את הלוגו של הסוכנות והדוח נוצר בלייבל לבן. כולל ציוני אמינות לכל יוצר כדי שתוכלו להגן על הבחירות בפגישה.",
     "pricing.faq.q4": "האם אתם לוקחים אחוז מהעסקאות או עמלות הודעות?",
-    "pricing.faq.a4": "אף פעם לא. Influradar הוא מנוי בלבד. אפס עמלה, אפס עמלה להודעות, אפס מארק-אפ על מה שאתם מחייבים את הלקוח. העסקה בינכם לבין היוצר והלקוח שלכם — אנחנו לא נוגעים בחשבוניות.",
+    "pricing.faq.a4": "אף פעם לא. Zarkor הוא מנוי בלבד. אפס עמלה, אפס עמלה להודעות, אפס מארק-אפ על מה שאתם מחייבים את הלקוח. העסקה בינכם לבין היוצר והלקוח שלכם — אנחנו לא נוגעים בחשבוניות.",
     "pricing.faq.q5": "כמה הנתונים טריים? לא יהיה לי מביך עם מספרי עוקבים מיושנים בפגישת לקוח?",
     "pricing.faq.a5": "נתוני הפרופיל מתעדכנים יומית, וציוני אמינות קהל מחושבים מחדש בלילה. כל תוצאה מציגה חותמת זמן של רענון אחרון. אנחנו מושכים מהמקור הרשמי של Meta, אז המספרים תואמים את מה שהיוצר רואה בדשבורד שלו.",
     "pricing.faq.q6": "אפשר לבטל בכל רגע?",
@@ -746,7 +746,7 @@ const I18N = {
     "brand.land.h1.a": "תשווקו עם משפיענים בתוך הבית. ",
     "brand.land.h1.b": "המאגר הוא שלכם.",
     "brand.land.h1.c": " מספיק לשלם ריטיינר לסוכנות על עבודה שאתם יכולים לעשות לבד.",
-    "brand.land.lede": "Influradar היא הפלטפורמה הפנימית למשפיענים עבור מותגים ישראליים. גלו יוצרים שהקהל שלכם כבר עוקב אחריהם, סננו לפי מדדים אמיתיים, ונהלו פנייה בעצמכם — בלי 15%–25% עמלה לסוכנות ובלי דוחות מעורפלים.",
+    "brand.land.lede": "Zarkor היא הפלטפורמה הפנימית למשפיענים עבור מותגים ישראליים. גלו יוצרים שהקהל שלכם כבר עוקב אחריהם, סננו לפי מדדים אמיתיים, ונהלו פנייה בעצמכם — בלי 15%–25% עמלה לסוכנות ובלי דוחות מעורפלים.",
     "brand.land.cta.primary": "נסו את הדמו",
     "brand.land.cta.secondary": "מחירון",
     "brand.land.trusted": "בנוי לצוותי שיווק במותגים ישראליים בתחומי",
@@ -766,13 +766,13 @@ const I18N = {
     "brand.land.f3.body": "שמרו יוצרים, עקבו מי הביא תוצאות בקמפיין האחרון, הוסיפו הערות פרטיות שהסוכנות לא ראתה. המאגר שלכם, ההיסטוריה שלכם — נשארים במותג, לא אצל מי שניהל את הקמפיין האחרון.",
     "brand.land.f4.title": "פנייה בקול של המותג שלכם",
     "brand.land.f4.body": "שלחו בריפים ישירות מהמייל של המותג. השתמשו בתבניות שמתאימות לטון שלכם, לא בבויילרפלייט של סוכנות. עקבו אחרי תגובות, נהלו אישורים, הריצו את הקמפיין — בלי שמתווך לוקח 20%.",
-    "brand.land.quote": "הסוכנות גבתה מאיתנו ₪14K לחודש רק בשביל לסרוק יוצרים — וחצי מהם היו אותם שמות שהיא הציעה למתחרים שלנו. הכנסנו את זה הביתה עם Influradar בשבועיים. הקמפיין האחרון שלנו המיר טוב יותר מכל מה שהסוכנות הריצה לנו.",
+    "brand.land.quote": "הסוכנות גבתה מאיתנו ₪14K לחודש רק בשביל לסרוק יוצרים — וחצי מהם היו אותם שמות שהיא הציעה למתחרים שלנו. הכנסנו את זה הביתה עם Zarkor בשבועיים. הקמפיין האחרון שלנו המיר טוב יותר מכל מה שהסוכנות הריצה לנו.",
     "brand.land.quote.name": "Mockup Brand Co.",
     "brand.land.quote.role": "ראש שיווק מותג · מותג D2C ישראלי",
     "brand.land.band.h2": "נבנה עבור זרימת עבודה פנימית של מותג",
     "brand.land.band.sub": "כל מה שצוות מותג ישראלי צריך כדי לגלות, לסנן, לתת בריף ולמדוד — בלי סוכנות סורסינג באמצע.",
     "brand.land.band.i1.title": "חתכו את המתווך",
-    "brand.land.band.i1.body": "ריטיינר טיפוסי של סוכנות לסורסינג משפיענים נע בין ₪10K-₪15K לחודש. Influradar עולה ₪249 לחודש ונותן לכם את אותו מידע — בלי המרק-אפ, בלי הלו\"ז מבוסס-מצגות.",
+    "brand.land.band.i1.body": "ריטיינר טיפוסי של סוכנות לסורסינג משפיענים נע בין ₪10K-₪15K לחודש. Zarkor עולה ₪249 לחודש ונותן לכם את אותו מידע — בלי המרק-אפ, בלי הלו\"ז מבוסס-מצגות.",
     "brand.land.band.i2.title": "ההיסטוריה היא שלכם",
     "brand.land.band.i2.body": "כשאתם מחליפים סוכנות, מאגר היוצרים, ההערות על ביצועים וההיסטוריה של הפניות נשארים במותג. לא צריך להתחיל מאפס כל 18 חודשים.",
     "brand.land.band.i3.title": "התאמה, לא רק חשיפה",
@@ -828,13 +828,13 @@ const I18N = {
     "brand.pricing.ent.cta": "צרו קשר עם המכירות",
     "brand.plan.legal": "מחירים בש\"ח, לפני מע\"מ. 40% הנחה לחצי שנה ראשונה — מקומות מוגבלים (נשארו 42 מתוך 50).",
     "brand.pricing.faq.q1": "כבר עובדים עם סוכנות. למה שנכניס את זה הביתה?",
-    "brand.pricing.faq.a1": "רוב הסוכנויות בישראל גובות ₪10-₪15K לחודש כריטיינר לסורסינג משפיענים — עבודה ש-Influradar עושה ב-₪249 לחודש. מותגים שרוצים מהירות, שקיפות ובעלות על המאגר שלהם מכניסים את זה הביתה. מותגים שרוצים שירות מלא של הפקת קמפיין עדיין משתמשים בסוכנות להפקה, חוזים ודיווח — ומשתמשים ב-Influradar כדי לתת לסוכנות את היוצרים המדויקים שהם רוצים.",
+    "brand.pricing.faq.a1": "רוב הסוכנויות בישראל גובות ₪10-₪15K לחודש כריטיינר לסורסינג משפיענים — עבודה ש-Zarkor עושה ב-₪249 לחודש. מותגים שרוצים מהירות, שקיפות ובעלות על המאגר שלהם מכניסים את זה הביתה. מותגים שרוצים שירות מלא של הפקת קמפיין עדיין משתמשים בסוכנות להפקה, חוזים ודיווח — ומשתמשים ב-Zarkor כדי לתת לסוכנות את היוצרים המדויקים שהם רוצים.",
     "brand.pricing.faq.q2": "במה זה שונה מ-Heepsy, Modash או Favikon?",
     "brand.pricing.faq.a2": "ישראל קודם, לא ישראל כהערת שוליים. חיפוש בעברית, כיסוי עמוק יותר של יוצרים ישראלים (אופנה צנועה, אוכל מזרחי, יוצרי טק בעברית), תמחור בש\"ח, ופיצ'רים בצד המותג שלכלים גלובליים אין — התאמה לפי חפיפת קהל עם המותג שלכם, סינון שיתופי פעולה עם מתחרים, ומאגר יוצרים ששלכם לתמיד.",
     "brand.pricing.faq.q3": "מה זה התאמה לפי \"חפיפת קהל\"?",
     "brand.pricing.faq.a3": "אנחנו מודדים איזה אחוז מהקהל של יוצר כבר עוקב אחרי חשבון האינסטגרם של המותג שלכם. יוצר עם חפיפה של 50% משתף פעולה עם קהל שכבר מכיר אתכם — מתמטיקה אחרת לגמרי מלהגיע לעוקבים קרים. זמין בתוכניות 'צוות' ו-Enterprise, אחרי שתחברו את האינסטגרם של המותג.",
     "brand.pricing.faq.q4": "אתם לוקחים אחוזים מהעסקאות עם היוצרים?",
-    "brand.pricing.faq.a4": "אף פעם. Influradar הוא מנוי בלבד. אפס עמלה על מה שאתם משלמים ליוצר, אפס דמי הודעה, אפס מרק-אפ. כל תקציב המדיה הולך ליוצר. אנחנו לא נוגעים בחשבוניות או חוזים — אלה ביניכם לבין היוצר (או הסוכן של היוצר).",
+    "brand.pricing.faq.a4": "אף פעם. Zarkor הוא מנוי בלבד. אפס עמלה על מה שאתם משלמים ליוצר, אפס דמי הודעה, אפס מרק-אפ. כל תקציב המדיה הולך ליוצר. אנחנו לא נוגעים בחשבוניות או חוזים — אלה ביניכם לבין היוצר (או הסוכן של היוצר).",
     "brand.pricing.faq.q5": "מה אם לצוות השיווק שלנו אין ניסיון במשפיענים?",
     "brand.pricing.faq.a5": "תוכנית 'צוות' כוללת שעת onboarding, תבניות בריפים שמתאימות לנורמות של השוק הישראלי, וזרימת עבודה ש-credibility score היא קודם — מה שמגן עליכם מטעויות נפוצות (עוקבים קנויים, פודי מעורבות, חשבונות בדעיכה). רוב צוותי המותג מריצים קמפיין ראשון תוך 3 שבועות מתחילת הניסיון.",
     "brand.pricing.faq.q6": "אפשר לבטל בכל עת?",
@@ -910,7 +910,7 @@ function applyI18n(lang){
   document.querySelectorAll(".lang-toggle button").forEach(b => {
     b.classList.toggle("active", b.dataset.lang === lang);
   });
-  try { localStorage.setItem("influradar_lang", lang); } catch(_) {}
+  try { localStorage.setItem("zarkor_lang", lang); } catch(_) {}
   // Reveal page after translations apply, unless a niche overlay is also
   // about to run — in that case let niche-demo.js do the reveal so the
   // user doesn't see fashion content briefly before the niche swap.
@@ -919,7 +919,7 @@ function applyI18n(lang){
 
 function initI18n(){
   let lang = "en";
-  try { lang = localStorage.getItem("influradar_lang") || "en"; } catch(_) {}
+  try { lang = localStorage.getItem("zarkor_lang") || "en"; } catch(_) {}
   applyI18n(lang);
   document.querySelectorAll(".lang-toggle button").forEach(b => {
     b.addEventListener("click", () => applyI18n(b.dataset.lang));
