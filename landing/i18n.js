@@ -12,7 +12,6 @@ const LP_I18N = {
   he: {
     "nav.cta": "קביעת שיחה של 15 דק׳",
     "softener": "או פשוט תגיבו למייל שלי — מה שנוח לכם.",
-    "fn.hi": "אני רועי.",
     "fn.sign": "— רועי, מייסד",
     "foot.src": "כל נתוני הפרופילים נאספים מפרופילי Instagram עסקי/יוצר ציבוריים דרך ה-Business Discovery API הרשמי.",
 
@@ -73,7 +72,6 @@ const LP_I18N = {
     "f.h1b": " שכבר מפרסמים על מקומות כמו שלכם.",
     "f.lede": "חיפוש בין אלפי יוצרי תוכן ישראלים לפי נישה ומעורבות. ראו מי כבר מתייג את המתחרים שלכם. פנו אליהם ישירות מהמותג — בלי סוכנות, בלי עמלה, בלי לנחש.",
     "f.cta": "קביעת שיחה של 15 דקות",
-    "f.fn.hi": "היי, נעים להכיר 👋",
     "f.fn.body": "אני בונה את Zarkor כי כל צוות מותג ישראלי שדיברתי איתו אמר אותו דבר: למצוא יוצרי תוכן מקומיים שבאמת מזיזים לקוחות זה איטי, ידני, וברובו ניחוש. אני עדיין לא מוכר כלום — אני עושה שיחות של 15 דקות עם מותגים וסוכנויות כדי להבין מה באמת שבור לפני שאני בונה עוד. אם איתור יוצרי תוכן ישראלים זה כאב אצלכם, אשמח לשמוע על זה.",
     "f.r2.kick": "מעורבות אמיתית",
     "f.r2.h": "לא רק כמה עוקבים — כמה מהם באמת מגיבים.",
@@ -184,7 +182,6 @@ const LP_I18N = {
   en: {
     "nav.cta": "Book 15 min",
     "softener": "Or just reply to my email — happy either way.",
-    "fn.hi": "I'm Roei.",
     "fn.sign": "— Roei, founder",
     "foot.src": "All profile data is sourced from public Instagram Business/Creator profiles via the official Business Discovery API.",
 
@@ -245,7 +242,6 @@ const LP_I18N = {
     "f.h1b": " who already post about places like yours.",
     "f.lede": "Search thousands of Israeli content creators by niche and engagement. See which ones already tag your competitors. Reach out from your brand — no agency, no commission, no guessing.",
     "f.cta": "Book 15 min",
-    "f.fn.hi": "Hey, nice to meet you 👋",
     "f.fn.body": "I'm building Zarkor because every Israeli brand team I've talked to said the same thing: finding local content creators who actually move customers is slow, manual, and mostly guesswork. I'm not selling anything yet — I'm running 15-minute calls with brands and agencies to learn what's really broken before I build more. If sourcing Israeli content creators is a pain for you, I'd genuinely like to hear about it.",
     "f.r2.kick": "Real engagement",
     "f.r2.h": "Not just how many followers — how many actually engage.",

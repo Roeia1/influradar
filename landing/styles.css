@@ -373,12 +373,6 @@ section{position:relative}
 
 /* ===== Founder note ===== */
 .founder{background:var(--bg-2);border-block:1px solid var(--border)}
-.personalize-bar{
-  display:none;font-size:13.5px;color:var(--accent-2);
-  background:var(--accent-soft);border:1px solid rgba(124,92,255,.25);
-  border-radius:999px;padding:9px 18px;margin-bottom:26px;width:fit-content;
-}
-.personalize-bar.show{display:block}
 .founder-card{
   display:flex;gap:26px;align-items:flex-start;
   max-width:780px;
@@ -485,10 +479,28 @@ section{position:relative}
   .preview-body{padding:12px}
   .preview-chrome{padding:9px 12px;gap:10px}
 
-  /* Dense creator cards stack instead of cramming 2-up (worked-with row
-     has a nowrap label that overflows a half-width card) */
-  .pv-grid,.pv-grid.two,.pv-grid.mini{grid-template-columns:1fr}
-  .pv-grid.mini .pv-av{width:44px;height:44px}
+  /* Keep a 2-up grid (single-column stacking made the cards too tall /
+     too much scroll) but rebalance proportions for the narrow width
+     so the worked-with row no longer overflows the half-width card */
+  .pv-grid,.pv-grid.two,.pv-grid.mini{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .pv-card{padding:12px;gap:8px;min-width:0}
+  .pv-card .pv-av,.pv-grid.mini .pv-av{width:34px;height:34px}
+  .pv-head{gap:7px}
+  .pv-head>div{min-width:0}
+  .pv-handle{font-size:12px}
+  .pv-name{font-size:10.5px}
+  .pv-handle,.pv-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pv-tag{font-size:10px;padding:2px 7px}
+  .pv-worked{gap:6px;padding-top:8px}
+  .pv-worked-logos img{width:20px;height:20px;margin-inline-start:-6px}
+  .pv-worked-logos img:first-child{margin-inline-start:0}
+  .pv-worked-label{font-size:10px}
+
+  /* Followers / engagement tiles were far too chunky on mobile */
+  .pv-stats{gap:6px}
+  .pv-stat{padding:6px 4px}
+  .pv-stat .l{font-size:9px}
+  .pv-stat .v{font-size:13px}
 
   /* Engagement metrics: 3-up is too tight at this width */
   .pv-metric{padding:11px 8px}
