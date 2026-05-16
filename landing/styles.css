@@ -121,7 +121,7 @@ section{position:relative}
 .softener{font-size:13.5px;color:var(--muted-2)}
 
 /* Hero layout: text + browser-chrome preview */
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:54px;align-items:center}
 @media (max-width:920px){
   .hero-grid{grid-template-columns:1fr;gap:40px}
   .hero{padding-top:52px;padding-bottom:60px}
@@ -157,7 +157,7 @@ section{position:relative}
 .preview-body.flush{padding:0}
 
 /* ===== Feature rows ===== */
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.frow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:center}
 .frow + .frow{margin-top:96px}
 .frow.flip .frow-text{order:2}
 .frow.flip .frow-media{order:1}
@@ -186,8 +186,8 @@ section{position:relative}
    across the /landing/ boundary (§6). Dark product look on purpose.
    ============================================================================ */
 
-.pv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.pv-grid.two{grid-template-columns:repeat(2,1fr)}
+.pv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pv-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:560px){ .pv-grid,.pv-grid.two{grid-template-columns:1fr 1fr} }
 
 .pv-card{
@@ -219,12 +219,15 @@ section{position:relative}
   border:1.5px solid var(--panel);margin-inline-start:-7px;background:var(--panel-3);
 }
 .pv-worked-logos img:first-child{margin-inline-start:0}
-.pv-stats{display:flex;gap:8px;margin-top:2px}
+.pv-stats{display:flex;gap:8px;margin-top:auto;padding-top:2px}
 .pv-stat{
-  flex:1;background:var(--panel-2);border:1px solid var(--border);
+  flex:1;min-width:0;background:var(--panel-2);border:1px solid var(--border);
   border-radius:9px;padding:8px 6px;text-align:center;
 }
-.pv-stat .l{font-size:10px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.03em}
+.pv-stat .l{
+  font-size:10px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.03em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
 .pv-stat .v{font-size:15px;font-weight:700;margin-top:3px}
 .pv-stat .v.good{color:var(--good)}
 .pv-actions{display:flex;gap:8px;margin-top:2px}
@@ -308,7 +311,7 @@ section{position:relative}
 .st-replied{color:var(--good);background:rgba(61,220,151,.1);border-color:rgba(61,220,151,.3)}
 
 /* Filter + grid preview (agency #1) */
-.pv-app{display:grid;grid-template-columns:200px 1fr;gap:14px}
+.pv-app{display:grid;grid-template-columns:160px minmax(0,1fr);gap:14px}
 @media (max-width:560px){ .pv-app{grid-template-columns:1fr} .pv-app .pv-filters{display:none} }
 .pv-filters{
   background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
@@ -325,9 +328,26 @@ section{position:relative}
 .pv-range{height:5px;border-radius:999px;background:var(--panel-3);position:relative;margin:14px 4px 4px}
 .pv-range::before{content:"";position:absolute;inset-inline-start:18%;inset-inline-end:32%;top:0;bottom:0;background:var(--accent);border-radius:999px}
 .pv-range::after{content:"";position:absolute;inset-inline-start:64%;top:-4px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
-.pv-grid.mini{grid-template-columns:repeat(2,1fr);gap:12px}
-.pv-grid.mini .pv-card{padding:12px;gap:8px}
-.pv-grid.mini .pv-av{width:38px;height:38px}
+/* Compact "screenshot" cards: cramped by the filter sidebar, so the head
+   and stat tiles are tuned to keep handles, names and labels on one line
+   and the two stat tiles bottom-aligned across the 2x2 grid. */
+.pv-grid.mini{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pv-grid.mini .pv-card{padding:11px;gap:8px}
+.pv-grid.mini .pv-head{gap:8px}
+.pv-grid.mini .pv-head>div{min-width:0}
+.pv-grid.mini .pv-av{width:34px;height:34px}
+.pv-grid.mini .pv-handle{font-size:13px}
+.pv-grid.mini .pv-name{font-size:11px}
+.pv-grid.mini .pv-handle,.pv-grid.mini .pv-name{
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.pv-grid.mini .pv-worked{gap:6px;padding-top:9px}
+.pv-grid.mini .pv-worked-logos img{width:19px;height:19px;margin-inline-start:-6px;border-width:1.5px}
+.pv-grid.mini .pv-worked-logos img:first-child{margin-inline-start:0}
+.pv-grid.mini .pv-worked-label{font-size:9.5px}
+.pv-grid.mini .pv-stats{gap:6px}
+.pv-grid.mini .pv-stat{padding:8px 4px}
+.pv-grid.mini .pv-stat .l{font-size:9.5px;letter-spacing:.2px;text-transform:none}
 
 /* HE creator card highlight (agency #2) */
 .pv-hl{background:rgba(255,184,77,.22);color:#ffce82;border-radius:3px;padding:0 2px}
@@ -400,7 +420,7 @@ section{position:relative}
   margin-top:14px;font-size:14px;color:var(--accent-2);font-weight:600;
 }
 .tiers{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;
   margin-top:38px;text-align:start;
 }
 @media (max-width:860px){ .tiers{grid-template-columns:1fr;max-width:420px;margin-inline:auto} }
